@@ -1,0 +1,258 @@
+' PRIME TIP WITH WATER
+
+
+' PICKUP OIL AND THEN DEPOSIT ONTO MEMBRANE
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+
+DEFINE_POINT(VariableName=WASH_PT_T1, _
+ X=5, _
+ Y=100.0, _
+ Z=-30.0)
+
+
+DEFINE_POINT(VariableName=SAFE_PT, _
+ X=5, _
+ Y=0, _
+ Z=0.0)
+
+
+DEFINE_POINT(VariableName=PICKUP_OIL, _
+ X=55.0, _
+ Y=124.0, _
+ Z=-30.0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=ST_TESTDISPENSE_INDEX, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=END_TESTDISPENSE_INDEX, _
+ VariableType=INT, _
+ VariableValue=2)
+
+
+' DEFINE AS 0 OR 1
+
+
+DEFINE_VARIABLE(VariableName=TESTDISPENSE_XCOL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=ST_TESTDISPENSE_INDEX, _
+ Prompt=ENTER STARTING TEST DISPENSE INDEX, _
+ MinValue=0, _
+ MaxValue=19, _
+ ValueIfUserCancels=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=END_TESTDISPENSE_INDEX, _
+ Prompt=ENTER ENDING TEST DISPENSE INDEX, _
+ MinValue=ST_TESTDISPENSE_INDEX, _
+ MaxValue=20, _
+ ValueIfUserCancels=ST_TESTDISPENSE_INDEX)
+
+
+DEFINE_GRID(VariableName=MEMBRANEGRID_T2, _
+ X=104.5, _
+ Y=89, _
+ Z=-22.5, _
+ XSteps=3, _
+ XIncrement=2.0, _
+ YSteps=3, _
+ YIncrement=2.0)
+
+
+DEFINE_GRID(VariableName=TESTDISPENS_T2, _
+ X=100, _
+ Y=12, _
+ Z=-35.5, _
+ XSteps=2, _
+ XIncrement=2.0, _
+ YSteps=21, _
+ YIncrement=2.0)
+
+
+' PRIME THE OIL SYRINGE
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=WASH_PT_T1, _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+PRIME(SyringeMask=1, _
+ VolumePerStroke_uL=200, _
+ NumSyringeStrokes=1, _
+ SyringeSpeedPull=32, _
+ SyringeSpeedPush=32, _
+ DelayAfter_ms=500)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+PAUSE(UserMessage=PRIMING COMPLETE  CLICK OK TO CONTINUE, _
+ PauseTime_ms=0)
+
+
+' PICKUP OIL AND DISPENSE ONTO CENTER FILTER PAPER
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_OIL, _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+ASPIRATE(SyringeMask=1, _
+ Volume_uL=20, _
+ SyringeSpeed=38, _
+ ValveToBypass=FALSE, _
+ DelayAfter_ms=5000)
+
+
+' PULL OUT SLOW
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_OIL, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=8, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+' TEST DISPENSING
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=TESTDISPENS_T2[TESTDISPENSE_XCOL,ST_TESTDISPENSE_INDEX], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=2, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I1 = ST_TESTDISPENSE_INDEX To END_TESTDISPENSE_INDEX Step 1)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=TESTDISPENS_T2[TESTDISPENSE_XCOL,I1], _
+	 ZOffset=2, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	DISPENSE(SyringeMask=1, _
+	 Volume_uL=0.834, _
+	 SyringeSpeed=25, _
+	 ValveToBypass=FALSE, _
+	 DelayAfter_ms=750)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=TESTDISPENS_T2[TESTDISPENSE_XCOL,I1], _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	PAUSE(UserMessage=WAIT, _
+	 PauseTime_ms=300)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=TESTDISPENS_T2[TESTDISPENSE_XCOL,I1], _
+	 ZOffset=2, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+NEXT
+
+
+PAUSE(UserMessage=CLICK OK TO CONTINUE, _
+ PauseTime_ms=0)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=MEMBRANEGRID_T2[0,0], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=2, _
+ Speed_pct=30, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I1 = 0 To 2 Step 1)
+
+
+	FOR(I2 = 0 To 2 Step 1)
+
+
+		' GO RIGHT ABOVE TARGET POINT
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MEMBRANEGRID_T2[I1,I2], _
+		 ZOffset=2, _
+		 Speed_pct=20, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		DISPENSE(SyringeMask=1, _
+		 Volume_uL=0.834, _
+		 SyringeSpeed=25, _
+		 ValveToBypass=FALSE, _
+		 DelayAfter_ms=200)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MEMBRANEGRID_T2[I1,I2], _
+		 Speed_pct=30, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		PAUSE(UserMessage=WAIT, _
+		 PauseTime_ms=300)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MEMBRANEGRID_T2[I1,I2], _
+		 ZOffset=2, _
+		 Speed_pct=30, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+NEXT
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+

@@ -1,0 +1,30 @@
+C:\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.ProcessActionViewer.resources
+C:\DE03 Syringe Script App\object\ControlLibrary.dll
+C:\DE03 Syringe Script App\object\ControlLibrary.pdb
+C:\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.dll
+C:\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.pdb
+C:\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csprojResolveAssemblyReference.cache
+C:\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csproj.GenerateResource.Cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\object\ControlLibrary.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csprojResolveAssemblyReference.cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.ProcessActionViewer.resources
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csproj.GenerateResource.Cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\object\ControlLibrary.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\object\ControlLibrary.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\object\ControlLibrary.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\object\ControlLibrary.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\object\ControlLibrary.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.ProcessActionViewer.resources
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csproj.GenerateResource.Cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\ControlLibrary.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\ControlLibrary.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.ProcessActionViewer.resources
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.csproj.GenerateResource.Cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ControlLibrary\obj\Debug\ControlLibrary.pdb

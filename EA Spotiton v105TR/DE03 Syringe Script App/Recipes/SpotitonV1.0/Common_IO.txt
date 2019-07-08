@@ -1,0 +1,40 @@
+DEFINE_VARIABLE(VariableName=OUT_WASH_ON, _
+ VariableType=INT, _
+ VariableValue=-4)
+
+
+DEFINE_VARIABLE(VariableName=OUT_WASH_OFF, _
+ VariableType=INT, _
+ VariableValue=4)
+
+
+
+DEFINE_VARIABLE(VariableName=OUT_COVERGLASS_EXTEND, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=OUT_COVERGLASS_RETRACT, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+
+DEFINE_VARIABLE(VariableName=IN_COVERGLASS_RETRACT_SEN, _
+ VariableType=INT, _
+ VariableValue=-4)
+
+
+
+DEFINE_VARIABLE(VariableName=OUT_SHUTTER_OPEN, _
+ VariableType=INT, _
+ VariableValue=2)
+
+
+DEFINE_VARIABLE(VariableName=OUT_SHUTTER_CLOSE, _
+ VariableType=INT, _
+ VariableValue=-2)
+
+
+
+

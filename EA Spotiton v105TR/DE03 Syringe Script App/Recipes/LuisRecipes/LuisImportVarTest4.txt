@@ -1,0 +1,27 @@
+DEFINE_IMPORT( FileName=c:\_Pixy_recipes\LuisImportVar more.txt)
+
+DEFINE_VARIABLE(VariableName=IVINT2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=IVDOUBLE2, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_POINT(VariableName=IVPOINT2, _
+ X=112.0, _
+ Y=289.0, _
+ Z=-30.0)
+
+
+DEFINE_GRID(VariableName=IVGRID2, _
+ X=28, _
+ Y=80, _
+ Z=-15.0, _
+ XSteps=5, _
+ XIncrement=1.0, _
+ YSteps=5, _
+ YIncrement=1.0)
+

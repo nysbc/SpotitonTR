@@ -1,0 +1,1716 @@
+Start execution of command sequence at 10/31 17:01:35:828 
+Run Completed: 10/31 17:01:56:218 
+Start execution of command sequence at 10/31 17:03:09:138 
+Run Completed: 10/31 17:03:28:418 
+Start execution of command sequence at 10/31 17:04:27:561 
+Run Completed: 10/31 17:04:29:961 
+Start execution of command sequence at 10/31 17:04:33:161 
+Run Completed: 10/31 17:04:35:731 
+Start execution of command sequence at 10/31 17:05:14:941 
+Run Completed: 10/31 17:08:14:142 
+Machine Initialized
+Start execution of command sequence at 10/31 17:11:43:267 
+Run Completed: 10/31 17:12:56:137 
+Start execution of command sequence at 10/31 17:13:00:467 
+Run Completed: 10/31 17:13:07:747 
+Start execution of command sequence at 10/31 17:13:44:837 
+Run Completed: 10/31 17:13:48:817 
+Start execution of command sequence at 10/31 17:14:27:647 
+Run Completed: 10/31 17:14:34:347 
+Start execution of command sequence at 10/31 17:25:44:818 
+Run Completed: 10/31 17:25:54:498 
+Start execution of command sequence at 10/31 17:26:41:578 
+Run Completed: 10/31 17:26:43:168 
+Start execution of command sequence at 10/31 17:26:47:838 
+Run Completed: 10/31 17:26:51:708 
+Start execution of command sequence at 10/31 17:27:41:308 
+Run Completed: 10/31 17:29:03:068 
+Start execution of command sequence at 10/31 17:29:09:228 
+Run Completed: 10/31 17:30:48:759 
+Start execution of command sequence at 10/31 17:30:53:249 
+Run Completed: 10/31 17:33:22:068 
+Machine Initialized
+Start execution of command sequence at 10/31 17:37:03:047 
+EXITSEQUENCE()
+Run Completed: 10/31 17:39:18:487 
+Machine Initialized
+Start execution of command sequence at 10/31 17:40:20:787 
+EXITSEQUENCE()
+Run Completed: 10/31 17:41:40:077 
+Start execution of command sequence at 10/31 17:42:25:907 
+EXITSEQUENCE()
+Run Completed: 10/31 17:42:49:347 
+Start execution of command sequence at 10/31 17:44:34:807 
+EXITSEQUENCE()
+Run Completed: 10/31 17:44:41:507 
+Start execution of command sequence at 10/31 17:45:06:197 
+EXITSEQUENCE()
+Run Completed: 10/31 17:45:09:757 
+Start execution of command sequence at 10/31 17:45:16:317 
+EXITSEQUENCE()
+Run Completed: 10/31 17:45:40:187 
+Machine Initialized
+Start execution of command sequence at 10/31 17:48:58:455 
+EXITSEQUENCE()
+Run Completed: 10/31 17:49:11:355 
+Machine Initialized
+Start execution of command sequence at 10/31 17:58:28:176 
+EXITSEQUENCE()
+Run Completed: 10/31 17:58:30:446 
+Start execution of command sequence at 10/31 17:59:59:100 
+EXITSEQUENCE()
+Run Completed: 10/31 18:00:03:440 
+Start execution of command sequence at 10/31 18:00:35:500 
+EXITSEQUENCE()
+Run Completed: 10/31 18:01:07:670 
+Start execution of command sequence at 10/31 18:04:01:770 
+Run Completed: 10/31 18:06:20:021 
+Start execution of command sequence at 10/31 18:06:28:911 
+EXITSEQUENCE()
+Run Completed: 10/31 18:06:36:681 
+Start execution of command sequence at 10/31 18:07:18:391 
+EXITSEQUENCE()
+Start execution of command sequence at 10/31 18:09:10:011 
+EXITSEQUENCE()
+Run Completed: 10/31 18:09:15:181 
+Start execution of command sequence at 10/31 18:12:08:981 
+EXITSEQUENCE()
+Run Completed: 10/31 18:13:39:565 
+Run Completed: 10/31 18:07:24:551 
+Start execution of command sequence at 10/31 18:16:15:017 
+EXITSEQUENCE()
+Run Completed: 10/31 18:16:17:237 
+Start execution of command sequence at 10/31 18:16:43:767 
+EXITSEQUENCE()
+Run Completed: 10/31 18:16:58:207 
+Start execution of command sequence at 10/31 18:20:11:068 
+EXITSEQUENCE()
+Run Completed: 10/31 18:22:21:268 
+Start execution of command sequence at 10/31 18:24:45:228 
+EXITSEQUENCE()
+Run Completed: 10/31 18:26:10:158 
+Start execution of command sequence at 10/31 18:26:50:728 
+EXITSEQUENCE()
+Run Completed: 10/31 18:27:32:368 
+Start execution of command sequence at 10/31 18:28:35:828 
+EXITSEQUENCE()
+Run Completed: 10/31 18:28:38:408 
+Start execution of command sequence at 10/31 18:29:13:508 
+EXITSEQUENCE()
+Run Completed: 10/31 18:29:31:258 
+Start execution of command sequence at 10/31 18:31:00:069 
+EXITSEQUENCE()
+Start execution of command sequence at 10/31 18:32:17:449 
+EXITSEQUENCE()
+Run Completed: 10/31 18:32:24:079 
+Start execution of command sequence at 10/31 18:32:42:629 
+EXITSEQUENCE()
+Run Completed: 10/31 18:32:52:109 
+Run Completed: 10/31 18:31:21:289 
+Machine Initialized
+Start execution of command sequence at 02/27 10:13:34:145 
+EXITSEQUENCE()
+Run Completed: 02/27 10:13:45:405 
+Start execution of command sequence at 02/27 10:14:45:635 
+EXITSEQUENCE()
+Run Completed: 02/27 10:19:54:508 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 02/27 11:43:48:450 
+EXITSEQUENCE()
+Run Completed: 02/27 11:45:18:780 
+Start execution of command sequence at 02/27 11:45:24:500 
+Run Completed: 02/27 11:47:00:304 ,  Run was aborted
+Machine Initialized
+Start execution of command sequence at 02/27 12:17:31:546 
+EXITSEQUENCE()
+Run Completed: 02/27 12:20:24:376 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 02/28 10:19:10:746 
+EXITSEQUENCE()
+Run Completed: 02/28 10:19:14:709 
+Start execution of command sequence at 02/28 10:19:17:649 
+EXITSEQUENCE()
+Run Completed: 02/28 10:20:37:003 
+Start execution of command sequence at 02/28 10:27:50:924 
+EXITSEQUENCE()
+Run Completed: 02/28 10:29:39:764 
+Start execution of command sequence at 02/28 10:29:52:385 
+Execution aborted at 2/28/2013 10:33:21 AM
+Run Completed: 02/28 10:33:21:809 
+Start execution of command sequence at 02/28 10:34:02:331 
+EXITSEQUENCE()
+Run Completed: 02/28 10:35:56:017 
+Start execution of command sequence at 02/28 11:01:21:657 
+Machine Initialized
+Start execution of command sequence at 02/28 11:02:57:835 
+Run Completed: 02/28 11:03:20:472 ,  Run was aborted
+Start execution of command sequence at 02/28 11:03:23:140 
+EXITSEQUENCE()
+Run Completed: 02/28 11:05:01:282 
+Start execution of command sequence at 02/28 11:07:48:138 
+EXITSEQUENCE()
+Run Completed: 02/28 11:09:51:109 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/07 12:13:03:315 
+EXITSEQUENCE()
+Run Completed: 05/07 12:13:31:332 
+Machine Initialized
+Start execution of command sequence at 05/07 12:22:02:946 
+EXITSEQUENCE()
+Run Completed: 05/07 12:22:58:498 
+Machine Initialized
+Start execution of command sequence at 05/10 10:22:31:397 
+EXITSEQUENCE()
+Run Completed: 05/10 10:22:31:476 
+Start execution of command sequence at 05/10 10:30:07:207 
+EXITSEQUENCE()
+Run Completed: 05/10 10:30:07:304 
+Start execution of command sequence at 05/10 10:30:16:254 
+EXITSEQUENCE()
+Run Completed: 05/10 10:30:16:355 
+Start execution of command sequence at 05/10 10:30:27:771 
+EXITSEQUENCE()
+Run Completed: 05/10 10:30:27:899 
+Start execution of command sequence at 05/10 10:30:56:573 
+EXITSEQUENCE()
+Run Completed: 05/10 10:31:31:989 
+Machine Initialized
+Start execution of command sequence at 05/14 12:26:45:127 
+EXITSEQUENCE()
+Run Completed: 05/14 12:26:56:538 
+Machine Initialized
+Start execution of command sequence at 05/14 13:35:33:418 
+EXITSEQUENCE()
+Run Completed: 05/14 13:35:45:141 
+Start execution of command sequence at 05/14 13:42:52:777 
+Run Completed: 05/14 13:43:00:481 
+Start execution of command sequence at 05/14 13:43:06:785 
+EXITSEQUENCE()
+Run Completed: 05/14 13:43:14:444 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/22 12:44:29:753 
+Run Completed: 05/22 12:46:11:754 
+Machine Initialized
+Start execution of command sequence at 05/22 12:47:50:963 
+EXITSEQUENCE()
+Run Completed: 05/22 12:48:18:257 
+Start execution of command sequence at 05/22 12:48:57:616 
+EXITSEQUENCE()
+Run Completed: 05/22 12:49:24:081 
+Start execution of command sequence at 05/22 12:50:00:783 
+Run Completed: 05/22 12:50:10:179 
+Start execution of command sequence at 05/22 12:50:24:445 
+EXITSEQUENCE()
+Run Completed: 05/22 12:50:50:475 
+Start execution of command sequence at 05/22 13:09:03:040 
+Run Completed: 05/22 13:09:08:047 
+Start execution of command sequence at 05/22 13:13:01:952 
+Run Completed: 05/22 13:13:07:539 
+Start execution of command sequence at 05/22 13:14:03:792 
+Run Completed: 05/22 13:14:34:195 
+Start execution of command sequence at 05/22 13:16:33:158 
+Run Completed: 05/22 13:19:19:830 
+Start execution of command sequence at 05/22 13:19:25:680 
+EXITSEQUENCE()
+Run Completed: 05/22 13:19:55:894 
+Start execution of command sequence at 05/22 13:22:32:456 
+EXITSEQUENCE()
+Run Completed: 05/22 13:23:52:690 
+Machine Initialized
+Start execution of command sequence at 05/22 13:31:54:138 
+EXITSEQUENCE()
+Run Completed: 05/22 13:33:16:242 
+Start execution of command sequence at 05/22 13:42:58:073 
+EXITSEQUENCE()
+Run Completed: 05/22 13:44:21:793 
+Machine Initialized
+Start execution of command sequence at 02/11 15:11:50:278 
+EXITSEQUENCE()
+Run Completed: 02/11 15:11:53:768 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/02 14:12:56:225 
+Run Completed: 04/02 14:13:21:045 
+Start execution of command sequence at 04/02 14:15:59:943 
+Run Completed: 04/02 14:16:32:263 
+Machine Initialized
+Start execution of command sequence at 04/02 14:19:17:439 
+Run Completed: 04/02 14:21:22:905 
+Start execution of command sequence at 04/02 14:21:31:075 
+Run Completed: 04/02 14:21:54:710 
+Machine Initialized
+Start execution of command sequence at 04/02 14:28:02:570 
+Run Completed: 04/02 14:28:15:970 
+Machine Initialized
+Start execution of command sequence at 04/03 11:13:57:856 
+EXITSEQUENCE()
+Run Completed: 04/03 11:17:05:947 
+Machine Initialized
+Start execution of command sequence at 04/03 11:47:32:878 
+EXITSEQUENCE()
+Run Completed: 04/03 11:48:20:656 
+Machine Initialized
+Start execution of command sequence at 04/03 11:52:54:085 
+Run Completed: 04/03 11:54:03:339 
+Start execution of command sequence at 04/03 11:54:14:630 
+Run Completed: 04/03 11:55:32:375 
+Start execution of command sequence at 04/03 11:55:43:789 
+Run Completed: 04/03 11:56:29:335 
+Machine Initialized
+Start execution of command sequence at 04/03 11:58:59:129 
+Run Completed: 04/03 11:59:24:723 
+Start execution of command sequence at 04/03 11:59:30:657 
+Run Completed: 04/03 12:00:16:273 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/03 12:09:22:130 
+Run Completed: 04/03 12:10:05:358 
+Start execution of command sequence at 04/03 12:11:09:705 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/03 12:18:39:050 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/03 12:24:03:535 
+Run Completed: 04/03 12:25:00:831 
+Machine Initialized
+Start execution of command sequence at 04/03 12:25:53:433 
+EXITSEQUENCE()
+Run Completed: 04/03 12:36:57:097 
+Machine Initialized
+Start execution of command sequence at 04/03 13:55:43:562 
+EXITSEQUENCE()
+Run Completed: 04/03 14:01:39:841 
+Machine Initialized
+Start execution of command sequence at 04/03 14:09:23:349 
+EXITSEQUENCE()
+Run Completed: 04/03 14:12:06:433 
+Machine Initialized
+Start execution of command sequence at 04/03 14:15:57:339 
+EXITSEQUENCE()
+Run Completed: 04/03 14:19:04:791 
+Start execution of command sequence at 04/03 14:19:57:530 
+EXITSEQUENCE()
+Run Completed: 04/03 14:20:26:913 
+Start execution of command sequence at 04/03 14:22:36:689 
+EXITSEQUENCE()
+Run Completed: 04/03 14:23:52:684 
+Start execution of command sequence at 04/03 14:28:55:167 
+EXITSEQUENCE()
+Run Completed: 04/03 14:29:43:908 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/03 14:36:16:520 
+EXITSEQUENCE()
+Run Completed: 04/03 14:36:54:628 
+Machine Initialized
+Start execution of command sequence at 04/03 14:39:11:493 
+Run Completed: 04/03 14:39:26:912 
+Machine Initialized
+Start execution of command sequence at 04/03 14:48:19:640 
+EXITSEQUENCE()
+Run Completed: 04/03 14:49:12:215 
+Machine Initialized
+Start execution of command sequence at 04/03 14:53:00:796 
+EXITSEQUENCE()
+Run Completed: 04/03 14:55:04:101 
+Machine Initialized
+Start execution of command sequence at 04/15 09:51:56:145 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/18 15:40:29:220 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/18 15:46:19:231 
+EXITSEQUENCE()
+Run Completed: 04/18 15:51:39:863 
+Machine Initialized
+Start execution of command sequence at 04/22 10:52:17:931 
+EXITSEQUENCE()
+Run Completed: 04/22 10:52:47:603 
+Machine Initialized
+Start execution of command sequence at 04/22 11:31:27:761 
+EXITSEQUENCE()
+Run Completed: 04/22 11:32:10:581 
+Start execution of command sequence at 04/22 11:32:55:581 
+EXITSEQUENCE()
+Run Completed: 04/22 11:35:49:771 
+Start execution of command sequence at 04/22 11:36:42:101 
+Run Completed: 04/22 11:38:17:262 ,  Run was aborted
+Start execution of command sequence at 04/22 11:39:10:722 
+EXITSEQUENCE()
+Run Completed: 04/22 11:40:32:092 
+Start execution of command sequence at 04/22 11:41:30:412 
+Run Completed: 04/22 11:41:44:652 ,  Run was aborted
+Start execution of command sequence at 04/22 11:43:12:082 
+EXITSEQUENCE()
+Run Completed: 04/22 11:45:21:082 
+Start execution of command sequence at 04/22 11:47:26:862 
+EXITSEQUENCE()
+Run Completed: 04/22 11:52:41:263 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/22 16:00:47:856 
+Run Completed: 04/22 16:01:01:116 
+Start execution of command sequence at 04/22 16:02:07:816 
+Run Completed: 04/22 16:02:20:526 
+Start execution of command sequence at 04/22 16:03:30:407 
+Run Completed: 04/22 16:03:37:357 
+Start execution of command sequence at 04/22 16:07:47:567 
+Run Completed: 04/22 16:22:41:958 
+Start execution of command sequence at 04/22 16:23:40:418 
+Run Completed: 04/22 16:23:50:028 
+Start execution of command sequence at 04/22 16:25:13:598 
+Run Completed: 04/22 16:25:34:238 
+Start execution of command sequence at 04/22 16:26:43:628 
+Run Completed: 04/22 16:26:47:588 
+Start execution of command sequence at 04/22 16:27:45:489 
+Run Completed: 04/22 16:27:51:159 
+Start execution of command sequence at 04/22 16:29:04:219 
+Run Completed: 04/22 16:29:10:759 
+Start execution of command sequence at 04/22 16:39:28:888 
+Run Completed: 04/22 16:39:42:498 
+Start execution of command sequence at 04/22 16:40:16:788 
+Run Completed: 04/22 16:44:25:700 
+Start execution of command sequence at 04/22 16:46:25:923 
+EXITSEQUENCE()
+Run Completed: 04/22 16:46:26:103 
+Machine Initialized
+Start execution of command sequence at 04/22 16:50:45:092 
+EXITSEQUENCE()
+Run Completed: 04/22 16:52:00:673 
+Start execution of command sequence at 04/22 16:53:42:063 
+Run Completed: 04/22 16:54:14:263 ,  Run was aborted
+Start execution of command sequence at 04/22 16:56:26:073 
+EXITSEQUENCE()
+Run Completed: 04/22 16:57:33:403 
+Start execution of command sequence at 04/22 17:00:13:653 
+Run Completed: 04/22 17:03:16:263 ,  Run was aborted
+Start execution of command sequence at 04/22 17:07:49:674 
+Run Completed: 04/22 17:11:53:044 ,  Run was aborted
+Start execution of command sequence at 04/22 17:12:14:154 
+Run Completed: 04/22 17:13:04:474 ,  Run was aborted
+Start execution of command sequence at 04/22 17:14:24:874 
+EXITSEQUENCE()
+Run Completed: 04/22 17:16:15:785 
+Machine Initialized
+Start execution of command sequence at 04/25 11:45:19:790 
+EXITSEQUENCE()
+Run Completed: 04/25 11:47:12:840 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/25 13:19:40:942 
+EXITSEQUENCE()
+Run Completed: 04/25 15:33:02:393 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/30 14:33:17:865 
+EXITSEQUENCE()
+Run Completed: 05/30 14:34:24:415 
+Start execution of command sequence at 05/30 15:26:08:493 
+Run Completed: 05/30 15:28:19:123 
+Machine Initialized
+Start execution of command sequence at 05/30 16:09:47:039 
+EXITSEQUENCE()
+Run Completed: 05/30 16:11:25:010 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 06/02 11:25:42:408 
+EXITSEQUENCE()
+Run Completed: 06/02 11:26:34:742 
+Start execution of command sequence at 06/02 11:27:07:980 
+EXITSEQUENCE()
+Run Completed: 06/02 11:28:08:065 
+Start execution of command sequence at 06/02 11:35:02:246 
+Run Completed: 06/02 11:36:29:766 
+Start execution of command sequence at 06/02 11:42:19:579 
+Run Completed: 06/02 11:53:07:639 ,  Run was aborted
+Start execution of command sequence at 06/02 11:59:44:660 
+EXITSEQUENCE()
+Run Completed: 06/02 12:01:36:790 
+Start execution of command sequence at 06/02 12:05:01:740 
+EXITSEQUENCE()
+Run Completed: 06/02 12:05:43:460 
+Start execution of command sequence at 06/02 13:13:43:976 
+EXITSEQUENCE()
+Run Completed: 06/02 13:14:09:376 
+Machine Initialized
+Start execution of command sequence at 06/02 13:29:14:023 
+EXITSEQUENCE()
+Run Completed: 06/02 13:35:09:794 
+Start execution of command sequence at 06/02 13:57:07:488 
+Run Completed: 06/02 14:28:30:176 
+Machine Initialized
+Start execution of command sequence at 06/02 14:34:12:568 
+EXITSEQUENCE()
+Run Completed: 06/02 14:42:46:619 
+Start execution of command sequence at 06/02 14:55:31:400 
+EXITSEQUENCE()
+Run Completed: 06/02 14:57:24:990 
+Start execution of command sequence at 06/02 15:23:08:053 
+EXITSEQUENCE()
+Run Completed: 06/02 15:35:07:134 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 06/03 14:01:28:897 
+EXITSEQUENCE()
+Run Completed: 06/03 14:04:38:970 
+Start execution of command sequence at 06/03 14:17:56:048 
+EXITSEQUENCE()
+Run Completed: 06/03 14:18:37:516 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 06/03 17:54:07:529 
+EXITSEQUENCE()
+Run Completed: 06/03 17:55:56:898 
+Machine Initialized
+Start execution of command sequence at 06/04 11:05:08:278 
+EXITSEQUENCE()
+Run Completed: 06/04 11:06:03:367 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 06/04 12:26:18:415 
+EXITSEQUENCE()
+Run Completed: 06/04 12:27:12:128 
+Machine Initialized
+Start execution of command sequence at 06/06 12:10:30:627 
+EXITSEQUENCE()
+Run Completed: 06/06 12:11:01:707 
+Start execution of command sequence at 06/06 12:11:05:667 
+EXITSEQUENCE()
+Run Completed: 06/06 12:11:50:427 
+Start execution of command sequence at 06/06 14:09:26:343 
+Run Completed: 06/06 14:09:47:573 
+Machine Initialized
+Start execution of command sequence at 06/06 14:11:39:685 
+EXITSEQUENCE()
+Run Completed: 06/06 14:12:17:935 
+Start execution of command sequence at 06/06 14:14:01:725 
+EXITSEQUENCE()
+Run Completed: 06/06 14:14:46:496 
+Start execution of command sequence at 06/06 14:18:22:396 
+EXITSEQUENCE()
+Run Completed: 06/06 14:19:49:356 
+Machine Initialized
+Start execution of command sequence at 06/06 15:08:28:238 
+Run Completed: 06/06 15:08:35:968 
+Start execution of command sequence at 06/06 15:10:29:959 
+EXITSEQUENCE()
+Run Completed: 06/06 15:11:59:199 
+Start execution of command sequence at 06/06 15:16:25:799 
+EXITSEQUENCE()
+Run Completed: 06/06 15:16:32:439 
+Start execution of command sequence at 06/06 15:16:37:929 
+Machine Initialized
+Start execution of command sequence at 06/09 08:39:52:666 
+EXITSEQUENCE()
+Run Completed: 06/09 08:42:05:505 
+Start execution of command sequence at 06/09 08:45:20:075 
+EXITSEQUENCE()
+Run Completed: 06/09 08:46:22:470 
+Start execution of command sequence at 06/09 08:46:35:944 
+EXITSEQUENCE()
+Run Completed: 06/09 08:49:12:236 
+Start execution of command sequence at 06/09 08:56:11:188 
+EXITSEQUENCE()
+Run Completed: 06/09 09:00:01:773 
+Start execution of command sequence at 06/09 09:00:13:323 
+EXITSEQUENCE()
+Run Completed: 06/09 09:07:28:003 
+Machine Initialized
+Start execution of command sequence at 06/09 09:35:55:426 
+Run Completed: 06/09 09:35:58:336 
+Start execution of command sequence at 06/09 09:36:41:556 
+EXITSEQUENCE()
+Run Completed: 06/09 09:37:54:356 
+Start execution of command sequence at 06/09 10:17:26:099 
+EXITSEQUENCE()
+Run Completed: 06/09 10:20:24:769 
+Start execution of command sequence at 06/09 10:22:18:350 
+EXITSEQUENCE()
+Run Completed: 06/09 10:28:08:950 
+Start execution of command sequence at 06/09 10:31:07:400 
+EXITSEQUENCE()
+Run Completed: 06/09 10:31:49:420 
+Start execution of command sequence at 06/09 10:32:05:430 
+EXITSEQUENCE()
+Run Completed: 06/09 10:32:50:790 
+Start execution of command sequence at 06/09 10:37:34:341 
+EXITSEQUENCE()
+Run Completed: 06/09 10:38:18:791 
+Start execution of command sequence at 06/09 10:44:57:321 
+Run Completed: 06/09 10:45:07:251 
+Start execution of command sequence at 06/09 10:45:38:542 
+EXITSEQUENCE()
+Run Completed: 06/09 10:48:22:362 
+Start execution of command sequence at 06/09 10:50:55:582 
+EXITSEQUENCE()
+Run Completed: 06/09 10:52:57:132 
+Start execution of command sequence at 06/09 12:28:58:770 
+Run Completed: 06/09 12:29:05:530 
+Start execution of command sequence at 06/09 12:29:43:600 
+EXITSEQUENCE()
+Run Completed: 06/09 12:30:34:242 
+Start execution of command sequence at 06/09 12:30:42:872 
+EXITSEQUENCE()
+Run Completed: 06/09 12:35:41:451 
+Start execution of command sequence at 06/09 12:39:37:841 
+EXITSEQUENCE()
+Run Completed: 06/09 12:59:02:519 
+Start execution of command sequence at 06/09 13:02:10:299 
+EXITSEQUENCE()
+Run Completed: 06/09 13:07:37:517 
+Start execution of command sequence at 06/09 13:08:17:478 
+EXITSEQUENCE()
+Run Completed: 06/09 13:15:35:172 
+Start execution of command sequence at 06/09 13:16:48:422 
+EXITSEQUENCE()
+Run Completed: 06/09 13:34:58:552 
+Start execution of command sequence at 06/09 13:51:07:825 
+EXITSEQUENCE()
+Run Completed: 06/09 13:51:46:995 
+Start execution of command sequence at 06/09 13:53:35:156 
+EXITSEQUENCE()
+Run Completed: 06/09 13:56:43:206 
+Start execution of command sequence at 06/09 14:09:16:327 
+EXITSEQUENCE()
+Run Completed: 06/09 14:09:49:837 
+Start execution of command sequence at 06/09 14:11:30:067 
+EXITSEQUENCE()
+Run Completed: 06/09 14:12:24:509 
+Start execution of command sequence at 06/09 14:14:23:699 
+EXITSEQUENCE()
+Run Completed: 06/09 14:17:13:486 
+Start execution of command sequence at 06/09 14:17:39:236 
+EXITSEQUENCE()
+Run Completed: 06/09 14:18:01:648 
+Start execution of command sequence at 06/09 14:18:50:412 
+EXITSEQUENCE()
+Run Completed: 06/09 14:24:16:072 
+Start execution of command sequence at 06/09 14:36:15:033 
+EXITSEQUENCE()
+Run Completed: 06/09 14:36:26:825 
+Start execution of command sequence at 06/09 14:36:48:545 
+EXITSEQUENCE()
+Run Completed: 06/09 14:44:13:066 
+Machine Initialized
+Start execution of command sequence at 06/09 16:23:35:164 
+EXITSEQUENCE()
+Run Completed: 06/09 16:24:34:334 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 07/10 11:07:02:976 
+EXITSEQUENCE()
+Run Completed: 07/10 11:10:43:446 
+Start execution of command sequence at 07/10 11:12:59:859 
+EXITSEQUENCE()
+Run Completed: 07/10 11:14:04:710 
+Start execution of command sequence at 07/10 11:16:30:367 
+EXITSEQUENCE()
+Run Completed: 07/10 11:19:34:403 
+Start execution of command sequence at 07/10 11:20:32:694 
+EXITSEQUENCE()
+Run Completed: 07/10 11:20:44:251 
+Start execution of command sequence at 07/10 11:21:03:757 
+EXITSEQUENCE()
+Run Completed: 07/10 11:21:43:115 
+Start execution of command sequence at 07/10 11:34:20:566 
+EXITSEQUENCE()
+Run Completed: 07/10 11:40:52:287 
+Start execution of command sequence at 07/10 11:43:32:647 
+EXITSEQUENCE()
+Run Completed: 07/10 11:44:50:697 
+Start execution of command sequence at 07/10 11:59:20:818 
+EXITSEQUENCE()
+Run Completed: 07/10 12:03:02:158 
+Start execution of command sequence at 07/10 12:03:14:798 
+EXITSEQUENCE()
+Run Completed: 07/10 12:04:32:369 
+Start execution of command sequence at 07/10 12:09:47:129 
+EXITSEQUENCE()
+Run Completed: 07/10 12:13:29:359 
+Start execution of command sequence at 07/10 12:20:37:440 
+EXITSEQUENCE()
+Run Completed: 07/10 12:24:20:940 
+Start execution of command sequence at 07/10 12:28:10:941 
+EXITSEQUENCE()
+Run Completed: 07/10 12:30:21:411 
+Machine Initialized
+Start execution of command sequence at 07/10 13:43:18:041 
+EXITSEQUENCE()
+Run Completed: 07/10 13:58:29:024 
+Start execution of command sequence at 07/10 14:02:06:694 
+EXITSEQUENCE()
+Run Completed: 07/10 14:04:16:355 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 07/17 14:11:31:306 
+EXITSEQUENCE()
+Run Completed: 07/17 14:40:49:546 
+Start execution of command sequence at 07/17 14:41:21:156 
+EXITSEQUENCE()
+Run Completed: 07/17 14:43:12:887 
+Start execution of command sequence at 07/17 14:43:42:217 
+EXITSEQUENCE()
+Run Completed: 07/17 14:44:29:627 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 07/23 14:25:26:887 
+EXITSEQUENCE()
+Run Completed: 07/23 14:25:54:745 
+Start execution of command sequence at 07/23 14:30:06:486 
+EXITSEQUENCE()
+Run Completed: 07/23 14:30:18:328 
+Start execution of command sequence at 07/23 14:32:10:140 
+EXITSEQUENCE()
+Run Completed: 07/23 14:32:30:044 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 07/23 16:30:02:837 
+EXITSEQUENCE()
+Run Completed: 07/23 16:52:58:173 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 08/08 10:54:49:478 
+EXITSEQUENCE()
+Run Completed: 08/08 10:57:45:078 
+Start execution of command sequence at 08/08 11:06:34:722 
+EXITSEQUENCE()
+Run Completed: 08/08 11:10:33:624 
+Start execution of command sequence at 08/08 11:10:48:840 
+EXITSEQUENCE()
+Run Completed: 08/08 11:11:33:405 
+Start execution of command sequence at 08/08 11:12:51:723 
+EXITSEQUENCE()
+Run Completed: 08/08 11:12:54:357 
+Start execution of command sequence at 08/08 11:15:10:511 
+EXITSEQUENCE()
+Run Completed: 08/08 11:22:39:304 
+Machine Initialized
+Start execution of command sequence at 08/08 11:52:45:101 
+EXITSEQUENCE()
+Run Completed: 08/08 11:58:04:486 
+Start execution of command sequence at 08/08 11:58:08:060 
+EXITSEQUENCE()
+Run Completed: 08/08 12:15:32:146 
+Machine Initialized
+Start execution of command sequence at 08/12 11:15:13:401 
+EXITSEQUENCE()
+Run Completed: 08/12 11:22:49:751 
+Start execution of command sequence at 08/12 11:25:23:714 
+EXITSEQUENCE()
+Run Completed: 08/12 11:29:48:234 
+Start execution of command sequence at 08/12 11:32:20:364 
+EXITSEQUENCE()
+Run Completed: 08/12 11:38:57:205 
+Start execution of command sequence at 08/12 11:40:14:375 
+EXITSEQUENCE()
+Run Completed: 08/12 11:43:10:505 
+Start execution of command sequence at 08/12 11:45:12:125 
+EXITSEQUENCE()
+Run Completed: 08/12 11:48:27:476 
+Start execution of command sequence at 08/12 11:48:57:516 
+EXITSEQUENCE()
+Run Completed: 08/12 11:56:35:286 
+Start execution of command sequence at 08/12 12:09:41:687 
+EXITSEQUENCE()
+Run Completed: 08/12 12:11:32:917 
+Start execution of command sequence at 08/12 12:13:57:178 
+EXITSEQUENCE()
+Run Completed: 08/12 12:14:43:188 
+Start execution of command sequence at 08/12 12:25:41:023 
+EXITSEQUENCE()
+Run Completed: 08/12 12:26:28:193 
+Start execution of command sequence at 08/12 12:27:31:023 
+EXITSEQUENCE()
+Run Completed: 08/12 12:32:07:783 
+Start execution of command sequence at 08/12 12:36:19:844 
+EXITSEQUENCE()
+Run Completed: 08/12 12:37:15:604 
+Start execution of command sequence at 08/12 12:40:02:094 
+EXITSEQUENCE()
+Run Completed: 08/12 12:41:05:734 
+Start execution of command sequence at 08/12 12:54:46:625 
+EXITSEQUENCE()
+Run Completed: 08/12 12:56:30:105 
+Machine Initialized
+Start execution of command sequence at 08/15 13:18:17:550 
+EXITSEQUENCE()
+Run Completed: 08/15 13:21:17:044 
+Start execution of command sequence at 08/15 14:11:58:738 
+Run Completed: 08/15 14:11:59:959 
+Start execution of command sequence at 08/15 14:12:02:079 
+Run Completed: 08/15 14:12:03:587 
+Start execution of command sequence at 08/15 14:12:09:229 
+EXITSEQUENCE()
+Run Completed: 08/15 14:12:20:724 
+Start execution of command sequence at 08/15 14:25:12:862 
+EXITSEQUENCE()
+Run Completed: 08/15 14:25:56:360 
+Start execution of command sequence at 08/15 14:28:38:303 
+EXITSEQUENCE()
+Run Completed: 08/15 14:29:08:305 
+Start execution of command sequence at 08/15 14:29:10:632 
+EXITSEQUENCE()
+Run Completed: 08/15 14:30:22:302 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 11/10 11:12:37:405 
+EXITSEQUENCE()
+Run Completed: 11/10 11:15:04:715 
+Start execution of command sequence at 11/10 11:24:32:886 
+EXITSEQUENCE()
+Run Completed: 11/10 12:12:17:670 
+Start execution of command sequence at 11/10 12:21:31:410 
+EXITSEQUENCE()
+Run Completed: 11/10 12:24:58:771 
+Machine Initialized
+Start execution of command sequence at 11/11 10:29:40:133 
+EXITSEQUENCE()
+Run Completed: 11/11 10:31:49:313 
+Start execution of command sequence at 11/11 10:50:05:475 
+EXITSEQUENCE()
+Run Completed: 11/11 10:51:16:445 
+Start execution of command sequence at 11/11 11:14:16:401 
+EXITSEQUENCE()
+Run Completed: 11/11 11:15:15:341 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 12/16 15:05:29:948 
+Run Completed: 12/16 15:05:38:387 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 12/22 13:55:01:595 
+EXITSEQUENCE()
+Run Completed: 12/22 13:56:28:945 
+Machine Initialized
+Start execution of command sequence at 01/05 12:36:48:331 
+EXITSEQUENCE()
+Run Completed: 01/05 12:39:28:481 
+Start execution of command sequence at 01/05 12:44:17:951 
+EXITSEQUENCE()
+Run Completed: 01/05 12:45:17:811 
+Start execution of command sequence at 01/05 12:56:34:072 
+EXITSEQUENCE()
+Run Completed: 01/05 12:57:25:422 
+Start execution of command sequence at 01/05 13:03:30:703 
+EXITSEQUENCE()
+Run Completed: 01/05 13:04:20:723 
+Start execution of command sequence at 01/05 13:28:12:191 
+EXITSEQUENCE()
+Run Completed: 01/05 13:29:33:101 
+Start execution of command sequence at 01/05 13:56:38:865 
+EXITSEQUENCE()
+Run Completed: 01/05 13:58:58:305 
+Start execution of command sequence at 01/05 14:23:17:359 
+EXITSEQUENCE()
+Run Completed: 01/05 14:25:40:060 
+Machine Initialized
+Start execution of command sequence at 01/28 10:30:48:002 
+EXITSEQUENCE()
+Run Completed: 01/28 10:36:08:386 
+Start execution of command sequence at 01/28 10:43:52:223 
+EXITSEQUENCE()
+Run Completed: 01/28 10:44:44:073 
+Start execution of command sequence at 01/28 11:07:16:805 
+EXITSEQUENCE()
+Run Completed: 01/28 11:08:15:905 
+Start execution of command sequence at 01/28 11:19:12:146 
+EXITSEQUENCE()
+Run Completed: 01/28 11:20:09:896 
+Start execution of command sequence at 01/28 11:53:08:669 
+EXITSEQUENCE()
+Run Completed: 01/28 11:54:19:319 
+Start execution of command sequence at 01/28 12:08:01:310 
+EXITSEQUENCE()
+Run Completed: 01/28 12:09:04:391 
+Start execution of command sequence at 01/28 12:25:29:082 
+EXITSEQUENCE()
+Run Completed: 01/28 12:27:57:732 
+Machine Initialized
+Start execution of command sequence at 01/28 13:59:38:222 
+Run Completed: 01/28 13:59:43:192 
+Start execution of command sequence at 01/28 14:00:45:192 
+EXITSEQUENCE()
+Run Completed: 01/28 14:02:28:022 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 02/27 13:32:25:978 
+Run Completed: 02/27 13:34:26:367 ,  Run was aborted
+Machine Initialized
+Start execution of command sequence at 02/27 13:40:39:880 
+Run Completed: 02/27 13:41:39:831 ,  Run was aborted
+Start execution of command sequence at 02/27 13:43:42:114 
+Run Completed: 02/27 13:46:17:817 ,  Run was aborted
+Start execution of command sequence at 02/27 13:46:41:457 
+EXITSEQUENCE()
+Run Completed: 02/27 13:47:07:626 
+Start execution of command sequence at 02/27 13:48:03:384 
+EXITSEQUENCE()
+Run Completed: 02/27 13:49:12:196 
+Start execution of command sequence at 02/27 13:50:23:703 
+EXITSEQUENCE()
+Run Completed: 02/27 13:54:20:641 
+Start execution of command sequence at 02/27 13:54:25:918 
+EXITSEQUENCE()
+Run Completed: 02/27 14:07:30:942 
+Start execution of command sequence at 02/27 14:08:46:823 
+EXITSEQUENCE()
+Run Completed: 02/27 14:13:27:549 
+Start execution of command sequence at 02/27 14:15:33:116 
+EXITSEQUENCE()
+Run Completed: 02/27 14:16:06:566 
+Start execution of command sequence at 02/27 14:16:32:995 
+EXITSEQUENCE()
+Run Completed: 02/27 14:16:57:422 
+Start execution of command sequence at 02/27 14:17:01:548 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 03/05 16:41:10:309 
+Run Completed: 03/05 16:41:17:036 
+Start execution of command sequence at 03/05 16:41:57:638 
+EXITSEQUENCE()
+Run Completed: 03/05 16:43:01:113 
+Start execution of command sequence at 03/05 16:43:13:717 
+EXITSEQUENCE()
+Run Completed: 03/05 16:43:20:584 
+Start execution of command sequence at 03/05 16:44:37:254 
+EXITSEQUENCE()
+Run Completed: 03/05 16:44:42:030 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/07 18:54:26:493 
+EXITSEQUENCE()
+Run Completed: 04/07 18:55:55:169 
+Start execution of command sequence at 04/07 18:56:53:218 
+EXITSEQUENCE()
+Run Completed: 04/07 18:57:26:346 
+Start execution of command sequence at 04/07 18:58:04:809 
+EXITSEQUENCE()
+Run Completed: 04/07 18:58:44:799 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/13 17:20:14:118 
+EXITSEQUENCE()
+Run Completed: 04/13 17:24:02:788 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/13 18:07:28:955 
+EXITSEQUENCE()
+Run Completed: 04/13 18:08:34:635 
+Machine Initialized
+Start execution of command sequence at 04/15 10:49:51:977 
+EXITSEQUENCE()
+Run Completed: 04/15 10:52:13:039 
+Machine Initialized
+Start execution of command sequence at 04/15 11:09:09:204 
+EXITSEQUENCE()
+Run Completed: 04/15 11:12:20:568 
+Start execution of command sequence at 04/15 11:18:44:358 
+EXITSEQUENCE()
+Run Completed: 04/15 11:21:52:629 
+Machine Initialized
+Start execution of command sequence at 04/15 11:47:16:911 
+EXITSEQUENCE()
+Run Completed: 04/15 11:50:36:974 
+Machine Initialized
+Start execution of command sequence at 04/15 12:01:25:963 
+Run Completed: 04/15 12:17:39:474 
+Machine Initialized
+Start execution of command sequence at 04/15 12:19:19:490 
+EXITSEQUENCE()
+Run Completed: 04/15 12:21:14:485 
+Machine Initialized
+Start execution of command sequence at 04/15 12:28:10:592 
+EXITSEQUENCE()
+Run Completed: 04/15 12:29:46:386 
+Machine Initialized
+Start execution of command sequence at 04/15 12:31:56:426 
+Execution aborted at 4/15/2015 12:35:24 PM
+Run Completed: 04/15 12:35:24:650 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/15 12:38:30:850 
+Execution aborted at 4/15/2015 1:12:22 PM
+Run Completed: 04/15 13:12:22:940 
+Start execution of command sequence at 04/15 13:12:53:398 
+Run Completed: 04/15 13:40:39:812 
+Start execution of command sequence at 04/15 13:43:02:066 
+EXITSEQUENCE()
+Run Completed: 04/15 13:43:08:752 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/15 15:41:52:213 
+Execution aborted at 4/15/2015 4:13:43 PM
+Run Completed: 04/15 16:13:43:436 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/15 18:05:43:471 
+Run Completed: 04/15 18:07:04:225 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/20 10:40:56:534 
+EXITSEQUENCE()
+Run Completed: 04/20 10:45:52:110 
+Machine Initialized
+Start execution of command sequence at 04/20 10:50:02:856 
+EXITSEQUENCE()
+Run Completed: 04/20 10:51:46:406 
+Machine Initialized
+Start execution of command sequence at 04/20 10:53:41:561 
+EXITSEQUENCE()
+Run Completed: 04/20 10:57:07:539 
+Machine Initialized
+Start execution of command sequence at 04/20 11:31:48:480 
+Run Completed: 04/20 11:34:29:488 ,  Run was aborted
+Start execution of command sequence at 04/20 11:34:53:888 
+Run Completed: 04/20 11:35:15:168 ,  Run was aborted
+Start execution of command sequence at 04/20 11:39:42:135 
+Run Completed: 04/20 11:40:13:300 ,  Run was aborted
+Start execution of command sequence at 04/20 11:40:44:566 
+Run Completed: 04/20 11:42:17:912 ,  Run was aborted
+Start execution of command sequence at 04/20 11:42:37:870 
+Run Completed: 04/20 11:43:02:242 ,  Run was aborted
+Start execution of command sequence at 04/20 11:44:46:413 
+Run Completed: 04/20 11:45:06:545 ,  Run was aborted
+Start execution of command sequence at 04/20 11:45:36:196 
+EXITSEQUENCE()
+Run Completed: 04/20 11:45:39:870 
+Start execution of command sequence at 04/20 11:48:04:683 
+Run Completed: 04/20 11:49:10:108 ,  Run was aborted
+Start execution of command sequence at 04/20 11:49:34:163 
+Run Completed: 04/20 11:51:02:223 
+Start execution of command sequence at 04/20 11:51:19:066 
+Run Completed: 04/20 11:51:30:765 ,  Run was aborted
+Start execution of command sequence at 04/20 11:51:38:906 
+EXITSEQUENCE()
+Run Completed: 04/20 11:56:45:413 
+Start execution of command sequence at 04/20 11:56:48:648 
+EXITSEQUENCE()
+Run Completed: 04/20 11:57:03:056 
+Start execution of command sequence at 04/20 11:57:22:088 
+EXITSEQUENCE()
+Run Completed: 04/20 12:59:09:902 
+Machine Initialized
+Start execution of command sequence at 04/20 13:55:42:405 
+EXITSEQUENCE()
+Run Completed: 04/20 14:22:27:586 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/20 15:41:48:353 
+EXITSEQUENCE()
+Run Completed: 04/20 15:42:13:474 
+Start execution of command sequence at 04/20 15:43:40:680 
+EXITSEQUENCE()
+Run Completed: 04/20 15:43:45:013 
+Start execution of command sequence at 04/20 15:43:52:903 
+EXITSEQUENCE()
+Run Completed: 04/20 15:43:55:388 
+Start execution of command sequence at 04/20 15:46:03:526 
+EXITSEQUENCE()
+Run Completed: 04/20 15:46:33:984 
+Start execution of command sequence at 04/20 15:47:01:173 
+EXITSEQUENCE()
+Run Completed: 04/20 15:47:04:815 
+Start execution of command sequence at 04/20 15:47:41:781 
+EXITSEQUENCE()
+Run Completed: 04/20 15:47:45:649 
+Start execution of command sequence at 04/20 15:48:38:442 
+EXITSEQUENCE()
+Run Completed: 04/20 15:48:43:125 
+Machine Initialized
+Start execution of command sequence at 04/20 16:05:52:587 
+Run Completed: 04/20 16:06:02:888 
+Start execution of command sequence at 04/20 16:08:41:104 
+Run Completed: 04/20 16:10:07:033 ,  Run was aborted
+Start execution of command sequence at 04/20 16:11:28:844 
+EXITSEQUENCE()
+Run Completed: 04/20 16:11:38:157 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/21 18:31:37:554 
+EXITSEQUENCE()
+Run Completed: 04/21 18:32:09:475 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/28 11:26:40:114 
+Run Completed: 04/28 11:26:43:384 
+Start execution of command sequence at 04/28 11:28:22:114 
+EXITSEQUENCE()
+Run Completed: 04/28 11:28:44:124 
+Start execution of command sequence at 04/28 11:29:39:334 
+EXITSEQUENCE()
+Run Completed: 04/28 11:30:11:894 
+Start execution of command sequence at 04/28 11:30:16:514 
+EXITSEQUENCE()
+Run Completed: 04/28 11:32:06:084 
+Start execution of command sequence at 04/28 11:34:50:515 
+EXITSEQUENCE()
+Run Completed: 04/28 11:35:25:195 
+Start execution of command sequence at 04/28 11:35:29:185 
+EXITSEQUENCE()
+Run Completed: 04/28 11:36:00:915 
+Start execution of command sequence at 04/28 11:37:07:295 
+EXITSEQUENCE()
+Run Completed: 04/28 11:37:46:795 
+Start execution of command sequence at 04/28 11:37:53:345 
+EXITSEQUENCE()
+Run Completed: 04/28 11:38:52:535 
+Start execution of command sequence at 04/28 11:38:58:725 
+EXITSEQUENCE()
+Run Completed: 04/28 11:39:23:485 
+Start execution of command sequence at 04/28 11:40:01:685 
+EXITSEQUENCE()
+Run Completed: 04/28 11:40:36:615 
+Start execution of command sequence at 04/28 11:42:20:475 
+EXITSEQUENCE()
+Run Completed: 04/28 11:45:33:155 
+Start execution of command sequence at 04/28 11:45:41:115 
+EXITSEQUENCE()
+Run Completed: 04/28 11:46:19:226 
+Start execution of command sequence at 04/28 11:46:34:676 
+EXITSEQUENCE()
+Run Completed: 04/28 11:47:12:578 
+Machine Initialized
+Start execution of command sequence at 04/28 11:52:20:384 
+EXITSEQUENCE()
+Run Completed: 04/28 11:52:54:974 
+Start execution of command sequence at 04/28 11:53:40:084 
+EXITSEQUENCE()
+Run Completed: 04/28 11:54:11:124 
+Start execution of command sequence at 04/28 11:54:26:554 
+EXITSEQUENCE()
+Run Completed: 04/28 11:55:13:994 
+Start execution of command sequence at 04/28 11:55:44:944 
+EXITSEQUENCE()
+Run Completed: 04/28 11:56:19:664 
+Start execution of command sequence at 04/28 11:56:58:104 
+EXITSEQUENCE()
+Run Completed: 04/28 11:57:25:014 
+Start execution of command sequence at 04/28 12:01:40:064 
+EXITSEQUENCE()
+Run Completed: 04/28 12:02:17:725 
+Start execution of command sequence at 04/28 12:03:46:655 
+EXITSEQUENCE()
+Run Completed: 04/28 12:04:08:905 
+Start execution of command sequence at 04/28 12:04:56:685 
+EXITSEQUENCE()
+Run Completed: 04/28 12:05:22:645 
+Start execution of command sequence at 04/28 12:05:40:565 
+EXITSEQUENCE()
+Run Completed: 04/28 12:06:02:125 
+Start execution of command sequence at 04/28 12:15:55:046 
+EXITSEQUENCE()
+Run Completed: 04/28 12:16:28:276 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/28 15:11:02:569 
+EXITSEQUENCE()
+Run Completed: 04/28 15:12:07:189 
+Start execution of command sequence at 04/28 15:12:57:279 
+EXITSEQUENCE()
+Run Completed: 04/28 15:17:46:675 
+Machine Initialized
+Start execution of command sequence at 04/28 15:22:14:701 
+EXITSEQUENCE()
+Run Completed: 04/28 15:24:53:141 
+Start execution of command sequence at 04/28 15:24:57:921 
+EXITSEQUENCE()
+Run Completed: 04/28 15:26:21:891 
+Start execution of command sequence at 04/28 15:27:33:631 
+EXITSEQUENCE()
+Run Completed: 04/28 15:28:53:391 
+Start execution of command sequence at 04/28 15:31:50:502 
+EXITSEQUENCE()
+Run Completed: 04/28 15:32:41:422 
+Start execution of command sequence at 04/28 15:36:13:372 
+EXITSEQUENCE()
+Run Completed: 04/28 15:36:48:122 
+Start execution of command sequence at 04/28 15:36:53:532 
+EXITSEQUENCE()
+Run Completed: 04/28 15:37:01:122 
+Start execution of command sequence at 04/28 15:37:08:882 
+EXITSEQUENCE()
+Run Completed: 04/28 15:38:21:682 
+Start execution of command sequence at 04/28 15:40:25:322 
+EXITSEQUENCE()
+Run Completed: 04/28 15:41:02:223 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/28 16:36:39:258 
+EXITSEQUENCE()
+Run Completed: 04/28 16:37:35:958 
+Machine Initialized
+Start execution of command sequence at 04/28 16:41:24:828 
+Run Completed: 04/28 16:41:39:758 
+Start execution of command sequence at 04/28 16:42:32:598 
+EXITSEQUENCE()
+Run Completed: 04/28 16:43:39:148 
+Machine Initialized
+Start execution of command sequence at 04/28 16:47:29:693 
+EXITSEQUENCE()
+Run Completed: 04/28 16:48:31:413 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/29 16:13:18:660 
+EXITSEQUENCE()
+Run Completed: 04/29 16:17:16:791 
+Machine Initialized
+Start execution of command sequence at 04/29 16:28:09:312 
+EXITSEQUENCE()
+Run Completed: 04/29 16:30:42:292 
+Machine Initialized
+Start execution of command sequence at 04/29 16:33:59:476 
+EXITSEQUENCE()
+Run Completed: 04/29 16:35:10:386 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 04/30 16:07:50:481 
+Run Completed: 04/30 16:07:59:471 
+Start execution of command sequence at 04/30 16:09:13:471 
+Run Completed: 04/30 16:09:32:141 
+Start execution of command sequence at 04/30 16:12:17:871 
+Run Completed: 04/30 16:12:36:191 
+Start execution of command sequence at 04/30 16:15:27:161 
+EXITSEQUENCE()
+Run Completed: 04/30 16:16:58:761 
+Start execution of command sequence at 04/30 16:18:44:056 
+EXITSEQUENCE()
+Run Completed: 04/30 16:24:34:136 
+Start execution of command sequence at 04/30 16:24:41:856 
+Run Completed: 04/30 16:25:30:126 
+Start execution of command sequence at 04/30 16:25:36:576 
+EXITSEQUENCE()
+Run Completed: 04/30 16:26:06:316 
+Machine Initialized
+Start execution of command sequence at 04/30 16:28:05:256 
+Run Completed: 04/30 16:28:08:096 
+Start execution of command sequence at 04/30 16:28:52:146 
+EXITSEQUENCE()
+Run Completed: 04/30 16:30:05:437 
+Start execution of command sequence at 04/30 17:07:42:318 
+Run Completed: 04/30 17:08:57:278 
+Start execution of command sequence at 04/30 17:09:08:608 
+EXITSEQUENCE()
+Run Completed: 04/30 17:10:02:888 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/01 16:03:55:933 
+EXITSEQUENCE()
+Run Completed: 05/01 16:06:54:764 
+Start execution of command sequence at 05/01 16:22:40:905 
+EXITSEQUENCE()
+Run Completed: 05/01 16:25:16:375 
+Start execution of command sequence at 05/01 16:36:02:743 
+EXITSEQUENCE()
+Run Completed: 05/01 16:38:03:543 
+Machine Initialized
+Start execution of command sequence at 05/01 16:46:08:714 
+EXITSEQUENCE()
+Run Completed: 05/01 16:50:35:894 
+Start execution of command sequence at 05/01 17:37:24:988 
+EXITSEQUENCE()
+Run Completed: 05/01 17:37:46:048 
+Start execution of command sequence at 05/01 17:37:52:778 
+Run Completed: 05/01 17:38:04:408 
+Start execution of command sequence at 05/01 17:40:22:868 
+Machine Initialized
+Start execution of command sequence at 05/01 17:46:53:269 
+EXITSEQUENCE()
+Run Completed: 05/01 17:48:47:899 
+Start execution of command sequence at 05/01 17:49:35:089 
+EXITSEQUENCE()
+Run Completed: 05/01 17:52:44:270 
+Start execution of command sequence at 05/01 17:53:03:870 
+EXITSEQUENCE()
+Run Completed: 05/01 17:55:08:240 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/05 14:07:55:433 
+Run Completed: 05/05 14:08:01:563 
+Start execution of command sequence at 05/05 14:10:46:500 
+Machine Initialized
+Start execution of command sequence at 05/05 14:23:34:931 
+EXITSEQUENCE()
+Run Completed: 05/05 14:25:01:021 
+Start execution of command sequence at 05/05 14:25:39:961 
+EXITSEQUENCE()
+Run Completed: 05/05 14:30:14:561 
+Start execution of command sequence at 05/05 14:37:15:682 
+EXITSEQUENCE()
+Run Completed: 05/05 14:52:36:253 
+Start execution of command sequence at 05/05 14:58:41:316 
+EXITSEQUENCE()
+Run Completed: 05/05 15:06:19:536 
+Start execution of command sequence at 05/05 15:07:49:157 
+EXITSEQUENCE()
+Run Completed: 05/05 15:08:55:197 
+Start execution of command sequence at 05/05 15:08:59:677 
+EXITSEQUENCE()
+Run Completed: 05/05 15:15:02:577 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/06 11:26:15:149 
+EXITSEQUENCE()
+Run Completed: 05/06 11:36:54:090 
+Start execution of command sequence at 05/06 11:40:14:351 
+EXITSEQUENCE()
+Run Completed: 05/06 12:13:01:527 
+Start execution of command sequence at 05/06 14:25:58:000 
+EXITSEQUENCE()
+Run Completed: 05/06 14:38:32:066 
+Machine Initialized
+Start execution of command sequence at 05/06 18:36:52:159 
+EXITSEQUENCE()
+Run Completed: 05/06 18:39:00:682 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/08 08:30:57:236 
+Run Completed: 05/08 08:30:59:778 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 05/08 11:06:40:059 
+EXITSEQUENCE()
+Run Completed: 05/08 11:13:01:559 
+Start execution of command sequence at 05/08 11:23:24:550 
+EXITSEQUENCE()
+Run Completed: 05/08 11:33:11:141 
+Start execution of command sequence at 05/08 11:34:21:321 
+EXITSEQUENCE()
+Run Completed: 05/08 11:34:35:591 
+Start execution of command sequence at 05/08 11:34:56:151 
+EXITSEQUENCE()
+Run Completed: 05/08 11:35:07:671 
+Start execution of command sequence at 05/08 11:45:34:392 
+EXITSEQUENCE()
+Run Completed: 05/08 11:49:52:903 
+Start execution of command sequence at 05/08 11:51:24:883 
+EXITSEQUENCE()
+Run Completed: 05/08 11:53:22:883 
+Start execution of command sequence at 05/08 11:53:41:193 
+EXITSEQUENCE()
+Run Completed: 05/08 11:56:29:193 
+Start execution of command sequence at 05/08 13:37:20:222 
+EXITSEQUENCE()
+Run Completed: 05/08 13:37:22:762 
+Start execution of command sequence at 05/08 13:37:58:682 
+Run Completed: 05/08 13:38:09:562 
+Start execution of command sequence at 05/08 13:38:29:242 
+Run Completed: 05/08 13:38:52:762 
+Start execution of command sequence at 05/08 13:39:40:764 
+Run Completed: 05/08 13:39:49:714 
+Start execution of command sequence at 05/08 13:40:55:854 
+Execution aborted at 5/8/2015 1:42:12 PM
+Run Completed: 05/08 13:42:12:704 
+Start execution of command sequence at 05/08 13:44:47:092 
+EXITSEQUENCE()
+Run Completed: 05/08 13:46:21:182 
+Start execution of command sequence at 05/08 13:47:08:422 
+EXITSEQUENCE()
+Run Completed: 05/08 13:47:54:402 
+Start execution of command sequence at 05/08 13:47:58:962 
+Execution aborted at 5/8/2015 1:49:47 PM
+Run Completed: 05/08 13:49:47:133 
+Start execution of command sequence at 05/08 13:50:45:713 
+EXITSEQUENCE()
+Run Completed: 05/08 13:50:48:573 
+Start execution of command sequence at 05/08 13:51:33:903 
+EXITSEQUENCE()
+Run Completed: 05/08 14:11:38:054 
+Start execution of command sequence at 05/08 14:42:49:687 
+Execution aborted at 5/8/2015 3:59:22 PM
+Run Completed: 05/08 15:59:22:824 
+Machine Initialized
+Start execution of command sequence at 05/12 11:00:03:630 
+EXITSEQUENCE()
+Run Completed: 05/12 11:01:11:699 
+Start execution of command sequence at 05/12 11:24:49:999 
+Run Completed: 05/12 11:24:56:173 
+Start execution of command sequence at 05/12 11:26:22:111 
+Run Completed: 05/12 11:26:24:740 
+Start execution of command sequence at 05/12 11:26:59:558 
+EXITSEQUENCE()
+Run Completed: 05/12 11:28:35:826 
+Start execution of command sequence at 05/12 11:29:38:373 
+EXITSEQUENCE()
+Run Completed: 05/12 11:30:52:117 
+Start execution of command sequence at 05/12 11:32:12:173 
+EXITSEQUENCE()
+Run Completed: 05/12 11:38:31:159 
+Start execution of command sequence at 05/12 11:45:43:694 
+EXITSEQUENCE()
+Run Completed: 05/12 11:45:46:278 
+Start execution of command sequence at 05/12 11:50:09:725 
+EXITSEQUENCE()
+Run Completed: 05/12 11:59:51:233 
+Start execution of command sequence at 05/12 12:00:17:280 
+EXITSEQUENCE()
+Run Completed: 05/12 12:02:54:062 
+Start execution of command sequence at 05/12 12:03:16:048 
+EXITSEQUENCE()
+Run Completed: 05/12 12:25:48:692 
+Start execution of command sequence at 05/12 12:25:56:934 
+EXITSEQUENCE()
+Run Completed: 05/12 12:28:07:732 
+Start execution of command sequence at 05/12 12:38:42:097 
+Run Completed: 05/12 12:38:44:262 
+Start execution of command sequence at 05/12 12:40:48:576 
+Run Completed: 05/12 12:40:50:228 
+Start execution of command sequence at 05/12 12:41:12:712 
+EXITSEQUENCE()
+Run Completed: 05/12 12:42:29:931 
+Start execution of command sequence at 05/12 12:43:13:791 
+EXITSEQUENCE()
+Run Completed: 05/12 12:47:04:257 
+Start execution of command sequence at 05/12 12:49:07:772 
+EXITSEQUENCE()
+Run Completed: 05/12 12:59:00:051 
+Start execution of command sequence at 05/12 13:00:59:920 
+EXITSEQUENCE()
+Run Completed: 05/12 13:01:10:189 
+Start execution of command sequence at 05/12 13:10:03:269 
+Execution aborted at 5/12/2015 2:44:21 PM
+Run Completed: 05/12 14:44:21:460 
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 06/23 07:54:04:331 
+Run Completed: 06/23 07:54:08:849 
+Start execution of command sequence at 06/23 07:56:28:143 
+Run Completed: 06/23 07:56:38:522 
+Start execution of command sequence at 06/23 07:56:48:190 
+Run Completed: 06/23 07:57:28:343 
+Start execution of command sequence at 06/23 07:57:30:437 
+Run Completed: 06/23 07:58:16:800 
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Machine Initialized
+Start execution of command sequence at 06/23 11:01:10:345 
+Run Completed: 06/23 11:03:04:787 ,  Run was aborted
+Start execution of command sequence at 06/23 11:03:10:753 
+EXITSEQUENCE()
+Run Completed: 06/23 11:03:31:797 
+Start execution of command sequence at 06/23 11:03:44:046 
+EXITSEQUENCE()
+Run Completed: 06/23 11:06:46:166 

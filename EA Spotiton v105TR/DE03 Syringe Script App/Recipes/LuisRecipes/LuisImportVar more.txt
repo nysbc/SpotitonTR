@@ -1,0 +1,10 @@
+
+DEFINE_VARIABLE(VariableName=IVINTMORE, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=IVDOUBLEMORE, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+

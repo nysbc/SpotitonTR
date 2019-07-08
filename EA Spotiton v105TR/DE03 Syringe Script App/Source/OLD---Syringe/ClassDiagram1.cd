@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Aurigin.AtSyringe" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>AtSyringe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurigin.SyringeStatus" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBCAAAAAAQECAABIAAAAAAAACAAAEAAAQAAACA=</HashCode>
+      <FileName>Syringe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurigin.SyringeParameters" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAoAQQiAAAAAAIAAIIADAASAAQAABAAAACAAAAAqA=</HashCode>
+      <FileName>Syringe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurigin.SyringeConfigurationData" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIAAAAAAgBEAAAAAAAAAAAAgQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Syringe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurigin.UserSyringeControl" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIBoAAIgCFSMoAAMQIQABFqFASAAZAwAjKGhEUCEAAE=</HashCode>
+      <FileName>Syringe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurigin.SyringeControlForm" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEEMAC0BACCFAbAIAADkASJCACQ8SAAABvICBDEAYiA=</HashCode>
+      <FileName>SyringeControlForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Aurigin.SyringeValvePosition" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>Syringe.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,109 @@
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+
+DEFINE_VARIABLE(VariableName=VEL_X, _
+ VariableType=DOUBLE, _
+ VariableValue=100)
+
+
+
+DEFINE_VARIABLE(VariableName=ACC_X, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=DEC_X, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=VEL_Y, _
+ VariableType=DOUBLE, _
+ VariableValue=100.0)
+
+
+
+DEFINE_VARIABLE(VariableName=ACC_Y, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=DEC_Y, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+DEFINE_VARIABLE(VariableName=VEL_Z, _
+ VariableType=DOUBLE, _
+ VariableValue=20.0)
+
+
+
+DEFINE_VARIABLE(VariableName=ACC_Z, _
+ VariableType=DOUBLE, _
+ VariableValue=500.0)
+
+
+
+DEFINE_VARIABLE(VariableName=DEC_Z, _
+ VariableType=DOUBLE, _
+ VariableValue=500.0)
+
+DEFINE_VARIABLE(VariableName=VEL_X2, _
+ VariableType=DOUBLE, _
+ VariableValue=100.0)
+
+
+
+DEFINE_VARIABLE(VariableName=ACC_X2, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=DEC_X2, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=VEL_Y2, _
+ VariableType=DOUBLE, _
+ VariableValue=100.0)
+
+
+
+DEFINE_VARIABLE(VariableName=ACC_Y2, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=DEC_Y2, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+' TESTED Z2 UP TO 1000,10000,10000 AND THIS WORKS OK FOR FAST PLUNGING.
+
+DEFINE_VARIABLE(VariableName=VEL_Z2, _
+ VariableType=DOUBLE, _
+ VariableValue=1000.0)
+
+
+
+DEFINE_VARIABLE(VariableName=ACC_Z2, _
+ VariableType=DOUBLE, _
+ VariableValue=10000.0)
+
+
+DEFINE_VARIABLE(VariableName=DEC_Z2, _
+ VariableType=DOUBLE, _
+ VariableValue=10000.0)
+

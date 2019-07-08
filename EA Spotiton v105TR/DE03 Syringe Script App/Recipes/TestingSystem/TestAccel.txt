@@ -1,0 +1,29 @@
+
+DEFINE_VARIABLE(VariableName=MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_VARIABLE(VariableName=ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+VARIABLE_SET(VariableName=MAX_VELOCITY, _
+	 VariableValue=200)
+
+
+VARIABLE_SET(VariableName=ACCELERATION, _
+	 VariableValue=2500)
+
+
+SET_MAX_VELOCITY(AxisNumber=0, _
+	 MaxVelocity=MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=0, _
+	 Accel=ACCELERATION)
+
+EXITSEQUENCE
+
+

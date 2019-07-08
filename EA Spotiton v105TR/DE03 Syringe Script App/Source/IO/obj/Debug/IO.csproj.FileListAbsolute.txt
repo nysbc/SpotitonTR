@@ -1,0 +1,19 @@
+C:\DE03 Syringe Script App\object\IO.dll
+C:\DE03 Syringe Script App\object\IO.pdb
+C:\DE03 Syringe Script App\Source\IO\obj\Debug\IO.dll
+C:\DE03 Syringe Script App\Source\IO\obj\Debug\IO.pdb
+C:\DE03 Syringe Script App\Source\IO\obj\Debug\IO.csprojResolveAssemblyReference.cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\object\IO.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\object\IO.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\IO\obj\Debug\IO.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\IO\obj\Debug\IO.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\object\IO.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\object\IO.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\IO\obj\Debug\IO.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\IO\obj\Debug\IO.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\IO\obj\Debug\IO.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\IO.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\IO.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\IO\obj\Debug\IO.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\IO\obj\Debug\IO.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\IO\obj\Debug\IO.pdb

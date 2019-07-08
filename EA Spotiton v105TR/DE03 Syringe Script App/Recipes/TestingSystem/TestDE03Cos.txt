@@ -1,0 +1,52 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+' A RECIPE TO CONINTOUSLY LOOP AND FIRE USER SELECTABLE NUMBER OF DROPS PER BURST
+
+
+DEFINE_VARIABLE(VariableName=INBURST, _
+ VariableType=INT, _
+ VariableValue=10000)
+
+
+WHILE(INBURST > 0)
+
+
+	GET_INTEGER_FROM_USER(VariableName=INBURST, _
+	 Prompt=INPUT THE SIZE OF THE COSINE BURST, _
+	 MinValue=0, _
+	 MaxValue=10000000, _
+	 ValueIfUserCancels=-1)
+
+
+	DE03_STOP_WAVEFORM()
+
+
+	IF(INBURST > -1)
+
+
+		DE03_COS_SETUP(Tip=1, _
+		 DesiredFreq=12750, _
+		 InBurstNo=INBURST, _
+		 CosAmplitude=450, _
+		 StrobeDuration=1, _
+		 StrobeDelay=0, _
+		 NumOfBursts=1, _
+		 TriggerSetting=0, _
+		 TriggerDelay=1000000, _
+		 TriggerPeriod=1)
+
+
+		DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+		 Timeout_ms=0)
+
+
+	ENDIF
+
+
+LOOP
+
+
+EXITSEQUENCE
+
+

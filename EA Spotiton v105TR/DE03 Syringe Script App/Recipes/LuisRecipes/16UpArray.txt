@@ -1,0 +1,178 @@
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=28, _
+ Y=80, _
+ Z=-15.0, _
+ XSteps=5, _
+ XIncrement=1.0, _
+ YSteps=5, _
+ YIncrement=1.0)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=112.0, _
+ Y=289.0, _
+ Z=-30.0)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=9.8, _
+ Y=172.2, _
+ Z=-10.0, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I3, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=STARTI, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=ENDI, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=XOFF, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_VARIABLE(VariableName=YOFF, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+GET_INTEGER_FROM_USER(VariableName=STARTI, _
+ Prompt=STARTING SAMPLE, _
+ MinValue=0, _
+ MaxValue=15, _
+ ValueIfUserCancels=-1)
+
+
+GET_INTEGER_FROM_USER(VariableName=ENDI, _
+ Prompt=ENDING SAMPLE, _
+ MinValue=STARTI, _
+ MaxValue=15, _
+ ValueIfUserCancels=-1)
+
+
+FOR(I1 = STARTI To ENDI Step 1)
+
+
+	ASPIRATE(SyringeMask=1, _
+	 Volume_uL=5, _
+	 SyringeSpeed=17, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=MICROTITER[I1,0], _
+	 MoveSpeedIn_pct=40, _
+	 MoveSpeedOut_pct=40)
+
+
+	PAUSE(UserMessage=WAIT A LITTLE, _
+	 PauseTime_ms=5000)
+
+
+	IF(I1 <= 7)
+
+
+		VARIABLE_SET(VariableName=XOFF, _
+		 VariableValue=0.0)
+
+
+		VARIABLE_MATH(YOFF = I1 * 9)
+
+
+	ELSE
+
+
+		VARIABLE_SET(VariableName=XOFF, _
+		 VariableValue=9.0)
+
+
+		VARIABLE_MATH(YOFF = I1 * 9)
+
+
+		VARIABLE_MATH(YOFF = YOFF - 72)
+
+
+	ENDIF
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=DISPENSEGRID[0,0], _
+	 XOffset=XOFF, _
+	 YOffset=YOFF, _
+	 Speed_pct=100, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	FOR(I2 = 0 To 4 Step 1)
+
+
+		FOR(I3 = 0 To 4 Step 1)
+
+
+			PIEZO_DISPENSE(Tip=1, _
+			 PiezoAmplitude=45, _
+			 PiezoFreq=22000, _
+			 DropsPerBurst=100, _
+			 NumBursts=1, _
+			 FreqOfBursts=10, _
+			 Tip1Point=DISPENSEGRID[I2,I3], _
+			 XOffset=XOFF, _
+			 YOffset=YOFF, _
+			 MoveHeightAboveSurface=0)
+
+
+		NEXT
+
+
+	NEXT
+
+
+	WASH_TIPS(SyringeMask=1, _
+	 VolumePerStroke_uL=40, _
+	 NumSyringeStrokes=1, _
+	 SyringeSpeedPull=10, _
+	 SyringeSpeedPush=20, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT, _
+	 MoveSpeedIn_pct=100, _
+	 MoveSpeedOut_pct=100)
+
+
+	PAUSE(UserMessage=WAIT A LITTLE, _
+	 PauseTime_ms=5000)
+
+
+NEXT
+
+
+SYRINGE_SET_VALVE(SyringeMask=1, _
+ ValvePosition=1, _
+ DelayAfter_ms=10)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+

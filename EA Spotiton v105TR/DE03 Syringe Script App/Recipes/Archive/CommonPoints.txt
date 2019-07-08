@@ -1,0 +1,26 @@
+DEFINE_POINT(VariableName=WASH_PT_T1, _
+X=1.5, _
+Y=200.0, _
+Z=-35)
+
+DEFINE_POINT(VariableName=INS_PT_T1, _
+X=183.2, _
+Y=200.0, _
+Z=-39.1)
+
+DEFINE_POINT(VariableName=SAFE_PT, _
+X=1.5, _
+Y=0.0, _
+Z=0.0)
+
+DEFINE_GRID(VariableName=PICKUP_SAMPLE_T1, _
+ X=144.75, _
+ Y=164.0, _
+ Z=-43, _
+ XSteps=12, _
+ XIncrement=-9.0, _
+ YSteps=3, _
+ YIncrement=9.0)
+
+
+

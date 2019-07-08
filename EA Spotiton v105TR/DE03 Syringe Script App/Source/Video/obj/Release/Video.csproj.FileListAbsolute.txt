@@ -1,0 +1,6 @@
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Release\Video.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Release\Video.pdb
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Release\uEyeDotNet.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Release\Video.csprojResolveAssemblyReference.cache
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Release\Video.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Release\Video.pdb

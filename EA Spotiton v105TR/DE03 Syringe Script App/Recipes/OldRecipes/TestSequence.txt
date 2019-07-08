@@ -1,0 +1,282 @@
+DEFINE_POINT(VariableName=WASH, _
+ X=0.0, _
+ Y=0.1, _
+ Z=0.2)
+
+
+PRIME(SyringeMask=1, _
+ VolumePerStroke_uL=15, _
+ NumSyringeStrokes=10, _
+ SyringeSpeedPull=9, _
+ SyringeSpeedPush=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH, _
+ XOffset=0.1, _
+ YOffset=0.1, _
+ ZOffset=-3.2, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20)
+
+
+DEFINE_VARIABLE(VariableName=ROW, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=COL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=5.0, _
+ Y=10.0, _
+ Z=0.0, _
+ XSteps=8, _
+ XIncrement=9.0, _
+ YSteps=12, _
+ YIncrement=9.0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=10)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=10)
+
+
+DEFINE_VARIABLE(VariableName=D1, _
+ VariableType=DOUBLE, _
+ VariableValue=0.5)
+
+
+DEFINE_VARIABLE(VariableName=B1, _
+ VariableType=BOOL, _
+ VariableValue=FALSE)
+
+
+DEFINE_POINT(VariableName=TIP1, _
+ X=0.0, _
+ Y=0.0, _
+ Z=0.0)
+
+
+DEFINE_POINT(VariableName=INSPECTIONPOINT, _
+ X=D1, _
+ Y=0.1, _
+ Z=0.2)
+
+
+DEFINE_POINT(VariableName=SURFACE, _
+ X=0.0, _
+ Y=0.1, _
+ Z=0.2)
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=100.3, _
+ Y=200.4, _
+ Z=0.0, _
+ XSteps=10, _
+ XIncrement=0.300, _
+ YSteps=25, _
+ YIncrement=0.300)
+
+
+VARIABLE_SET(VariableName=D1, _
+ VariableValue=I1)
+
+
+VARIABLE_MATH(D1 = D1 + 3)
+
+
+VARIABLE_COMPARE(B1 = D1 > 2)
+
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=PLEASE ENTER A NUMBER, _
+ MinValue=0, _
+ MaxValue=10, _
+ ValueIfUserCancels=-1)
+
+
+GET_DOUBLE_FROM_USER(VariableName=D1, _
+ Prompt=PLEASE ENTER A NUMBER, _
+ MinValue=0.0, _
+ MaxValue=100.3, _
+ ValueIfUserCancels=-1.0)
+
+
+FOR(ROW = 0 To 7 Step 1)
+
+
+	FOR(COL = 0 To 11 Step 1)
+
+
+		ASPIRATE(SyringeMask=1, _
+		 Volume_uL=3, _
+		 SyringeSpeed=5, _
+		 DelayAfter_ms=500, _
+		 Tip1Point=MICROTITER[ROW,COL], _
+		 XOffset=0.0, _
+		 YOffset=0.0, _
+		 ZOffset=-2.5, _
+		 MoveSpeedIn_pct=20, _
+		 MoveSpeedOut_pct=20)
+
+
+		PIEZO_DISPENSE(Tip=1, _
+		 PiezoAmplitude=25, _
+		 PiezoFreq=1000, _
+		 DropsPerBurst=100, _
+		 NumBursts=10, _
+		 FreqOfBursts=10, _
+		 Tip1Point=DISPENSEGRID[ROW,COL], _
+		 XOffset=0.0, _
+		 YOffset=0.0, _
+		 ZOffset=0.0, _
+		 MoveHeightAboveSurface=0.750)
+
+
+	NEXT
+
+
+NEXT
+
+
+' EXITLOOP
+
+
+PAUSE(UserMessage=WAIT A LITTLE, _
+ PauseTime_ms=5500)
+
+
+WHILE(B1 = TRUE)
+
+
+	GET_BOOLEAN_FROM_USER(VariableName=B1, _
+	 Prompt=SHOULD WE GO ON?, _
+	 ValueIfUserCancels=FALSE)
+
+
+LOOP
+
+
+IF(D1 >= 3)
+
+
+	VARIABLE_SET(VariableName=D1, _
+	 VariableValue=21.3)
+
+
+ELSE
+
+
+	VARIABLE_SET(VariableName=D1, _
+	 VariableValue=I1)
+
+
+ENDIF
+
+
+PRIME(SyringeMask=1, _
+ VolumePerStroke_uL=15, _
+ NumSyringeStrokes=10, _
+ SyringeSpeedPull=9, _
+ SyringeSpeedPush=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH, _
+ XOffset=0.1, _
+ YOffset=0.1, _
+ ZOffset=-3.2, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20)
+
+
+DISPENSE(SyringeMask=1, _
+ Volume_uL=3, _
+ SyringeSpeed=5, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH, _
+ XOffset=0.2, _
+ YOffset=0.2, _
+ ZOffset=-2.5, _
+ MoveSpeedIn_pct=10, _
+ MoveSpeedOut_pct=10)
+
+
+SYRINGE_SET_VALVE(SyringeMask=1, _
+ ValvePosition=2, _
+ DelayAfter_ms=750)
+
+
+SYRINGE_MOVE(SyringeMask=1, _
+ SyringePosition=150, _
+ SyringeSpeed=5, _
+ DelayAfter_ms=500)
+
+
+SYRINGE_EMPTY(SyringeMask=1, _
+ SyringeSpeed=5, _
+ EmptyThroughTip=TRUE, _
+ DelayAfter_ms=500)
+
+
+WASH_TIPS(SyringeMask=1, _
+ VolumePerStroke_uL=15, _
+ NumSyringeStrokes=10, _
+ SyringeSpeedPull=9, _
+ SyringeSpeedPush=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH, _
+ XOffset=0.1, _
+ YOffset=0.1, _
+ ZOffset=-3.2, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20)
+
+
+CONTROLLER_ENABLE(EnableController=TRUE)
+
+
+INSPECT_TIPS(TipMask=1, _
+ Tip1Point=INSPECTIONPOINT, _
+ XOffset=0.0, _
+ YOffset=-0.2, _
+ ZOffset=0.5)
+
+
+MOTION_INITIALIZE()
+
+
+HOME_AXIS(AxisNumber=1)
+
+
+MOVE_RELATIVE(XOffset=1.5, _
+ YOffset=-2.3, _
+ ZOffset=4, _
+ Speed_pct=12)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+
+MOVE_TO_POINT(Tool=TIP1, _
+ Point=WASH, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=5, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+MOVE_ABOVE_POINT(Tool=TIP1, _
+ Point=WASH, _
+ XOffset=0, _
+ YOffset=0, _
+ Speed_pct=10)
+
+

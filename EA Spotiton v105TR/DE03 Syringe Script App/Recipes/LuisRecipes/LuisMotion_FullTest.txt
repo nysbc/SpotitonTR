@@ -1,0 +1,85 @@
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+DEFINE_VARIABLE( VariableName=OK, _
+  VariableType=BOOL, _
+  VariableValue=false)
+
+GET_BOOLEAN_FROM_USER(VariableName=OK, _
+  Prompt="If ready to initialize and home click yes.", _
+  ValueIfUserCancels=false)
+
+IF( OK = FALSE ) 
+  EXITSEQUENCE
+ENDIF
+
+MOTION_INITIALIZE()
+HOME_AXIS( AxisNumber=0)
+HOME_AXIS( AxisNumber=1)
+HOME_AXIS( AxisNumber=2)
+
+GET_BOOLEAN_FROM_USER(VariableName=OK, _
+  Prompt="Press yes to continue with motion tests", _
+  ValueIfUserCancels=false)
+
+if( OK = false )
+  EXITSEQUENCE
+ENDIF
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=112.0, _
+ Y=289.0, _
+ Z=-30.0)
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=1, _
+ Y=1, _
+ Z=-10.0, _
+ XSteps=1, _
+ XIncrement=1, _
+ YSteps=1, _
+ YIncrement=1)
+
+
+' PIPETTE TIP DISPENSING ON FILTER PAPER
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=1, _
+ Y=1, _
+ Z=-15.0, _
+ XSteps=16, _
+ XIncrement=1.0, _
+ YSteps=8, _
+ YIncrement=1.0)
+
+
+' MOVE TO ORIGIN OF ARRAY SAFELY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=DISPENSEGRID[0,0], _
+ Speed_pct=100, _
+ MoveToSafeHeightFirst=TRUE)
+
+FOR(I1 = 0 To 11 Step 1)
+	FOR(I2 = 0 To 7 Step 1)
+
+		MOVE_TO_POINT( Tool=SYSTEM_TIP1, _
+		   Point=DISPENSEGRID[I1,I2], _
+		   Speed_pct=80, _
+		   MoveToSafeHeightFirst=FALSE)
+
+	NEXT
+NEXT
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+

@@ -1,0 +1,269 @@
+' WASH TIP 1 (PIEZO) WITH WATER
+
+
+' PICKUP SAMPLE A1, INSPECT WITH CAMERA, DEPOSIT IN GRID ON MEMBRANE
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+DEFINE_POINT(VariableName=WASH_PT_T1, _
+ X=5, _
+ Y=100.0, _
+ Z=-34)
+
+
+DEFINE_POINT(VariableName=SAFE_PT, _
+ X=5, _
+ Y=0, _
+ Z=0)
+
+
+DEFINE_POINT(VariableName=INS_POINT, _
+ X=175.4, _
+ Y=100, _
+ Z=-28.3)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=WASH_CYCLES, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=SAMPLE_NUMBER, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=INS_OPTION, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_GRID(VariableName=PICKUP_SAMPLE, _
+ X=136.0, _
+ Y=124.0, _
+ Z=-29, _
+ XSteps=1, _
+ XIncrement=9.0, _
+ YSteps=8, _
+ YIncrement=9.0)
+
+
+DEFINE_GRID(VariableName=MEMBRANEGRID_T1, _
+ X=86.5, _
+ Y=89.5, _
+ Z=-19.5, _
+ XSteps=3, _
+ XIncrement=2.0, _
+ YSteps=3, _
+ YIncrement=2.0)
+
+
+GET_INTEGER_FROM_USER(VariableName=SAMPLE_NUMBER, _
+ Prompt=ENTER SAMPLE WELL NUMBER (0=A1  7=H1), _
+ MinValue=0, _
+ MaxValue=7, _
+ ValueIfUserCancels=0)
+
+
+' WASH THE TIPS (OPTIONALLY)
+
+
+GET_INTEGER_FROM_USER(VariableName=WASH_CYCLES, _
+ Prompt=ENTER NUMBER OF WASH CYCLES, _
+ MinValue=0, _
+ MaxValue=3, _
+ ValueIfUserCancels=0)
+
+
+IF(WASH_CYCLES > 0)
+
+
+	WASH_TIPS(SyringeMask=0, _
+	 VolumePerStroke_uL=50, _
+	 NumSyringeStrokes=WASH_CYCLES, _
+	 SyringeSpeedPull=15, _
+	 SyringeSpeedPush=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT_T1, _
+	 MoveSpeedOut_pct=30)
+
+
+
+ENDIF
+
+
+' PICKUP SAMPLE
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE[0,SAMPLE_NUMBER], _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+ASPIRATE(SyringeMask=0, _
+ Volume_uL=6, _
+ SyringeSpeed=20, _
+ ValveToBypass=TRUE, _
+ DelayAfter_ms=1000)
+
+
+' PULL OUT SLOW
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE[0,SAMPLE_NUMBER], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=8, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+' INSPECT THE FIRING
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=INS_POINT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=40, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+WHILE(INS_OPTION = 1)
+
+
+	PIEZO_DISPENSE(Tip=1, _
+	 PiezoAmplitude=105, _
+	 PiezoFreq=18500, _
+	 DropsPerBurst=500, _
+	 NumBursts=1, _
+	 FreqOfBursts=1)
+
+
+	GET_INTEGER_FROM_USER(VariableName=INS_OPTION, _
+	 Prompt=0 TO ABORT  1 TO INSPECT  2 TO PROCEED, _
+	 MinValue=0, _
+	 MaxValue=2, _
+	 ValueIfUserCancels=1)
+
+
+LOOP
+
+
+IF(INS_OPTION = 0)
+
+
+	' SET AT OUTPUT, SYRINGE PUMP1
+
+
+	SYRINGE_SET_VALVE(SyringeMask=0, _
+	 ValvePosition=1, _
+	 DelayAfter_ms=100)
+
+
+	EXITSEQUENCE
+
+
+ENDIF
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=MEMBRANEGRID_T1[0,0], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=15, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I1 = 0 To 2 Step 1)
+
+
+	FOR(I2 = 0 To 2 Step 1)
+
+
+		' GO RIGHT ABOVE TARGET POINT
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MEMBRANEGRID_T1[I1,I2], _
+		 Speed_pct=10, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		PIEZO_DISPENSE(Tip=1, _
+		 PiezoAmplitude=75, _
+		 PiezoFreq=18500, _
+		 DropsPerBurst=500, _
+		 NumBursts=1, _
+		 FreqOfBursts=1)
+
+
+	NEXT
+
+
+NEXT
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+' WASH THE TIPS (OPTIONALLY)
+
+
+GET_INTEGER_FROM_USER(VariableName=WASH_CYCLES, _
+ Prompt=ENTER NUMBER OF WASH CYCLES, _
+ MinValue=0, _
+ MaxValue=3, _
+ ValueIfUserCancels=0)
+
+
+IF(WASH_CYCLES > 0)
+
+
+	WASH_TIPS(SyringeMask=0, _
+	 VolumePerStroke_uL=50, _
+	 NumSyringeStrokes=WASH_CYCLES, _
+	 SyringeSpeedPull=15, _
+	 SyringeSpeedPush=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT_T1, _
+	 MoveSpeedOut_pct=30)
+
+
+
+ENDIF
+
+
+' SET AT OUTPUT, SYRINGE PUMP1
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=15, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=1, _
+ DelayAfter_ms=100)
+
+

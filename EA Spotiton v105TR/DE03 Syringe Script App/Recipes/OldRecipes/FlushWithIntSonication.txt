@@ -1,0 +1,208 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+' ALL AXIS SPEEDS
+
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+' X AXIS MAX VELOCITY AND ACCELERATION
+
+
+SET_MAX_VELOCITY(AxisNumber=0, _
+ MaxVelocity=X_MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=0, _
+ Accel=X_ACCELERATION)
+
+
+' Y AXIS MAX VELOCITY AND ACCELERATION
+
+
+SET_MAX_VELOCITY(AxisNumber=1, _
+ MaxVelocity=Y_MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=1, _
+ Accel=Y_ACCELERATION)
+
+
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+SET_MAX_VELOCITY(AxisNumber=1, _
+ MaxVelocity=Z_MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=1, _
+ Accel=Z_ACCELERATION)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=MOVE TO WASH POINT \N1=MOVE CANCEL=SKIP, _
+ MinValue=0, _
+ MaxValue=1, _
+ ValueIfUserCancels=-1)
+
+
+IF(I1 = 1)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=WASH_T1_PT, _
+	 ZOffset=5, _
+	 Speed_pct=SPEED_FACTOR, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+ENDIF
+
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=PROCEED TO SONICATE \N1=PROCEED CANCEL=ABORT, _
+ MinValue=1, _
+ MaxValue=1, _
+ ValueIfUserCancels=-1)
+
+
+IF(I1 = -1)
+
+
+	EXITSEQUENCE
+
+
+ENDIF
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=0, _
+ DelayAfter_ms=100)
+
+
+ASPIRATE(SyringeMask=0, _
+ Volume_uL=100, _
+ SyringeSpeed=10, _
+ ValveToBypass=FALSE, _
+ AspFromReservoir=TRUE)
+
+
+DISPENSE(SyringeMask=0, _
+ Volume_uL=100, _
+ SyringeSpeed=15, _
+ ValveToBypass=FALSE, _
+ DelayAfter_ms=-1)
+
+
+' A SPEED OF 17 WILL TAKE 30 SECONDS
+
+
+FOR(I2 = 1 To 2 Step 1)
+
+
+	DE03_STOP_WAVEFORM()
+
+
+	DE03_COS_SETUP(Tip=1, _
+	 DesiredFreq=40000, _
+	 InBurstNo=20000, _
+	 CosAmplitude=1800, _
+	 StrobeDuration=1, _
+	 StrobeDelay=0, _
+	 NumOfBursts=1, _
+	 TriggerSetting=0, _
+	 TriggerDelay=100, _
+	 TriggerPeriod=1)
+
+
+	DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+	 Timeout_ms=1000)
+
+
+	PAUSE(UserMessage=40KHZ, _
+	 PauseTime_ms=1000)
+
+
+	DE03_STOP_WAVEFORM()
+
+
+	DE03_COS_SETUP(Tip=1, _
+	 DesiredFreq=60000, _
+	 InBurstNo=30000, _
+	 CosAmplitude=1800, _
+	 StrobeDuration=1, _
+	 StrobeDelay=0, _
+	 NumOfBursts=1, _
+	 TriggerSetting=0, _
+	 TriggerDelay=100, _
+	 TriggerPeriod=1)
+
+
+	DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+	 Timeout_ms=1000)
+
+
+	PAUSE(UserMessage=60KHZ, _
+	 PauseTime_ms=1000)
+
+
+	DE03_STOP_WAVEFORM()
+
+
+	DE03_COS_SETUP(Tip=1, _
+	 DesiredFreq=80000, _
+	 InBurstNo=40000, _
+	 CosAmplitude=1800, _
+	 StrobeDuration=1, _
+	 StrobeDelay=0, _
+	 NumOfBursts=1, _
+	 TriggerSetting=0, _
+	 TriggerDelay=100, _
+	 TriggerPeriod=1)
+
+
+	DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+	 Timeout_ms=0)
+
+
+	PAUSE(UserMessage=80KHZ, _
+	 PauseTime_ms=1000)
+
+
+NEXT
+
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=WHEN SYRINGE IS DONE MOVING HIT 1 TO SWITCH VALVE TO BYPASS, _
+ MinValue=1, _
+ MaxValue=1, _
+ ValueIfUserCancels=-1)
+
+
+IF(I1 = 1)
+
+
+	SYRINGE_SET_VALVE(SyringeMask=0, _
+	 ValvePosition=2, _
+	 DelayAfter_ms=100)
+
+
+ENDIF
+
+
+EXITSEQUENCE
+
+

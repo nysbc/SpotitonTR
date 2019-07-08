@@ -1,0 +1,98 @@
+MOVE_TO_SAFE_HEIGHT(Speed_pct=20)
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=2, _
+ DelayAfter_ms=100)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=22.184, _
+ Y=170.396, _
+ Z=-46)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=1.9, _
+ Y=323.6, _
+ Z=-19, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+' PIPETTE TIP DISPENSING ON FILTER PAPER
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=117.897, _
+ Y=320.597, _
+ Z=-41, _
+ XSteps=5, _
+ XIncrement=-.12, _
+ YSteps=5, _
+ YIncrement=.12)
+ 
+DE03_TRAP_SETUP(Tip=1, _
+ Leading=4, _
+ Dwell=15, _
+ Trailing=10, _
+ TrapDrops=1, _
+ TrapFreq=300, _
+ TrapAmp=700, _
+ StrobeDuration=1, _
+ StrobeDelay=200, _
+ Enabled=TRUE)
+
+
+' MOVE TO ORIGIN OF ARRAY SAFELY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=DISPENSEGRID[0,0], _
+ Speed_pct=100, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I1 = 0 To 5 Step 1)
+
+
+	FOR(I2 = 0 To 5 Step 1)
+	
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=DISPENSEGRID[0,0], _
+		 Speed_pct=100, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		DE03_START_WAVEFORM(WaitForCompletion=TRUE, _
+		 Timeout_ms=0)
+		 
+		DE03_STOP_WAVEFORM(Enabled=TRUE)
+
+
+	NEXT
+
+
+NEXT
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=1, _
+ DelayAfter_ms=10)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=20)
+
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProcessSequence xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Steps>
+    <WASH Name="Build start wash">
+      <Description>Extra tip washing at start of the build</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <SyringeVolumePerStroke_uL>50</SyringeVolumePerStroke_uL>
+      <NumSyringeStrokes>1</NumSyringeStrokes>
+      <SyringeSpeed>14</SyringeSpeed>
+      <BowlFlowTimeBeforeMoveIn_ms>2000</BowlFlowTimeBeforeMoveIn_ms>
+      <DelayBeforeMoveUp_ms>1000</DelayBeforeMoveUp_ms>
+      <BowlFlowTimeAfterMoveUp_ms>3000</BowlFlowTimeAfterMoveUp_ms>
+      <DepthInWash>5</DepthInWash>
+      <ZSpeedIn_pct>10</ZSpeedIn_pct>
+      <ZSpeedOut_pct>10</ZSpeedOut_pct>
+	<AirAspirateEnable>false</AirAspirateEnable>
+    </WASH>
+    <LOOP_START Name="Start Loop">
+      <Description>Main process loop</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+    </LOOP_START>
+    <ASPIRATE Name="Aspirate">
+      <Description>Perform next pick from microtiter plate</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <SyringeSpeed>19</SyringeSpeed>
+      <Volume_uL>
+        <double>8</double>
+        <double>0</double>
+      </Volume_uL>
+      <DelayBeforeMoveUp_ms>1000</DelayBeforeMoveUp_ms>
+      <DepthInWell>7</DepthInWell>
+      <ZSpeedIn_pct>10</ZSpeedIn_pct>
+      <ZSpeedOut_pct>10</ZSpeedOut_pct>
+    </ASPIRATE>
+    <INSPECT Name="Inspect">
+      <Description>Watch tips fire with side-looking camera</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <TipEnabled>
+        <boolean>true</boolean>
+        <boolean>true</boolean>
+      </TipEnabled>
+      <FiringFrequency_Hz>3</FiringFrequency_Hz>
+    </INSPECT>
+    <DISPENSE Name="Dispense">
+      <Description>Dispense on the next set of defined locations</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <DispenseHeightAboveSurface>1.0</DispenseHeightAboveSurface>
+      <MoveHeightAboveSurface>1.0</MoveHeightAboveSurface>
+	<PiezoAmplitude>22</PiezoAmplitude>
+	<PiezoFreq>18000</PiezoFreq>
+    </DISPENSE>
+    <WASH Name="Quick_Wash">
+      <Description>Clean tips quickly before reading spots</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <SyringeVolumePerStroke_uL>5</SyringeVolumePerStroke_uL>
+      <NumSyringeStrokes>1</NumSyringeStrokes>
+      <SyringeSpeed>14</SyringeSpeed>
+      <BowlFlowTimeBeforeMoveIn_ms>0</BowlFlowTimeBeforeMoveIn_ms>
+      <DelayBeforeMoveUp_ms>500</DelayBeforeMoveUp_ms>
+      <BowlFlowTimeAfterMoveUp_ms>3000</BowlFlowTimeAfterMoveUp_ms>
+      <DepthInWash>5</DepthInWash>
+      <ZSpeedIn_pct>10</ZSpeedIn_pct>
+      <ZSpeedOut_pct>10</ZSpeedOut_pct>
+	<AirAspirateEnable>false</AirAspirateEnable>
+    </WASH>
+    <READ Name="Read">
+      <Description>Perform reading on dispensed spots</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <ReadingTimeAfterDispense_s>30000</ReadingTimeAfterDispense_s>
+      <DwellTime_ms>1000</DwellTime_ms>
+      <WaitForTriggerHandshake>true</WaitForTriggerHandshake>
+    </READ>
+    <WASH Name="Inter_Sample_Wash">
+      <Description>Tip wash performed with each pick</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <SyringeVolumePerStroke_uL>50</SyringeVolumePerStroke_uL>
+      <NumSyringeStrokes>1</NumSyringeStrokes>
+      <SyringeSpeed>14</SyringeSpeed>
+      <BowlFlowTimeBeforeMoveIn_ms>2000</BowlFlowTimeBeforeMoveIn_ms>
+      <DelayBeforeMoveUp_ms>1000</DelayBeforeMoveUp_ms>
+      <BowlFlowTimeAfterMoveUp_ms>3000</BowlFlowTimeAfterMoveUp_ms>
+      <DepthInWash>5</DepthInWash>
+      <ZSpeedIn_pct>10</ZSpeedIn_pct>
+      <ZSpeedOut_pct>10</ZSpeedOut_pct>
+	<AirAspirateEnable>false</AirAspirateEnable>
+    </WASH>
+    <LOOP_END Name="End Loop">
+      <Description>End of main process loop</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+    </LOOP_END>
+    <WASH Name="Build end wash">
+      <Description>Extra tips washing at end of the build</Description>
+      <Enabled>true</Enabled>
+      <Frequency>1</Frequency>
+      <SyringeVolumePerStroke_uL>90</SyringeVolumePerStroke_uL>
+      <NumSyringeStrokes>2</NumSyringeStrokes>
+      <SyringeSpeed>14</SyringeSpeed>
+      <BowlFlowTimeBeforeMoveIn_ms>2000</BowlFlowTimeBeforeMoveIn_ms>
+      <DelayBeforeMoveUp_ms>1000</DelayBeforeMoveUp_ms>
+      <BowlFlowTimeAfterMoveUp_ms>3000</BowlFlowTimeAfterMoveUp_ms>
+      <DepthInWash>5</DepthInWash>
+      <ZSpeedIn_pct>10</ZSpeedIn_pct>
+      <ZSpeedOut_pct>10</ZSpeedOut_pct>
+	<AirAspirateEnable>false</AirAspirateEnable>
+    </WASH>
+  </Steps>
+</ProcessSequence>

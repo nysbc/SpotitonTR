@@ -1,0 +1,250 @@
+-------- Entering SuperPlunge Command ----------
+Start:09/24 16:55:22:275 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=True
+Elapsed Time: 0
+StartSensor: 1918
+EndSensor: 4524
+EndSensor - StartMotion: 2606
+
+PK- Test timeout of end sensor,  mess1???  Need to update
+
+-------- Entering SuperPlunge Command ----------
+Start:09/24 16:58:05:575 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=True
+Elapsed Time: 0
+StartSensor: 2231
+mess1
+
+PK- Test case where cylinder is already at end position
+
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:03:16:366 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 15
+StartMotion: 62
+EndSensor: 78
+EndSensor - StartMotion: 16
+EndMotion: 2605
+EndMotion - StartMotion: 2543
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:04:59:006 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 0
+StartMotion: 31
+EndSensor: 63
+EndSensor - StartMotion: 32
+EndMotion: 2590
+EndMotion - StartMotion: 2559
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:05:39:556 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 0
+StartMotion: 47
+EndSensor: 78
+EndSensor - StartMotion: 31
+EndMotion: 2605
+EndMotion - StartMotion: 2558
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:07:54:776 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 0
+StartMotion: 46
+EndMotion: 62
+EndMotion - StartMotion: 16
+EndSensor: 62
+EndSensor - StartMotion: 16
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:08:40:886 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 0
+StartMotion: 32
+EndSensor: 63
+EndSensor - StartMotion: 31
+EndMotion: 2590
+EndMotion - StartMotion: 2558
+
+
+PK- Test case where cylinder beats motion to end position:
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:13:22:226 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1528
+StartMotion: 1560
+EndSensor: 2121
+EndSensor - StartMotion: 561
+EndMotion: 4118
+EndMotion - StartMotion: 2558
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:14:34:967 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2777
+StartMotion: 2808
+EndSensor: 3619
+EndSensor - StartMotion: 811
+EndMotion: 5366
+EndMotion - StartMotion: 2558
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:15:55:467 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2231
+StartMotion: 2278
+EndSensor: 3261
+EndSensor - StartMotion: 983
+EndMotion: 4821
+EndMotion - StartMotion: 2543
+
+
+PK- Test case where motion beats cylinder to end position:
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:19:04:847 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1903
+StartMotion: 1950
+EndMotion: 4477
+EndMotion - StartMotion: 2527
+EndSensor: 5335
+EndSensor - StartMotion: 3385
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:19:35:557 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1311
+StartMotion: 1342
+EndMotion: 3869
+EndMotion - StartMotion: 2527
+EndSensor: 4633
+EndSensor - StartMotion: 3291
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:20:44:287 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1700
+StartMotion: 1731
+EndMotion: 4258
+EndMotion - StartMotion: 2527
+EndSensor: 5413
+EndSensor - StartMotion: 3682
+
+PK-After Reboot
+
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:28:54:129 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2262
+StartMotion: 2293
+EndMotion: 4820
+EndMotion - StartMotion: 2527
+EndSensor: 5631
+
+PK- Test case where motion does not beat cylinder to end position:
+
+
+EndSensor - StartMotion: 3338
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:30:37:609 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2028
+StartMotion: 2075
+EndSensor: 2901
+EndSensor - StartMotion: 826
+EndMotion: 4617
+EndMotion - StartMotion: 2542
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:32:11:380 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2418
+StartMotion: 2450
+EndSensor: 3074
+EndSensor - StartMotion: 624
+EndMotion: 5008
+EndMotion - StartMotion: 2558
+
+PK- Test case where motion beats cylinder to end position:
+
+
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:37:32:137 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1544
+StartMotion: 1591
+EndMotion: 4118
+EndMotion - StartMotion: 2527
+EndSensor: 5241
+EndSensor - StartMotion: 3650
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:38:16:627 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1498
+StartMotion: 1529
+EndMotion: 4056
+EndMotion - StartMotion: 2527
+EndSensor: 4727
+EndSensor - StartMotion: 3198
+
+PK- Test case where we see the timeout waiting for end travel cylinder.
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:47:57:185 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 1170
+StartMotion: 1217
+EndMotion: 3744
+EndMotion - StartMotion: 2527
+Error Time Out,  Motion Done=True, End Sensor Found =False
+
+
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:55:38:234 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2013
+StartMotion: 2075
+EndMotion: 4602
+EndMotion - StartMotion: 2527
+EndSensor: 5460
+EndSensor - StartMotion: 3385
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:56:09:374 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 4618
+StartMotion: 4665
+EndSensor: 6505
+EndSensor - StartMotion: 1840
+EndMotion: 7207
+EndMotion - StartMotion: 2542

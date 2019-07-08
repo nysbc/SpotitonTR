@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SyringeConfigurationData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ComPort>1</ComPort>
+  <TimeoutForSyringeMove_ms>60000</TimeoutForSyringeMove_ms>
+  <TimeoutForValveMove_ms>2000</TimeoutForValveMove_ms>
+  <TimeoutForCommandReponse_ms>1000</TimeoutForCommandReponse_ms>
+  <DelayBetweenCommands_ms>100</DelayBetweenCommands_ms>
+  <MultiplexPump>false</MultiplexPump>
+  <TotalSyringePump>1</TotalSyringePump>
+  <SyringeParams>
+    <PUMP_PARAMETERS PumpName="Pump 1">
+      <InitializationForceCode_0to3>2</InitializationForceCode_0to3>
+      <StepsPerStroke>3000</StepsPerStroke>
+      <SyringeVolume_uL>100</SyringeVolume_uL>
+      <ValveOutputPositionIsOnRight>false</ValveOutputPositionIsOnRight>
+      <PumpAddress>1</PumpAddress>
+      <PumpCommPort>1</PumpCommPort>
+      <RefillSpeedCode>10</RefillSpeedCode>
+    </PUMP_PARAMETERS>
+  </SyringeParams>
+</SyringeConfigurationData>

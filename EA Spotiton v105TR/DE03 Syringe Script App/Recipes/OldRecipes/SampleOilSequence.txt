@@ -1,0 +1,295 @@
+DEFINE_POINT(VariableName=OIL_PT, _
+ X=175.0, _
+ Y=252.0, _
+ Z=-123.0)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=50.0, _
+ Y=290.0, _
+ Z=-100.0)
+
+
+' AMMOUNT THAT IT WILL SUCK BACK THE OIL SYRINGE (STEPS)
+
+
+DEFINE_VARIABLE(VariableName=SYRINGESUCKBACK, _
+ VariableType=INT, _
+ VariableValue=10)
+
+
+' AMMOUNT THAT IT WILL COVER EACH SPOT
+
+
+DEFINE_VARIABLE(VariableName=SYRINGEDISPENSE, _
+ VariableType=INT, _
+ VariableValue=60)
+
+
+' VARIABLE USED TO HOLD THE LOCATION WHERE WE WILL DRIVE THE SYRINGE
+
+
+DEFINE_VARIABLE(VariableName=TEMPSYRINGE, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=TOTALSPOTS, _
+ VariableType=INT, _
+ VariableValue=8)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=12.5, _
+ Y=182.0, _
+ Z=-113.0, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+' PIPETTE TIP DISPENSING ON FILTER PAPER
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=39.0, _
+ Y=91.0, _
+ Z=-120.0, _
+ XSteps=2, _
+ XIncrement=25.0, _
+ YSteps=4, _
+ YIncrement=20.0)
+
+
+' LETS ASPIRATE AIR GAP AND THEN SOME OIL
+
+
+MOVE_ABOVE_POINT(Tool=SYSTEM_TIP1, _
+ Point=OIL_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ Speed_pct=50)
+
+
+' MAKE SURE VALVE SET AT OUTPUT
+
+
+SYRINGE_SET_VALVE(SyringeMask=2, _
+ ValvePosition=2, _
+ DelayAfter_ms=750)
+
+
+SYRINGE_MOVE(SyringeMask=2, _
+ SyringePosition=60, _
+ SyringeSpeed=18, _
+ DelayAfter_ms=100)
+
+
+VARIABLE_MATH(TEMPSYRINGE = SYRINGEDISPENSE * TOTALSPOTS)
+
+
+' AIRGAP AND SUCKBACK
+
+
+VARIABLE_MATH(TEMPSYRINGE = TEMPSYRINGE + 70)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=OIL_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=25, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+SYRINGE_MOVE(SyringeMask=2, _
+ SyringePosition=TEMPSYRINGE, _
+ SyringeSpeed=18, _
+ DelayAfter_ms=100)
+
+
+MOVE_ABOVE_POINT(Tool=SYSTEM_TIP1, _
+ Point=OIL_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ Speed_pct=20)
+
+
+VARIABLE_MATH(TEMPSYRINGE = TEMPSYRINGE + SYRINGESUCKBACK)
+
+
+SYRINGE_MOVE(SyringeMask=2, _
+ SyringePosition=TEMPSYRINGE, _
+ SyringeSpeed=18, _
+ DelayAfter_ms=100)
+
+
+FOR(I1 = 0 To 1 Step 1)
+
+
+	WASH_TIPS(SyringeMask=1, _
+	 VolumePerStroke_uL=40, _
+	 NumSyringeStrokes=1, _
+	 SyringeSpeed=17, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT, _
+	 XOffset=0.0, _
+	 YOffset=0.0, _
+	 ZOffset=0.0, _
+	 MoveSpeedIn_pct=20, _
+	 MoveSpeedOut_pct=20, _
+	 DoAirAspirateAfter=FALSE)
+
+
+
+	PAUSE(UserMessage=WAIT A LITTLE, _
+	 PauseTime_ms=5000)
+
+
+
+	' PICK FROM MICROTITER PLATE
+
+
+	ASPIRATE(SyringeMask=1, _
+	 Volume_uL=5, _
+	 SyringeSpeed=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=MICROTITER[I1,0], _
+	 XOffset=0.0, _
+	 YOffset=0.0, _
+	 ZOffset=-5.5, _
+	 MoveSpeedIn_pct=20, _
+	 MoveSpeedOut_pct=20)
+
+
+	PAUSE(UserMessage=WAIT A LITTLE, _
+	 PauseTime_ms=10000)
+
+
+	' MOVE TO ORIGIN OF ARRAY SAFELY
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=DISPENSEGRID[0,0], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=0, _
+	 Speed_pct=25, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	FOR(I2 = 0 To 3 Step 1)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=DISPENSEGRID[I1,I2], _
+		 XOffset=0, _
+		 YOffset=0, _
+		 ZOffset=0, _
+		 Speed_pct=25, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		PIEZO_DISPENSE(Tip=1, _
+		 PiezoAmplitude=50, _
+		 PiezoFreq=22000, _
+		 DropsPerBurst=10000, _
+		 NumBursts=1, _
+		 FreqOfBursts=1, _
+		 Tip1Point=DISPENSEGRID[I1,I2], _
+		 XOffset=0.0, _
+		 YOffset=0.0, _
+		 ZOffset=0.001, _
+		 MoveHeightAboveSurface=0.0)
+
+
+		' MOVE THE OIL TIP TO THE CORRECT POINT
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP2, _
+		 Point=DISPENSEGRID[I1,I2], _
+		 XOffset=0, _
+		 YOffset=0, _
+		 ZOffset=0, _
+		 Speed_pct=25, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		VARIABLE_MATH(TEMPSYRINGE = TEMPSYRINGE - SYRINGEDISPENSE)
+
+
+		SYRINGE_MOVE(SyringeMask=2, _
+		 SyringePosition=TEMPSYRINGE, _
+		 SyringeSpeed=18, _
+		 DelayAfter_ms=100)
+
+
+		VARIABLE_MATH(TEMPSYRINGE = TEMPSYRINGE + SYRINGESUCKBACK)
+
+
+		SYRINGE_MOVE(SyringeMask=2, _
+		 SyringePosition=TEMPSYRINGE, _
+		 SyringeSpeed=18, _
+		 DelayAfter_ms=100)
+
+
+		PAUSE(UserMessage=DISPENSED OIL ON ARRAY, _
+		 PauseTime_ms=2000)
+
+
+	NEXT
+
+
+NEXT
+
+
+'SUCK BACK MORE AS WE MOVE OVER TO WASH
+VARIABLE_MATH(TEMPSYRINGE = TEMPSYRINGE + 100)
+
+
+SYRINGE_MOVE(SyringeMask=2, _
+  SyringePosition=TEMPSYRINGE, _
+  SyringeSpeed=18, _
+  DelayAfter_ms=100)
+
+
+WASH_TIPS(SyringeMask=1, _
+ VolumePerStroke_uL=40, _
+ NumSyringeStrokes=1, _
+ SyringeSpeed=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH_PT, _
+ XOffset=0.0, _
+ YOffset=0.0, _
+ ZOffset=0.0, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20, _
+ DoAirAspirateAfter=FALSE)
+
+
+WASH_TIPS(SyringeMask=2, _
+ VolumePerStroke_uL=50, _
+ NumSyringeStrokes=1, _
+ SyringeSpeed=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH_PT, _
+ XOffset=0.0, _
+ YOffset=0.0, _
+ ZOffset=0.0, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20, _
+ DoAirAspirateAfter=FALSE)
+
+

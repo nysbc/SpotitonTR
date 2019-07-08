@@ -1,0 +1,144 @@
+' ALL AXIS SPEEDS
+
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=35)
+
+
+' X AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=X_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=300.0)
+
+
+DEFINE_VARIABLE(VariableName=X_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=3000.0)
+
+' Y AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=Y_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=200.0)
+
+
+DEFINE_VARIABLE(VariableName=Y_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=3000.0)
+
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=Z_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=40.0)
+
+
+DEFINE_VARIABLE(VariableName=Z_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=300.0)
+
+' GENERAL INTEGERS  USED FOR USER INPUT AND LOOPING
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I3, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=MAIN_LOOP_1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=INNER_LOOP_1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+
+
+
+' STEP AND INCREMENT WHEN FIRING ONTO THE GRID OR COVER GLASS
+
+DEFINE_VARIABLE(VariableName=Y_OFFSET_GRID, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+
+DEFINE_VARIABLE(VariableName=YINC_GRID, _
+ VariableType=DOUBLE, _
+ VariableValue=-0.5)
+
+DEFINE_VARIABLE(VariableName=Z_OFFSET_GRID, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+
+DEFINE_VARIABLE(VariableName=ZINC_GRID, _
+ VariableType=DOUBLE, _
+ VariableValue=-0.4)
+
+
+
+DEFINE_VARIABLE(VariableName=FIRE_ON_COVERGLASS, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+'VARIABLES FOR TUBE HOLDER AND DAB PAD
+
+DEFINE_VARIABLE(VariableName=TUBE_ROW_0_TO_3, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=TUBE_COL_0_TO_3, _
+ VariableType=INT, _
+ VariableValue=0)
+
+DEFINE_VARIABLE(VariableName=DAB_ROW_0_TO_8, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=DAB_COL_0_TO_8, _
+ VariableType=INT, _
+ VariableValue=0)
+
+DEFINE_VARIABLE(VariableName=DAB_USE_DAB, _
+ VariableType=BOOL, _
+ VariableValue=TRUE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

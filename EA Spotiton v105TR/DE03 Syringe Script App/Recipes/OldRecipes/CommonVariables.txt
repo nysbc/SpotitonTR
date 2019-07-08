@@ -1,0 +1,15 @@
+DEFINE_VARIABLE(VariableName=FILEINT1, _
+ VariableType=INT, _
+ VariableValue=1234)
+
+
+DEFINE_VARIABLE(VariableName=FILEINT2, _
+ VariableType=INT, _
+ VariableValue=5678)
+
+
+DEFINE_VARIABLE(VariableName=FILEINT3, _
+ VariableType=INT, _
+ VariableValue=9876)
+
+

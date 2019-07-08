@@ -1,0 +1,192 @@
+
+05/07 17:31:36:147 
+Axis=0, Index Loc in mm=151.85875,  Found Index To Limit in Steps =1793 , 
+05/07 17:31:56:777 
+Axis=1, Index Loc in mm=149.945,  Found Index To Limit in Steps =3324 , 
+05/07 17:32:11:427 
+Axis=2, Index Loc in mm=2.59225,  Found Index To Limit in Steps =1969 , 
+05/07 17:32:47:337 
+Axis=3, Index Loc in mm=0.88125,  Found Index To Limit in Steps =3985 , 
+05/07 17:32:57:457 
+Axis=4, Index Loc in mm=103.78625,  Found Index To Limit in Steps =251 , 
+05/07 17:33:32:197 
+Axis=5, Index Loc in mm=4.7375,  Found Index To Limit in Steps =219 , 
+05/07 17:35:57:908 
+Axis=0, Index Loc in mm=151.85875,  Found Index To Limit in Steps =1793 , 
+05/07 17:36:16:368 
+Axis=1, Index Loc in mm=149.945,  Found Index To Limit in Steps =3324 , 
+05/07 17:36:27:248 
+Axis=2, Index Loc in mm=2.59225,  Found Index To Limit in Steps =1969 , 
+05/07 17:36:35:908 
+Axis=5, Index Loc in mm=4.7,  Found Index To Limit in Steps =216 , 
+05/07 17:36:49:878 
+Axis=3, Index Loc in mm=0.88125,  Found Index To Limit in Steps =3985 , 
+05/07 17:36:55:948 
+Axis=4, Index Loc in mm=103.78625,  Found Index To Limit in Steps =251 , 
+
+-------
+05/07 17:51:46:958 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 17:52:06:068 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 17:52:36:188 
+Axis=2, Index Loc in mm=3.0825,  Found Index To Limit in Steps =1970 , 
+05/07 17:53:10:348 
+Axis=3, Index Loc in mm=5.86,  Found Index To Limit in Steps =3984 , 
+05/07 17:53:14:838 
+Axis=4, Index Loc in mm=103.4775,  Found Index To Limit in Steps =250 , 
+05/07 17:53:19:488 
+Axis=5, Index Loc in mm=7.4375,  Found Index To Limit in Steps =216 , 
+
+
+-------
+05/07 18:09:43:150 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 18:09:48:580 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 18:10:07:880 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 18:10:25:880 
+Axis=2, Index Loc in mm=3.08175,  Found Index To Limit in Steps =1967 , 
+05/07 18:11:17:740 
+Axis=4, Index Loc in mm=103.47625,  Found Index To Limit in Steps =251 , 
+05/07 18:11:20:970 
+Axis=5, Index Loc in mm=7.425,  Found Index To Limit in Steps =215 , 
+05/07 18:13:48:960 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 18:13:59:520 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 18:14:10:950 
+Axis=2, Index Loc in mm=3.082,  Found Index To Limit in Steps =1968 , 
+05/07 18:14:20:110 
+Axis=2, Index Loc in mm=3.082,  Found Index To Limit in Steps =1968 , 
+05/07 18:14:30:130 
+Axis=3, Index Loc in mm=4.72125,  Found Index To Limit in Steps =3073 , 
+05/07 18:14:34:010 
+Axis=4, Index Loc in mm=103.47625,  Found Index To Limit in Steps =251 , 
+05/07 18:14:40:070 
+Axis=5, Index Loc in mm=7.4625,  Found Index To Limit in Steps =218 , 
+05/07 18:23:14:519 
+Axis=0, Index Loc in mm=149.62,  Found Index To Limit in Steps =1792 , 
+05/07 18:23:27:509 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 18:23:38:569 
+Axis=2, Index Loc in mm=3.0825,  Found Index To Limit in Steps =1970 , 
+05/07 18:23:51:599 
+Axis=3, Index Loc in mm=4.72,  Found Index To Limit in Steps =3072 , 
+05/07 18:23:54:889 
+Axis=4, Index Loc in mm=103.47625,  Found Index To Limit in Steps =251 , 
+05/07 18:23:58:599 
+Axis=5, Index Loc in mm=7.425,  Found Index To Limit in Steps =215 , 
+05/07 18:26:19:479 
+Axis=0, Index Loc in mm=149.62,  Found Index To Limit in Steps =1792 , 
+05/07 18:26:39:200 
+Axis=0, Index Loc in mm=149.62,  Found Index To Limit in Steps =1792 , 
+05/07 18:26:59:490 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 18:33:21:284 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 18:33:31:574 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 18:33:49:289 
+Axis=2, Index Loc in mm=3.0825,  Found Index To Limit in Steps =1970 , 
+05/07 18:34:03:229 
+Axis=3, Index Loc in mm=4.72,  Found Index To Limit in Steps =3072 , 
+05/07 18:34:08:639 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 18:34:23:739 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/07 18:34:57:248 
+Axis=0, Index Loc in mm=149.62,  Found Index To Limit in Steps =1792 , 
+05/07 18:35:07:508 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/07 18:35:18:198 
+Axis=2, Index Loc in mm=3.0825,  Found Index To Limit in Steps =1970 , 
+05/07 18:35:27:818 
+Axis=3, Index Loc in mm=4.72,  Found Index To Limit in Steps =3072 , 
+05/07 18:35:31:108 
+Axis=4, Index Loc in mm=103.47625,  Found Index To Limit in Steps =251 , 
+05/07 18:35:35:918 
+Axis=5, Index Loc in mm=7.4375,  Found Index To Limit in Steps =216 , 
+05/08 09:38:25:795 
+Axis=0, Index Loc in mm=149.62,  Found Index To Limit in Steps =1792 , 
+05/08 09:38:37:795 
+Axis=1, Index Loc in mm=145.78375,  Found Index To Limit in Steps =3325 , 
+05/08 09:38:48:455 
+Axis=2, Index Loc in mm=3.0815,  Found Index To Limit in Steps =1966 , 
+05/08 09:38:58:455 
+Axis=3, Index Loc in mm=4.72125,  Found Index To Limit in Steps =3073 , 
+05/08 09:39:01:265 
+Axis=4, Index Loc in mm=103.47625,  Found Index To Limit in Steps =251 , 
+05/08 09:39:06:395 
+Axis=5, Index Loc in mm=7.475,  Found Index To Limit in Steps =219 , 
+05/08 10:24:51:162 
+Axis=0, Index Loc in mm=149.61875,  Found Index To Limit in Steps =1793 , 
+05/08 10:32:20:736 
+Axis=0, Index Loc in mm=149.62,  Found Index To Limit in Steps =1792 , 
+05/08 10:32:50:123 
+Axis=1, Index Loc in mm=145.785,  Found Index To Limit in Steps =3324 , 
+05/08 10:34:11:506 
+Axis=2, Index Loc in mm=3.08175,  Found Index To Limit in Steps =1967 , 
+05/08 10:34:21:606 
+Axis=3, Index Loc in mm=4.72125,  Found Index To Limit in Steps =3073 , 
+05/08 10:34:24:736 
+Axis=4, Index Loc in mm=103.475,  Found Index To Limit in Steps =252 , 
+05/08 10:34:30:266 
+Axis=5, Index Loc in mm=7.475,  Found Index To Limit in Steps =219 , 
+05/12 10:46:48:752 
+Axis=0, Index Loc in mm=149.6175,  Found Index To Limit in Steps =1794 , 
+05/12 10:47:06:663 
+Axis=1, Index Loc in mm=145.78375,  Found Index To Limit in Steps =3325 , 
+05/12 10:47:31:043 
+Axis=2, Index Loc in mm=3.08125,  Found Index To Limit in Steps =1965 , 
+05/12 10:47:40:408 
+Axis=2, Index Loc in mm=3.081,  Found Index To Limit in Steps =1964 , 
+05/12 10:47:48:741 
+Axis=3, Index Loc in mm=4.7225,  Found Index To Limit in Steps =3074 , 
+05/12 10:47:57:721 
+Axis=4, Index Loc in mm=103.475,  Found Index To Limit in Steps =252 , 
+05/12 10:48:02:611 
+Axis=5, Index Loc in mm=7.4125,  Found Index To Limit in Steps =214 , 
+06/23 07:57:25:714 
+*****HOME ERROR******
+Axis=2, Index Loc in mm=3.0885,  Found Index To Limit in Steps =1994 , 
+06/23 07:58:15:737 
+*****HOME ERROR******
+Axis=2, Index Loc in mm=3.0885,  Found Index To Limit in Steps =1994 , 
+06/23 08:00:59:549 
+Axis=0, Index Loc in mm=149.62375,  Found Index To Limit in Steps =1789 , 
+06/23 08:01:16:022 
+Axis=1, Index Loc in mm=145.7875,  Found Index To Limit in Steps =3322 , 
+06/23 08:01:52:950 
+*****HOME ERROR******
+Axis=2, Index Loc in mm=3.089,  Found Index To Limit in Steps =1996 , 
+06/23 08:02:28:043 
+Axis=3, Index Loc in mm=4.72125,  Found Index To Limit in Steps =3073 , 
+06/23 08:02:41:083 
+Axis=4, Index Loc in mm=103.47875,  Found Index To Limit in Steps =249 , 
+06/23 08:02:46:836 
+Axis=5, Index Loc in mm=7.425,  Found Index To Limit in Steps =215 , 
+06/23 08:04:53:294 
+*****HOME ERROR******
+Axis=2, Index Loc in mm=3.08925,  Found Index To Limit in Steps =1997 , 
+06/23 08:09:37:532 
+*****HOME ERROR******
+Axis=2, Index Loc in mm=3.08775,  Found Index To Limit in Steps =1991 , 
+06/23 08:14:58:807 
+*****HOME ERROR******
+Axis=2, Index Loc in mm=3.08975,  Found Index To Limit in Steps =1999 , 
+06/23 10:58:58:862 
+Axis=2, Index Loc in mm=3.09,  Found Index To Limit in Steps =2000 , 
+06/23 10:59:32:026 
+Axis=0, Index Loc in mm=149.62125,  Found Index To Limit in Steps =1791 , 
+06/23 10:59:43:243 
+Axis=1, Index Loc in mm=145.7875,  Found Index To Limit in Steps =3322 , 
+06/23 11:00:02:552 
+Axis=2, Index Loc in mm=3.09025,  Found Index To Limit in Steps =2001 , 
+06/23 11:00:38:566 
+Axis=3, Index Loc in mm=4.72,  Found Index To Limit in Steps =3072 , 
+06/23 11:00:42:896 
+Axis=4, Index Loc in mm=103.47875,  Found Index To Limit in Steps =249 , 
+06/23 11:00:58:221 
+Axis=5, Index Loc in mm=7.475,  Found Index To Limit in Steps =219 , 

@@ -1,0 +1,209 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\SpotitonV1.0\TESTMOTION_VARIABLES.TXT)
+
+
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\SpotitonV1.0\COMMON_POINTS.TXT)
+
+
+' MOVE BOTH ROBOTS UP
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=25)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=25, _
+ UseGridRobot=TRUE)
+
+
+' SET ALL AXIS INITIAL ACCEL AND VELOCITY
+
+
+SET_MAX_VELOCITY(AxisNumber=0, _
+ MaxVelocity=VEL_X, _
+ UseGridRobot=FALSE)
+
+
+SET_ACCEL(AxisNumber=0, _
+ Accel=ACC_X, _
+ Decel=DEC_X, _
+ UseGridRobot=FALSE)
+
+
+SET_MAX_VELOCITY(AxisNumber=1, _
+ MaxVelocity=VEL_Y, _
+ UseGridRobot=FALSE)
+
+
+SET_ACCEL(AxisNumber=1, _
+ Accel=ACC_Y, _
+ Decel=DEC_Y, _
+ UseGridRobot=FALSE)
+
+
+SET_MAX_VELOCITY(AxisNumber=2, _
+ MaxVelocity=VEL_Z, _
+ UseGridRobot=FALSE)
+
+
+SET_ACCEL(AxisNumber=2, _
+ Accel=ACC_Z, _
+ Decel=DEC_Z, _
+ UseGridRobot=FALSE)
+
+
+SET_MAX_VELOCITY(AxisNumber=0, _
+ MaxVelocity=VEL_X2, _
+ UseGridRobot=TRUE)
+
+
+SET_ACCEL(AxisNumber=0, _
+ Accel=ACC_X2, _
+ Decel=DEC_X2, _
+ UseGridRobot=TRUE)
+
+
+SET_MAX_VELOCITY(AxisNumber=1, _
+ MaxVelocity=VEL_Y2, _
+ UseGridRobot=TRUE)
+
+
+SET_ACCEL(AxisNumber=1, _
+ Accel=ACC_Y2, _
+ Decel=DEC_Y2, _
+ UseGridRobot=TRUE)
+
+
+SET_MAX_VELOCITY(AxisNumber=2, _
+ MaxVelocity=VEL_Z2, _
+ UseGridRobot=TRUE)
+
+
+SET_ACCEL(AxisNumber=2, _
+ Accel=ACC_Z2, _
+ Decel=DEC_Z2, _
+ UseGridRobot=TRUE)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+WHILE(I1 > 0)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I1, _
+	 Prompt=1=START MOVING \N 2=RESET GRID ROBOT MOTION PARAM \N 3=RESET PIPETTE ROBOT MOTION PARAM \N 4= RESET PLUNGE Z2 AXIS ONLY PARAM \N  0=CANCEL, _
+	 MinValue=0, _
+	 MaxValue=4, _
+	 ValueIfUserCancels=0)
+
+
+
+	IF(I1 = 3)
+
+
+		SET_DEFAULT_MOTION_PARAMETERS()
+
+
+	ENDIF
+
+
+
+	IF(I1 = 2)
+
+
+		SET_DEFAULT_MOTION_PARAMETERS(UseGridRobot=TRUE)
+
+
+	ENDIF
+
+
+	IF(I1 = 4)
+
+
+		SET_DEFAULT_MOTION_PARAMETERS(AxisNumber=2, _
+		 UseGridRobot=TRUE)
+
+
+	ENDIF
+
+
+
+	IF(I1 = 1)
+
+
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=SAFE_T1_PT, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=TRUE)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=SAFE_PT_GRIDROBOT, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=TRUE, _
+		 UseGridRobot=TRUE)
+
+
+		ROTATE_SETUP(AccelCount=25000, _
+		 DecelCount=25000, _
+		 MaxVelCount=1000000)
+
+
+		ROTATE_MOVE(PositionCount=ROTATE_0)
+
+
+		FOR(I2 = 1 To 20 Step 1)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MID_T1_PT, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=TRUE)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=SAFE_T1_PT, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=TRUE)
+
+
+			ROTATE_MOVE(PositionCount=ROTATE_90)
+
+
+			ROTATE_MOVE(PositionCount=ROTATE_0)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MID_PT_GRIDROBOT, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=TRUE, _
+			 UseGridRobot=TRUE)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=SAFE_PT_GRIDROBOT, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=TRUE, _
+			 UseGridRobot=TRUE)
+
+
+		NEXT
+
+
+	ENDIF
+
+
+LOOP
+
+
+EXITSEQUENCE
+
+

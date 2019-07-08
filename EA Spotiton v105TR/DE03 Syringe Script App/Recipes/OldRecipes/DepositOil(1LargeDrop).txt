@@ -1,0 +1,119 @@
+'PRIME TIP WITH WATER
+'PICKUP OIL AND THEN DEPOSIT ONTO MEMBRANE
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+
+DEFINE_POINT(VariableName=WASH_PT_T1, _
+ X=5, _
+ Y=100.0, _
+ Z=-30.0)
+
+DEFINE_POINT(VariableName=PICKUP_OIL, _
+ X=55.0, _
+ Y=124.0, _
+ Z=-30.0)
+
+DEFINE_POINT(VariableName=SAFE_PT, _
+ X=5.0, _
+ Y=0.0, _
+ Z=0.0)
+
+
+DEFINE_POINT(VariableName=MEMBRANECENTER_T2, _
+ X=107.0, _
+ Y=92.0, _
+ Z=-22)
+
+' PRIME THE OIL SYRINGE
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=WASH_PT_T1, _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=TRUE)
+
+PRIME(SyringeMask=1, _
+ VolumePerStroke_uL=200, _
+ NumSyringeStrokes=1, _
+ SyringeSpeedPull=32, _
+ SyringeSpeedPush=32, _
+ DelayAfter_ms=500)
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+PAUSE(UserMessage=PRIMING COMPLETE  CLICK OK TO CONTINUE, _
+ PauseTime_ms=0)
+
+
+' PICKUP OIL AND DISPENSE ONTO CENTER FILTER PAPER
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_OIL, _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+ASPIRATE(SyringeMask=1, _
+ Volume_uL=40, _
+ SyringeSpeed=38, _
+ ValveToBypass=FALSE, _
+ DelayAfter_ms=5000)
+
+
+' PULL OUT SLOW
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_OIL, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=8, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=MEMBRANECENTER_T2, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=40, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+DISPENSE(SyringeMask=1, _
+ Volume_uL=35, _
+ SyringeSpeed=38, _
+ ValveToBypass=FALSE, _
+ DelayAfter_ms=2000)
+
+
+PAUSE(UserMessage=WAIT A LITTLE, _
+ PauseTime_ms=200)
+
+
+' MOVE AWAY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=MEMBRANECENTER_T2, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=5, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=5, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+

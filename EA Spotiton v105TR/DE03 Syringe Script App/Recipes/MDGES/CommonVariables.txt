@@ -1,0 +1,95 @@
+' ALL AXIS SPEEDS
+
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+' X AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=X_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=300.0)
+
+
+DEFINE_VARIABLE(VariableName=X_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=3000.0)
+
+' Y AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=Y_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=200.0)
+
+
+DEFINE_VARIABLE(VariableName=Y_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=3000.0)
+
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=Z_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=40.0)
+
+
+DEFINE_VARIABLE(VariableName=Z_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=300.0)
+
+' GENERAL INTEGERS  USED FOR USER INPUT AND LOOPING
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I3, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=MAIN_LOOP_1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=INNER_LOOP_1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+
+DEFINE_VARIABLE(VariableName=MICROPLATE_ROW_0_TO_7, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=MICROPLATE_COL_0_TO_11, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

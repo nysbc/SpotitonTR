@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AtSyringe">
+</Property><Property Name="Solution File" Value="C:\DE03 Syringe Script App\Source\Syringe\AtSyringe.sln">
+</Property><Property Name="Date" Value="Thursday, March 22, 2012">
+</Property><Property Name="Time" Value="12:57 PM">
+</Property></Properties><Event ErrorLevel="0" Project="AtSyringe" Source="AtSyringe.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="AtSyringe" Source="AtSyringe.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="AtSyringe.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AtSyringe.sln" Description="Converted">
+</Event></UpgradeLog>

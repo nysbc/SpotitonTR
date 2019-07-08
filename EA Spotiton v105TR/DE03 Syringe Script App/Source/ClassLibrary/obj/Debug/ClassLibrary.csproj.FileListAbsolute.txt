@@ -1,0 +1,32 @@
+C:\DE03 Syringe Script App\object\ClassLibrary.dll
+C:\DE03 Syringe Script App\object\ClassLibrary.pdb
+C:\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmPause.resources
+C:\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmUserInput.resources
+C:\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\object\ClassLibrary.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmPause.resources
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmUserInput.resources
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\object\ClassLibrary.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\object\ClassLibrary.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\object\ClassLibrary.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\object\ClassLibrary.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\object\ClassLibrary.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmPause.resources
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmUserInput.resources
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\ClassLibrary.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\ClassLibrary.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmPause.resources
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\EA.PixyControl.ClassLibrary.frmUserInput.resources
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\ClassLibrary\obj\Debug\ClassLibrary.pdb

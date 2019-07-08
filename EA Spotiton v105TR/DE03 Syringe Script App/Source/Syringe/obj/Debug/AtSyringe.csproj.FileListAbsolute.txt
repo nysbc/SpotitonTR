@@ -1,0 +1,30 @@
+C:\DE03 Syringe Script App\object\AtSyringe.dll
+C:\DE03 Syringe Script App\object\AtSyringe.pdb
+C:\DE03 Syringe Script App\Source\Syringe\obj\Debug\Aurigin.SyringeControlForm.resources
+C:\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.dll
+C:\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.pdb
+C:\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csproj.GenerateResource.Cache
+C:\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csprojResolveAssemblyReference.cache
+C:\StainItOn\object\AtSyringe.dll
+C:\StainItOn\Source\Syringe\obj\Debug\AtSyringe.csprojAssemblyReference.cache
+C:\StainItOn\Source\Syringe\obj\Debug\Aurigin.SyringeControlForm.resources
+C:\StainItOn\Source\Syringe\obj\Debug\AtSyringe.csproj.GenerateResource.cache
+C:\StainItOn\Source\Syringe\obj\Debug\AtSyringe.csproj.CoreCompileInputs.cache
+C:\StainItOn\Source\Syringe\obj\Debug\AtSyringe.dll
+C:\StainItOn\Source\Syringe\obj\Debug\AtSyringe.pdb
+C:\StainItOn\object\AtSyringe.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\object\AtSyringe.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\object\AtSyringe.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csprojAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Syringe\obj\Debug\Aurigin.SyringeControlForm.resources
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csproj.GenerateResource.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csproj.CoreCompileInputs.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\AtSyringe.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\object\AtSyringe.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Syringe\obj\Debug\Aurigin.SyringeControlForm.resources
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.csproj.GenerateResource.Cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Syringe\obj\Debug\AtSyringe.pdb

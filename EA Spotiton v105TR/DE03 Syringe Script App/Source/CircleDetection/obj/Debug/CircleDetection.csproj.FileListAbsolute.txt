@@ -1,0 +1,52 @@
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.pdb
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.UI.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.Util.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csprojResolveAssemblyReference.cache
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.pdb
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.pdb
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.UI.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.Util.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csprojResolveAssemblyReference.cache
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.pdb
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.pdb
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.UI.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.Util.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csprojResolveAssemblyReference.cache
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.UI.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.Util.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.UI.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.Util.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csprojAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csproj.CoreCompileInputs.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csproj.CopyComplete
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\CircleDetection.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.CV.UI.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\bin\Debug\Emgu.Util.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csprojAssemblyReference.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csproj.CoreCompileInputs.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.csproj.CopyComplete
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\CircleDetection\obj\Debug\CircleDetection.pdb

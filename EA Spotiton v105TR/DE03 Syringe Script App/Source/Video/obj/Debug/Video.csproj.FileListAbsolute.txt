@@ -1,0 +1,41 @@
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\uEyeDotNet.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+D:\NYSBC\Spotiton\Software\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\uEyeDotNet.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+C:\Users\EA-NCRR-1\Desktop\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\bin\Debug\uEyeDotNet.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+C:\Users\EA-NCRR-1\Source\Repos\spotiton\EA Spotiton v075\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\Video\bin\Debug\uEyeDotNet.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v100\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\Video\bin\Debug\uEyeDotNet.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\Spotiton New Software\GUI Software\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojAssemblyReference.cache
+C:\EA Spotiton v101\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csproj.CoreCompileInputs.cache
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Video\bin\Debug\Video.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Video\bin\Debug\Video.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Video\obj\Debug\Video.dll
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Video\obj\Debug\Video.pdb
+C:\EA Spotiton v105TR\DE03 Syringe Script App\Source\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache

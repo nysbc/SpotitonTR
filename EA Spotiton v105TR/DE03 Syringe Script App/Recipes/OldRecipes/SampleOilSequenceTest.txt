@@ -1,0 +1,119 @@
+DEFINE_POINT(VariableName=OIL_PT, _
+ X=175.0, _
+ Y=252.0, _
+ Z=-123.0)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=50.0, _
+ Y=290.0, _
+ Z=-100.0)
+
+
+' AMMOUNT THAT IT WILL SUCK BACK THE OIL SYRINGE (STEPS)
+
+
+DEFINE_VARIABLE(VariableName=SYRINGESUCKBACK, _
+ VariableType=INT, _
+ VariableValue=10)
+
+
+' AMMOUNT THAT IT WILL COVER EACH SPOT
+
+
+DEFINE_VARIABLE(VariableName=SYRINGEDISPENSE, _
+ VariableType=INT, _
+ VariableValue=60)
+
+
+' VARIABLE USED TO HOLD THE LOCATION WHERE WE WILL DRIVE THE SYRINGE
+
+
+DEFINE_VARIABLE(VariableName=TEMPSYRINGE, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=TOTALSPOTS, _
+ VariableType=INT, _
+ VariableValue=8)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=12.5, _
+ Y=182.0, _
+ Z=-113.0, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+' PIPETTE TIP DISPENSING ON FILTER PAPER
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=39.0, _
+ Y=91.0, _
+ Z=-120.0, _
+ XSteps=2, _
+ XIncrement=25.0, _
+ YSteps=4, _
+ YIncrement=20.0)
+
+
+
+	WASH_TIPS(SyringeMask=1, _
+	 VolumePerStroke_uL=40, _
+	 NumSyringeStrokes=1, _
+	 SyringeSpeedPush=17, _
+	 SyringeSpeedPull=17, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT, _
+	 XOffset=0.0, _
+	 YOffset=0.0, _
+	 ZOffset=0.0, _
+	 MoveSpeedIn_pct=20, _
+	 MoveSpeedOut_pct=20, _
+	 DoAirAspirateAfter=FALSE)
+
+
+
+	
+WASH_TIPS(SyringeMask=1, _
+ VolumePerStroke_uL=40, _
+ NumSyringeStrokes=1, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH_PT, _
+ XOffset=0.0, _
+ YOffset=0.0, _
+ ZOffset=0.0, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20, _
+ DoAirAspirateAfter=FALSE)
+
+
+WASH_TIPS(SyringeMask=1, _
+ VolumePerStroke_uL=50, _
+ NumSyringeStrokes=1, _
+ SyringeSpeedPush=25, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH_PT, _
+ XOffset=0.0, _
+ YOffset=0.0, _
+ ZOffset=0.0, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20, _
+ DoAirAspirateAfter=FALSE)
+
+

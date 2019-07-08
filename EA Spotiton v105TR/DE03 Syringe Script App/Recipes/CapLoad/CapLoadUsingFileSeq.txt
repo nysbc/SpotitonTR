@@ -1,0 +1,284 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_GRID(VariableName=MICROPLATE, _
+ X=162.0, _
+ Y=71.0, _
+ Z=-48.0, _
+ XSteps=8, _
+ XIncrement=-9.0, _
+ YSteps=12, _
+ YIncrement=9.0)
+
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=30)
+
+
+
+DEFINE_VARIABLE(VariableName=VALVE_TO_RESERVOIR, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+
+DEFINE_VARIABLE(VariableName=VALVE_TO_TIP, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+
+DEFINE_VARIABLE(VariableName=VALVE_TO_BYPASS, _
+ VariableType=INT, _
+ VariableValue=2)
+
+
+DEFINE_VARIABLE(VariableName=F1_STEP, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F2_CODE, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F3_ROW, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F4_COL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F5_PUSH_VOL, _
+ VariableType=DOUBLE, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F6_PUSH_SP, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F7_PUSH_DLY, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F8_ASP_VOL, _
+ VariableType=DOUBLE, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F9_ASP_SP, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=F10_ASP_DLY, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=PROMPT_I, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=KEEP_LOOPING, _
+ VariableType=BOOL, _
+ VariableValue=TRUE)
+
+
+GET_INTEGER_FROM_USER(VariableName=PROMPT_I, _
+ Prompt=READY TO PROCEED WITH FILE BASED SEQUENCE\N 1=CONTINUE  0=ABORT, _
+ MinValue=0, _
+ MaxValue=1, _
+ ValueIfUserCancels=0)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+IF(PROMPT_I = 0)
+
+
+	EXITSEQUENCE
+
+
+ENDIF
+
+
+FOR(F1_STEP = 1 To 100 Step 1)
+
+
+	GET_STEP_FROM_FILE(FilePath=C:\DE03 SYRINGE SCRIPT APP\RECIPES\CapLoad\csvFiles\Test2013-05-22.csv, _
+	 StepNo=F1_STEP, _
+	 Code=F2_CODE, _
+	 Row=F3_ROW, _
+	 Col=F4_COL, _
+	 Vol1_ul=F5_PUSH_VOL, _
+	 Vol1_syringe_speed=F6_PUSH_SP, _
+	 Vol1_delay=F7_PUSH_DLY, _
+	 Vol2_ul=F8_ASP_VOL, _
+	 Vol2_syringe_speed=F9_ASP_SP, _
+	 Vol2_delay=F10_ASP_DLY)
+
+
+'	PAUSE(UserMessage=NONE, _
+'	  PauseTime_ms=2000)
+
+	' STEP NOT IN FILE  F2_CODE=-1 ?
+
+	IF(F2_CODE = -1)
+
+
+		MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	' REFILL THE SYRINGE
+
+
+	IF(F2_CODE = 2)
+
+
+ 		WRITE_TO_CONSOLE(TextToWrite=RESETTING THE SYRINGE)
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE[F3_ROW, F4_COL], _
+		 ZOffset=10, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE[F3_ROW, F4_COL], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=VALVE_TO_RESERVOIR, _
+		 DelayAfter_ms=50)
+
+
+		SYRINGE_EMPTY(SyringeMask=0, _
+		 SyringeSpeed=14, _
+		 EmptyThroughTip=FALSE, _
+		 DelayAfter_ms=50)
+
+
+		'ASPIRATE A LITTLE IN CASE YOU WANT TO USE PUSH OUT LATER
+
+  
+		ASPIRATE(SyringeMask=0, _
+		 Volume_uL=F8_ASP_VOL, _
+		 SyringeSpeed=F9_ASP_SP, _
+		 ValveToBypass=FALSE, _
+		 AspFromReservoir=TRUE, _
+		 DelayAfter_ms=F10_ASP_DLY)
+
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=VALVE_TO_TIP, _
+		 DelayAfter_ms=50)
+
+
+		' MOVE BACK UP
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE[F3_ROW, F4_COL], _
+		 ZOffset=10, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	ENDIF
+
+
+	IF(F2_CODE = 1)
+
+		WRITE_TO_CONSOLE(TextToWrite=GETTIN A REAGENT)
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE[F3_ROW, F4_COL], _
+		 ZOffset=10, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=VALVE_TO_TIP, _
+		 DelayAfter_ms=50)
+
+
+		IF(F5_PUSH_VOL > 0)
+
+
+			DISPENSE(SyringeMask=0, _
+			 Volume_uL=F5_PUSH_VOL, _
+			 SyringeSpeed=F6_PUSH_SP, _
+			 ValveToBypass=FALSE, _
+			 DelayAfter_ms=F7_PUSH_DLY)
+
+
+		ENDIF
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE[F3_ROW, F4_COL], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+		ASPIRATE(SyringeMask=0, _
+		 Volume_uL=F8_ASP_VOL, _
+		 SyringeSpeed=F9_ASP_SP, _
+		 ValveToBypass=FALSE, _
+		 DelayAfter_ms=F10_ASP_DLY)
+
+
+		' PULL OUT SLOWLY
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE[F3_ROW, F4_COL], _
+		 ZOffset=10, _
+		 Speed_pct=10, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	ENDIF
+
+
+NEXT
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=10, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+EXITSEQUENCE
+
+

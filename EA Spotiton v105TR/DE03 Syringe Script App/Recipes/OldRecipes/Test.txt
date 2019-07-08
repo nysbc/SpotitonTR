@@ -1,0 +1,12 @@
+
+
+ASPIRATE(SyringeMask=1, _
+	 Volume_uL=20, _
+	 SyringeSpeed=15, _
+	 DelayAfter_ms=500, _
+	 XOffset=0.0, _
+	 YOffset=0.0, _
+	 ZOffset=-5.5, _
+	 MoveSpeedIn_pct=20, _
+	 MoveSpeedOut_pct=20)
+

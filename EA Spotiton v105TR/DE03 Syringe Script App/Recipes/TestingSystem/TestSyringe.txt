@@ -1,0 +1,57 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=0, _
+ DelayAfter_ms=100)
+
+
+ASPIRATE(SyringeMask=0, _
+ Volume_uL=10, _
+ SyringeSpeed=15, _
+ ValveToBypass=FALSE, _
+ AspFromReservoir=TRUE)
+
+
+DISPENSE(SyringeMask=0, _
+ Volume_uL=10, _
+ SyringeSpeed=17, _
+ ValveToBypass=FALSE, _
+ DelayAfter_ms=1)
+
+
+EXITSEQUENCE
+
+
+WHILE(I1 > -1)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I1, _
+	 Prompt=SET SYRINGE VALVE RES=0   TIP=1  BYPASS=2, _
+	 MinValue=0, _
+	 MaxValue=2, _
+	 ValueIfUserCancels=-1)
+
+
+	IF(I1 > -1)
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=I1, _
+		 DelayAfter_ms=100)
+
+
+	ENDIF
+
+
+LOOP
+
+
+EXITSEQUENCE
+
+

@@ -1,0 +1,86 @@
+
+' POINTS FOR XYZ SYSTEM
+
+DEFINE_POINT(VariableName=SAFE_PT, _
+X=0.0, _
+Y=100.0, _
+Z=0.0)
+
+' Z Used to be -19.5
+
+DEFINE_POINT(VariableName=INS_T1_PT, _
+X=306.0, _
+Y=67.34, _
+Z=-21.5)
+
+DEFINE_POINT(VariableName=WASH_T1_PT, _
+ X=119.4, _
+ Y=80.5, _
+ Z=-28)
+
+
+'ARRAYS OF POINTS
+
+DEFINE_GRID(VariableName=MICROPLATE_T1_GR, _
+ X=119.4, _
+ Y=143.5, _
+ Z=-28, _
+ XSteps=12, _
+ XIncrement=9.0, _
+ YSteps=3, _
+ YIncrement=-9.0)
+
+
+' X AXIS MAX VELOCITY AND ACCELERATION
+
+
+
+DEFINE_VARIABLE(VariableName=X_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=300.0)
+
+
+DEFINE_VARIABLE(VariableName=X_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=3000.0)
+
+' Y AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=Y_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=200.0)
+
+
+DEFINE_VARIABLE(VariableName=Y_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=3000.0)
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+DEFINE_VARIABLE(VariableName=Z_MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=40.0)
+
+
+DEFINE_VARIABLE(VariableName=Z_ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=300.0)
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+
+
+
+
+
+
+
+
+
+
+
+

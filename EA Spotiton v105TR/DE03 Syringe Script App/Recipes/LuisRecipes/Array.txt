@@ -1,0 +1,86 @@
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+
+SYRINGE_SET_VALVE(SyringeMask=1, _
+ ValvePosition=2, _
+ DelayAfter_ms=100)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=112.0, _
+ Y=289.0, _
+ Z=-30.0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=9.8, _
+ Y=172.2, _
+ Z=-10.0, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+' PIPETTE TIP DISPENSING ON FILTER PAPER
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=28, _
+ Y=83, _
+ Z=-15.0, _
+ XSteps=5, _
+ XIncrement=1.0, _
+ YSteps=5, _
+ YIncrement=1.0)
+
+
+' MOVE TO ORIGIN OF ARRAY SAFELY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=DISPENSEGRID[0,0], _
+ Speed_pct=100, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I1 = 0 To 4 Step 1)
+
+
+	FOR(I2 = 0 To 4 Step 1)
+
+
+		PIEZO_DISPENSE(Tip=1, _
+		 PiezoAmplitude=45, _
+		 PiezoFreq=22000, _
+		 DropsPerBurst=100, _
+		 NumBursts=1, _
+		 FreqOfBursts=10, _
+		 Tip1Point=DISPENSEGRID[I1,I2], _
+		 MoveHeightAboveSurface=0)
+
+
+	NEXT
+
+
+NEXT
+
+
+SYRINGE_SET_VALVE(SyringeMask=1, _
+ ValvePosition=1, _
+ DelayAfter_ms=10)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+

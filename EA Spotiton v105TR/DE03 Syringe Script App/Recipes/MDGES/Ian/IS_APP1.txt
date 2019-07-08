@@ -1,0 +1,534 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\MDGES\COMMONPOINTS.TXT)
+
+
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\MDGES\COMMONVARIABLES.TXT)
+
+
+' X AXIS MAX VELOCITY AND ACCELERATION
+
+
+SET_MAX_VELOCITY(AxisNumber=0, _
+ MaxVelocity=X_MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=0, _
+ Accel=X_ACCELERATION)
+
+
+' Y AXIS MAX VELOCITY AND ACCELERATION
+
+
+SET_MAX_VELOCITY(AxisNumber=1, _
+ MaxVelocity=Y_MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=1, _
+ Accel=Y_ACCELERATION)
+
+
+' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+SET_MAX_VELOCITY(AxisNumber=2, _
+ MaxVelocity=Z_MAX_VELOCITY)
+
+
+SET_ACCEL(AxisNumber=2, _
+ Accel=Z_ACCELERATION)
+
+
+' SET TO 1 IF YOU WANT TO FIRE WITH TRAPEZOID ELSE COS   ADDED PK
+
+
+DEFINE_VARIABLE(VariableName=USE_TRAPEZOID, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+WHILE(MAIN_LOOP_1 = 1)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I1, _
+	 Prompt=1=WASH WITH SONICATE  2=ASPIRATE SAMPLE\N3=INSPECT SIDE CAM     4=DISPENSE\N5=MOVE SAFE    CANCEL=TO EXIT, _
+	 MinValue=1, _
+	 MaxValue=5, _
+	 ValueIfUserCancels=-1)
+
+
+	IF(I1 = -1)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	' WASH WITH SONICATE
+
+
+	IF(I1 = 1)
+
+
+		GET_INTEGER_FROM_USER(VariableName=I2, _
+		 Prompt=MOVE TO WASH POINT \N1=MOVE CANCEL=SKIP MOVE, _
+		 MinValue=1, _
+		 MaxValue=1, _
+		 ValueIfUserCancels=-1)
+
+
+		IF(I2 = 1)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=WASH_T1_PT, _
+			 XOffset=0, _
+			 ZOffset=6, _
+			 Speed_pct=50, _
+			 MoveToSafeHeightFirst=TRUE)
+
+
+			GET_INTEGER_FROM_USER(VariableName=I3, _
+			 Prompt=CONTINUE MOVING DOWN \N1=MOVE CANCEL=ABORT, _
+			 MinValue=1, _
+			 MaxValue=1, _
+			 ValueIfUserCancels=-1)
+
+
+			IF(I3 = -1)
+
+
+				EXITSEQUENCE
+
+
+			ENDIF
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=WASH_T1_PT, _
+			 XOffset=0, _
+			 ZOffset=-6, _
+			 Speed_pct=50, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+		ENDIF
+
+
+		GET_INTEGER_FROM_USER(VariableName=I2, _
+		 Prompt=PROCEED TO SONICATE \N1=PROCEED CANCEL=ABORT, _
+		 MinValue=1, _
+		 MaxValue=1, _
+		 ValueIfUserCancels=-1)
+
+
+		IF(I2 = -1)
+
+
+			EXITSEQUENCE
+
+
+		ENDIF
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=0, _
+		 DelayAfter_ms=100)
+
+
+		SYRINGE_EMPTY(SyringeMask=0, _
+		 SyringeSpeed=10, _
+		 EmptyThroughTip=FALSE, _
+		 DelayAfter_ms=50)
+
+
+		ASPIRATE(SyringeMask=0, _
+		 Volume_uL=100, _
+		 SyringeSpeed=10, _
+		 ValveToBypass=FALSE, _
+		 AspFromReservoir=TRUE)
+
+
+		DISPENSE(SyringeMask=0, _
+		 Volume_uL=100, _
+		 SyringeSpeed=15, _
+		 ValveToBypass=FALSE, _
+		 DelayAfter_ms=-1)
+
+
+		' A SPEED OF 17 WILL TAKE 30 SECONDS
+
+
+		FOR(I2 = 1 To 2 Step 1)
+
+
+			DE03_STOP_WAVEFORM()
+
+
+			DE03_COS_SETUP(Tip=1, _
+			 DesiredFreq=40000, _
+			 InBurstNo=20000, _
+			 CosAmplitude=1800, _
+			 StrobeDuration=1, _
+			 StrobeDelay=0, _
+			 NumOfBursts=1, _
+			 TriggerSetting=0, _
+			 TriggerDelay=100, _
+			 TriggerPeriod=1)
+
+
+			DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+			 Timeout_ms=1000)
+
+
+			PAUSE(UserMessage=40KHZ, _
+			 PauseTime_ms=1000)
+
+
+			DE03_STOP_WAVEFORM()
+
+
+			DE03_COS_SETUP(Tip=1, _
+			 DesiredFreq=60000, _
+			 InBurstNo=30000, _
+			 CosAmplitude=1800, _
+			 StrobeDuration=1, _
+			 StrobeDelay=0, _
+			 NumOfBursts=1, _
+			 TriggerSetting=0, _
+			 TriggerDelay=100, _
+			 TriggerPeriod=1)
+
+
+			DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+			 Timeout_ms=1000)
+
+
+			PAUSE(UserMessage=60KHZ, _
+			 PauseTime_ms=1000)
+
+
+			DE03_STOP_WAVEFORM()
+
+
+			DE03_COS_SETUP(Tip=1, _
+			 DesiredFreq=80000, _
+			 InBurstNo=40000, _
+			 CosAmplitude=1800, _
+			 StrobeDuration=1, _
+			 StrobeDelay=0, _
+			 NumOfBursts=1, _
+			 TriggerSetting=0, _
+			 TriggerDelay=100, _
+			 TriggerPeriod=1)
+
+
+			DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+			 Timeout_ms=0)
+
+
+			PAUSE(UserMessage=80KHZ, _
+			 PauseTime_ms=1000)
+
+
+		NEXT
+
+
+		GET_INTEGER_FROM_USER(VariableName=I2, _
+		 Prompt=WHEN SYRINGE IS DONE MOVING HIT 1 TO SWITCH VALVE TO BYPASS, _
+		 MinValue=1, _
+		 MaxValue=1, _
+		 ValueIfUserCancels=-1)
+
+
+		IF(I2 = 1)
+
+
+			SYRINGE_SET_VALVE(SyringeMask=0, _
+			 ValvePosition=2, _
+			 DelayAfter_ms=1000)
+
+
+		ENDIF
+
+
+		' COME OUT OF WASH SLOW
+
+
+		MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+	ENDIF
+
+
+	' ASPIRATE SAMPLE
+
+
+	IF(I1 = 2)
+
+
+		VARIABLE_SET(VariableName=MICROPLATE_COL_0_TO_11, _
+		 VariableValue=1)
+
+
+		VARIABLE_SET(VariableName=MICROPLATE_ROW_0_TO_7, _
+		 VariableValue=3)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE_T1_GR[MICROPLATE_COL_0_TO_11,MICROPLATE_ROW_0_TO_7], _
+		 ZOffset=6, _
+		 Speed_pct=50, _
+		 MoveToSafeHeightFirst=TRUE)
+
+
+		GET_INTEGER_FROM_USER(VariableName=I2, _
+		 Prompt=1=OK TO MOVE INTO WELL\NCANCEL=ABORT, _
+		 MinValue=1, _
+		 MaxValue=1, _
+		 ValueIfUserCancels=-1)
+
+
+		IF(I2 = -1)
+
+
+			EXITSEQUENCE
+
+
+		ENDIF
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE_T1_GR[MICROPLATE_COL_0_TO_11,MICROPLATE_ROW_0_TO_7], _
+		 ZOffset=-6, _
+		 Speed_pct=50, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		ASPIRATE(SyringeMask=0, _
+		 Volume_uL=5, _
+		 SyringeSpeed=20, _
+		 ValveToBypass=FALSE, _
+		 AspFromReservoir=FALSE)
+
+
+		PAUSE(UserMessage=NONE, _
+		 PauseTime_ms=1000)
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=2, _
+		 DelayAfter_ms=2000)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MICROPLATE_T1_GR[MICROPLATE_COL_0_TO_11,MICROPLATE_ROW_0_TO_7], _
+		 ZOffset=6, _
+		 Speed_pct=25, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	ENDIF
+
+
+	' INSPECT WITH SIDE CAMERA
+
+
+	IF(I1 = 3)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=INS_T1_PT, _
+		 ZOffset=0, _
+		 Speed_pct=50, _
+		 MoveToSafeHeightFirst=TRUE)
+
+
+		VARIABLE_SET(VariableName=INNER_LOOP_1, _
+		 VariableValue=1)
+
+
+		WHILE(INNER_LOOP_1 = 1)
+
+
+			GET_INTEGER_FROM_USER(VariableName=INNER_LOOP_1, _
+			 Prompt=1=FIRE, _
+			 MinValue=1, _
+			 MaxValue=1, _
+			 ValueIfUserCancels=-1)
+
+
+			IF(INNER_LOOP_1 = 1)
+
+
+				DE03_STOP_WAVEFORM()
+
+
+				IF(USE_TRAPEZOID = 1)
+
+
+					DE03_TRAP_SETUP(Tip=1, _
+					 Leading=1, _
+					 Dwell=15, _
+					 Trailing=10, _
+					 TrapDrops=50, _
+					 TrapFreq=300, _
+					 TrapAmp=630, _
+					 StrobeDuration=1, _
+					 StrobeDelay=200, _
+					 TriggerSetting=0, _
+					 TriggerDelay=1000000, _
+					 TriggerPeriod=1)
+
+
+				ELSE
+
+
+					DE03_COS_SETUP(Tip=1, _
+					 DesiredFreq=12350, _
+					 InBurstNo=100, _
+					 CosAmplitude=450, _
+					 StrobeDuration=1, _
+					 StrobeDelay=0, _
+					 NumOfBursts=1, _
+					 TriggerSetting=0, _
+					 TriggerDelay=100, _
+					 TriggerPeriod=1)
+
+
+				ENDIF
+
+
+				DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+				 Timeout_ms=1000)
+
+
+			ENDIF
+
+
+		LOOP
+
+
+		MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+	ENDIF
+
+
+	' DISPENSE ONTO TARGET
+
+
+	IF(I1 = 4)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=TARGET_T1_GR[0,0], _
+		 Speed_pct=50, _
+		 MoveToSafeHeightFirst=TRUE)
+
+
+		DE03_STOP_WAVEFORM()
+
+
+		IF(USE_TRAPEZOID = 1)
+
+
+			DE03_TRAP_SETUP(Tip=1, _
+			 Leading=1, _
+			 Dwell=15, _
+			 Trailing=10, _
+			 TrapDrops=5, _
+			 TrapFreq=300, _
+			 TrapAmp=630, _
+			 StrobeDuration=1, _
+			 StrobeDelay=200, _
+			 TriggerSetting=0, _
+			 TriggerDelay=1000000, _
+			 TriggerPeriod=1)
+
+
+		ELSE
+
+
+			DE03_COS_SETUP(Tip=1, _
+			 DesiredFreq=12350, _
+			 InBurstNo=2, _
+			 CosAmplitude=650, _
+			 StrobeDuration=1, _
+			 StrobeDelay=0, _
+			 NumOfBursts=1, _
+			 TriggerSetting=0, _
+			 TriggerDelay=100, _
+			 TriggerPeriod=1)
+
+
+		ENDIF
+
+
+		SET_ACCEL(AxisNumber=0, _
+		 Accel=1000)
+
+
+		SET_ACCEL(AxisNumber=1, _
+		 Accel=1000)
+
+
+		FOR(I2 = 0 To 4 Step 1)
+
+
+			FOR(I3 = 0 To 4 Step 1)
+
+
+				MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+				 Point=TARGET_T1_GR[I3,I2], _
+				 Speed_pct=50, _
+				 MoveToSafeHeightFirst=FALSE)
+
+
+				PAUSE(UserMessage=NONE, _
+				 PauseTime_ms=500)
+
+
+				DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+				 Timeout_ms=1000)
+
+
+				PAUSE(UserMessage=NONE, _
+				 PauseTime_ms=500)
+
+
+			NEXT
+
+
+		NEXT
+
+
+		SET_ACCEL(AxisNumber=0, _
+		 Accel=X_ACCELERATION)
+
+
+		SET_ACCEL(AxisNumber=0, _
+		 Accel=Y_ACCELERATION)
+
+
+		MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+	ENDIF
+
+
+	IF(I1 = 5)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=SAFE_PT, _
+		 Speed_pct=50, _
+		 MoveToSafeHeightFirst=TRUE)
+
+
+	ENDIF
+
+
+LOOP
+
+

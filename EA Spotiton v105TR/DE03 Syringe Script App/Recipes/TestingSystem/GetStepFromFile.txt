@@ -1,0 +1,142 @@
+DEFINE_VARIABLE(VariableName=STEPNO, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=CODE, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=ROW, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=COL, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=VOL1_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=-1.0)
+
+
+DEFINE_VARIABLE(VariableName=VOL1_SP, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=VOL1_DELAY, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=VOL2_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=-1.0)
+
+
+DEFINE_VARIABLE(VariableName=VOL2_SP, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+DEFINE_VARIABLE(VariableName=VOL2_DELAY, _
+ VariableType=INT, _
+ VariableValue=-1)
+
+
+GET_STEP_FROM_FILE(FilePath=C:\DE03 SYRINGE SCRIPT APP\DATA\CAPLOADSTEPS\EXAMPLE1.TXT, _
+ StepNo=1, _
+ Code=CODE, _
+ Row=ROW, _
+ Col=COL, _
+ Vol1_ul=VOL1_UL, _
+ Vol1_syringe_speed=VOL1_SP, _
+ Vol1_delay=VOL1_DELAY, _
+ Vol2_ul=VOL2_UL, _
+ Vol2_syringe_speed=VOL2_SP, _
+ Vol2_delay=VOL2_DELAY)
+
+
+GET_INTEGER_FROM_USER(VariableName=CODE, _
+ Prompt=INPUT A NEW VALUE FOR CODE, _
+ MinValue=0, _
+ MaxValue=1000, _
+ ValueIfUserCancels=0, _
+ DefaultValue=CODE)
+
+
+' NOTICE THE NEXT LINE DOES NOT PASS IN ALL THE OPTIONAL PARAMETERS
+
+
+GET_STEP_FROM_FILE(FilePath=C:\DE03 SYRINGE SCRIPT APP\DATA\CAPLOADSTEPS\EXAMPLE1.TXT, _
+ StepNo=2, _
+ Code=CODE, _
+ Row=ROW, _
+ Col=COL, _
+ Vol1_ul=VOL1_UL)
+
+
+GET_INTEGER_FROM_USER(VariableName=CODE, _
+ Prompt=INPUT A NEW VALUE FOR CODE, _
+ MinValue=0, _
+ MaxValue=1000, _
+ ValueIfUserCancels=0, _
+ DefaultValue=CODE)
+
+
+GET_STEP_FROM_FILE(FilePath=C:\DE03 SYRINGE SCRIPT APP\DATA\CAPLOADSTEPS\EXAMPLE1.TXT, _
+ StepNo=3, _
+ Code=CODE, _
+ Row=ROW, _
+ Col=COL, _
+ Vol1_ul=VOL1_UL, _
+ Vol1_syringe_speed=VOL1_SP, _
+ Vol1_delay=VOL1_DELAY)
+
+
+GET_INTEGER_FROM_USER(VariableName=CODE, _
+ Prompt=INPUT A NEW VALUE FOR CODE, _
+ MinValue=0, _
+ MaxValue=1000, _
+ ValueIfUserCancels=0, _
+ DefaultValue=CODE)
+
+
+FOR(STEPNO = 1 To 100 Step 1)
+
+
+	GET_STEP_FROM_FILE(FilePath=C:\DE03 SYRINGE SCRIPT APP\DATA\CAPLOADSTEPS\EXAMPLE1.TXT, _
+	 StepNo=STEPNO, _
+	 Code=CODE, _
+	 Row=ROW, _
+	 Col=COL, _
+	 Vol1_ul=VOL1_UL, _
+	 Vol1_syringe_speed=VOL1_SP, _
+	 Vol1_delay=VOL1_DELAY, _
+	 Vol2_ul=VOL2_UL, _
+	 Vol2_syringe_speed=VOL2_SP, _
+	 Vol2_delay=VOL2_DELAY)
+
+
+	IF(CODE = -1)
+
+
+		' WITHOUT THE PAUSE THE VARIABLE WINDOW DOES NOT UPDATE QUICK ENOUGH SOMETIMES
+
+		PAUSE(UserMessage=NONE, _
+		 PauseTime_ms=1000)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+NEXT
+
+

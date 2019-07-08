@@ -1,0 +1,57 @@
+
+' POINTS FOR XYZ SYSTEM
+
+DEFINE_POINT(VariableName=SAFE_PT, _
+X=15.0, _
+Y=150.0, _
+Z=0.0)
+
+' Z Used to be -19.5
+
+DEFINE_POINT(VariableName=INS_T1_PT, _
+X=301.65, _
+Y=177.45, _
+Z=-14.1)
+
+DEFINE_POINT(VariableName=WASH_T1_PT, _
+ X=183.0, _
+ Y=134.6, _
+ Z=-21)
+
+
+'ARRAYS OF POINTS,  WELL A1 TAUGHT AT TOP SURFACE OF PLATE
+
+DEFINE_GRID(VariableName=MICROPLATE_T1_GR, _
+ X=129.0, _
+ Y=134.6, _
+ Z=-21, _
+ XSteps=12, _
+ XIncrement=9.0, _
+ YSteps=8, _
+ YIncrement=9.0)
+
+DEFINE_GRID(VariableName=TARGET_T1_GR, _
+ X=142.0, _
+ Y=70, _
+ Z=-25, _
+ XSteps=10, _
+ XIncrement=1, _
+ YSteps=10, _
+ YIncrement=1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

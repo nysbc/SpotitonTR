@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MachineConfigurationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FiringControllerComPort>5</FiringControllerComPort>
+  <WorklistDirectory>C:\DE03 Syringe Script App\Recipes\</WorklistDirectory>
+  <WorklistExtension>.txt</WorklistExtension>
+  <LogFileDirectory>C:\DE03 Syringe Script App\LogFiles\</LogFileDirectory>
+  <LogFileExtension>.txt</LogFileExtension>
+  <DefaultLogFile>DefaultDatalog.txt</DefaultLogFile>
+  <VideoFileDirectory>C:\Users\SpotitonV1.0\Desktop\Spotiton Videos</VideoFileDirectory>
+  <NumberOfTips>3</NumberOfTips>
+  <Tips>
+    <TIP Name="Tip 1">
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TIP>
+    <TIP Name="Tip 2">
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TIP>
+    <TIP Name="Tip 3">
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </TIP>
+  </Tips>
+  <WashPoint Name="Wash Point">
+    <X>150</X>
+    <Y>50</Y>
+    <Z>-55</Z>
+    <MaxDepth>4</MaxDepth>
+  </WashPoint>
+  <SideCamInspectPointTips>
+    <TIP Name="">
+      <X>83.43625</X>
+      <Y>148.72125</Y>
+      <Z>-70.24175</Z>
+    </TIP>
+    <TIP Name="">
+      <X>79.03125</X>
+      <Y>148.72125</Y>
+      <Z>-70.041750000000008</Z>
+    </TIP>
+    <TIP Name="">
+      <X>82.73375</X>
+      <Y>148.68625</Y>
+      <Z>-69.7485</Z>
+    </TIP>
+  </SideCamInspectPointTips>
+  <SideCamInspectPoint Name="Side Camera">
+    <X>81.98</X>
+    <Y>148.19</Y>
+    <Z>-69.5</Z>
+  </SideCamInspectPoint>
+  <SafePoint Name="SAFE POINT">
+    <X>150</X>
+    <Y>50</Y>
+    <Z>-25</Z>
+  </SafePoint>
+  <SafePointGrid Name="SAFE Point Grid Robot">
+    <X>0</X>
+    <Y>100</Y>
+    <Z>0</Z>
+  </SafePointGrid>
+  <WashPointUPTip1 Name="Wash Point Up Tip 1">
+    <X>150</X>
+    <Y>50</Y>
+    <Z>-55</Z>
+  </WashPointUPTip1>
+  <WashPointDOWNTip1 Name="Wash Point Down Tip 1">
+    <X>150</X>
+    <Y>50</Y>
+    <Z>-65</Z>
+  </WashPointDOWNTip1>
+  <AspiratePointUPTip1 Name="Apsirate Point Up Tip 1">
+    <X>49.884</X>
+    <Y>50.309</Y>
+    <Z>-45.9</Z>
+  </AspiratePointUPTip1>
+  <AspiratePointDOWNTip1 Name="Aspirate Point Down Tip 1">
+    <X>49.884</X>
+    <Y>50.309</Y>
+    <Z>-59.9</Z>
+  </AspiratePointDOWNTip1>
+  <BackCameraPointTips>
+    <TIP Name="">
+      <X>63.95875</X>
+      <Y>63.27375</Y>
+      <Z>-48.80025</Z>
+    </TIP>
+    <TIP Name="">
+      <X>63.95875</X>
+      <Y>63.17</Y>
+      <Z>-44.3975</Z>
+    </TIP>
+    <TIP Name="">
+      <X>64.058</X>
+      <Y>64.84</Y>
+      <Z>-37.813250000000004</Z>
+    </TIP>
+  </BackCameraPointTips>
+  <CalculatedVideoCenterPoint>
+    <TIP Name="">
+      <X>63.96</X>
+      <Y>64.184892247689163</Y>
+      <Z>-48.240110596819861</Z>
+    </TIP>
+    <TIP Name="">
+      <X>63.95875</X>
+      <Y>64.095861409936049</Y>
+      <Z>-43.987947340810422</Z>
+    </TIP>
+    <TIP Name="">
+      <X>64.0575</X>
+      <Y>64.057663864470427</Y>
+      <Z>-38.286898744460856</Z>
+    </TIP>
+  </CalculatedVideoCenterPoint>
+  <GridDropLocation>
+    <TIP Name="Cryo Grid 1">
+      <X>52.778</X>
+      <Y>107.5</Y>
+      <Z>-147.963</Z>
+    </TIP>
+    <TIP Name="Cryo Grid 2">
+      <X>54.6</X>
+      <Y>107.5</Y>
+      <Z>-147.963</Z>
+    </TIP>
+    <TIP Name="Cryo Grid 3">
+      <X>53.079</X>
+      <Y>64.0421944202741</Y>
+      <Z>-38.280250275816414</Z>
+    </TIP>
+    <TIP Name="Cryo Grid 4">
+      <X>52.981</X>
+      <Y>64.0421944202741</Y>
+      <Z>-38.280250275816414</Z>
+    </TIP>
+  </GridDropLocation>
+  <InLiquidEthaneBowl Name="Plunge Freezing position">
+    <X>52.778</X>
+    <Y>69.4125</Y>
+    <Z>-136.8</Z>
+  </InLiquidEthaneBowl>
+  <AboveLiquidNitrogen Name="Plunge Freezing position">
+    <X>52.778</X>
+    <Y>77.413</Y>
+    <Z>-124.95</Z>
+  </AboveLiquidNitrogen>
+  <Z2HighestPoint>10</Z2HighestPoint>
+  <SyringeMask>0</SyringeMask>
+  <DelayAfterms>2000</DelayAfterms>
+  <SyringePullSpeed>17</SyringePullSpeed>
+  <PrimeVolume>100</PrimeVolume>
+  <SyringePullSpeedPrime>11</SyringePullSpeedPrime>
+  <SyringePushSpeedPrime>15</SyringePushSpeedPrime>
+  <DelayAftermsPrime>500</DelayAftermsPrime>
+  <DE03TrapSetupLeading>3</DE03TrapSetupLeading>
+  <DE03TrapSetupDwell>13</DE03TrapSetupDwell>
+  <DE03TrapSetupTrailing>8</DE03TrapSetupTrailing>
+  <DE03TrapSetupTrapDrops>10</DE03TrapSetupTrapDrops>
+  <DE03TrapSetupTrapFreq>300</DE03TrapSetupTrapFreq>
+  <DE03TrapSetupStrobeDuration>2</DE03TrapSetupStrobeDuration>
+  <DE03TrapSetupTriggerSetting>0</DE03TrapSetupTriggerSetting>
+  <DE03TrapSetupTriggerDelay>1000000</DE03TrapSetupTriggerDelay>
+  <DE03TrapSetupTriggerPeriod>1</DE03TrapSetupTriggerPeriod>
+  <DE03TrapSetupStrobeDelay>150</DE03TrapSetupStrobeDelay>
+  <TrapAmp>
+    <int>1000</int>
+    <int>650</int>
+    <int>625</int>
+  </TrapAmp>
+  <NumberDropsToSpot>
+    <int>10</int>
+    <int>20</int>
+    <int>20</int>
+  </NumberDropsToSpot>
+  <AspirateVolume>15</AspirateVolume>
+  <SideCameraID>4002867212</SideCameraID>
+  <BackCameraID>4002867381</BackCameraID>
+  <VideoToMotionScaler_X>0.0031764855364025241</VideoToMotionScaler_X>
+  <VideoToMotionScaler_Y>0.0032570549927641093</VideoToMotionScaler_Y>
+  <PlungeAxisWithEthaneUp>-102</PlungeAxisWithEthaneUp>
+  <PlungeAxisWithEthaneDown>-236</PlungeAxisWithEthaneDown>
+  <PlungeAxisSpeedPct>5.6</PlungeAxisSpeedPct>
+  <ThetaAccelCount>25000</ThetaAccelCount>
+  <ThetaDecelCount>25000</ThetaDecelCount>
+  <ThetaMaxVelCount>1000000</ThetaMaxVelCount>
+  <ThetaRotate_0>0</ThetaRotate_0>
+  <ThetaRotate_90>-100000</ThetaRotate_90>
+  <WashTime>10000</WashTime>
+  <GridToCameraPoint Name="">
+    <X>52.776250000000005</X>
+    <Y>69.60875</Y>
+    <Z>-31.950000000000003</Z>
+  </GridToCameraPoint>
+  <TipWipingPointStart Name="">
+    <X>89.86</X>
+    <Y>51.418</Y>
+    <Z>-53.912</Z>
+  </TipWipingPointStart>
+  <TipWipingPointStop Name="">
+    <X>89.86</X>
+    <Y>36.418</Y>
+    <Z>-53.912</Z>
+  </TipWipingPointStop>
+  <DIOPresent>true</DIOPresent>
+  <MotionPresent>false</MotionPresent>
+  <SyringePresent>true</SyringePresent>
+  <DE03Present>true</DE03Present>
+  <TipVideoCentered>
+    <boolean>true</boolean>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+  </TipVideoCentered>
+</MachineConfigurationData>

@@ -1,0 +1,141 @@
+DEFINE_VARIABLE(VariableName=CONTINUE, _
+ VariableType=BOOL, _
+ VariableValue=TRUE)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=SAMPLE, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=ARRAYSPACING, _
+ VariableType=DOUBLE, _
+ VariableValue=25.0)
+
+
+DEFINE_VARIABLE(VariableName=YARRAYOFFSET, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=50.0, _
+ Y=290.0, _
+ Z=-85.0)
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=30.0, _
+ Y=90.0, _
+ Z=-120.0, _
+ XSteps=100, _
+ XIncrement=1.0, _
+ YSteps=100, _
+ YIncrement=1.0)
+
+
+WASH_TIPS(SyringeMask=1, _
+ VolumePerStroke_uL=90, _
+ NumSyringeStrokes=1, _
+ SyringeSpeedPull=9, _
+ SyringeSpeedPush=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH_PT, _
+ XOffset=0.0, _
+ YOffset=0.0, _
+ ZOffset=0.0, _
+ MoveSpeedIn_pct=20, _
+ MoveSpeedOut_pct=20, _
+ DoAirAspirateAfter=FALSE)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=12.0, _
+ Y=182.0, _
+ Z=-113.0, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+FOR(SAMPLE = 0 To 2 Step 1)
+
+
+	ASPIRATE(SyringeMask=1, _
+	 Volume_uL=5, _
+	 SyringeSpeed=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=MICROTITER[SAMPLE,0], _
+	 XOffset=0.0, _
+	 YOffset=0.0, _
+	 ZOffset=-2.5, _
+	 MoveSpeedIn_pct=20, _
+	 MoveSpeedOut_pct=20)
+
+
+	VARIABLE_MATH(YARRAYOFFSET = ARRAYSPACING * SAMPLE)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=DISPENSEGRID[0,0], _
+	 XOffset=0, _
+	 YOffset=YARRAYOFFSET, _
+	 ZOffset=0, _
+	 Speed_pct=50, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	FOR(I1 = 0 To 4 Step 1)
+
+
+		FOR(I2 = 0 To 4 Step 1)
+
+
+			PIEZO_DISPENSE(Tip=1, _
+			 PiezoAmplitude=50, _
+			 PiezoFreq=22000, _
+			 DropsPerBurst=20, _
+			 NumBursts=1, _
+			 FreqOfBursts=1, _
+			 Tip1Point=DISPENSEGRID[I1,I2], _
+			 XOffset=0.0, _
+			 YOffset=YARRAYOFFSET, _
+			 ZOffset=0.001, _
+			 MoveHeightAboveSurface=0.0)
+
+
+		NEXT
+
+
+	NEXT
+
+
+	WASH_TIPS(SyringeMask=1, _
+	 VolumePerStroke_uL=90, _
+	 NumSyringeStrokes=1, _
+	 SyringeSpeedPull=9, _
+	 SyringeSpeedPush=17, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT, _
+	 XOffset=0.0, _
+	 YOffset=0.0, _
+	 ZOffset=0.0, _
+	 MoveSpeedIn_pct=20, _
+	 MoveSpeedOut_pct=20, _
+	 DoAirAspirateAfter=FALSE)
+
+
+NEXT
+
+

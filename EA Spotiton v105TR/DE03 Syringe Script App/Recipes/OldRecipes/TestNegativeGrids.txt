@@ -1,0 +1,68 @@
+' COMMENT 1
+
+
+' COMMENT 44
+
+
+DEFINE_IMPORT(FileName=C:\PIXY_2.0\Recipes\COMMONPOINTS.TXT)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_GRID(VariableName=PICKUP_SAMPLE, _
+ X=136.0, _
+ Y=124.0, _
+ Z=-10, _
+ XSteps=3, _
+ XIncrement=-9.0, _
+ YSteps=8, _
+ YIncrement=9.0)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE[0,0], _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+PAUSE(UserMessage=ENTER TO MOVE TO THE NEXT POINT, _
+ PauseTime_ms=0)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE[1,0], _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+PAUSE(UserMessage=ENTER TO MOVE TO THE NEXT POINT, _
+ PauseTime_ms=0)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE[1,3], _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+PAUSE(UserMessage=ENTER TO MOVE TO SAFE POINT (EXTERNAL DEFINED), _
+ PauseTime_ms=0)
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+

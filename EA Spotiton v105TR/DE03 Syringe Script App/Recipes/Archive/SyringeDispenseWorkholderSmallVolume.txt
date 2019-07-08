@@ -1,0 +1,267 @@
+DEFINE_IMPORT(FileName=C:\PIXY_2.0\RECIPES\COMMONPOINTS.TXT)
+
+
+' THE SCRIPT WILL SPIT 1UL BACK INTO THE MICROPLATE
+
+
+DEFINE_VARIABLE(VariableName=ASP_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=5.0)
+
+
+DEFINE_VARIABLE(VariableName=DISP_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=0.2)
+
+
+' CENTER OF WORKHOLDER
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_CX_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=145.0)
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_CY_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=90.0)
+
+
+' JUST TOUCHING WORKHOLDER SURFACE
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_CZ_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=-19.5)
+
+
+' PITCH BETWEEN SPOTS,  X IS NEGATIVE,  Y IS POSITIVE
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_PX, _
+ VariableType=DOUBLE, _
+ VariableValue=-2.0)
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_PY, _
+ VariableType=DOUBLE, _
+ VariableValue=2.0)
+
+
+' ORIGIN OF WORKHOLDER
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_OX_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_OY_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+VARIABLE_MATH(WORKHOLDER_OX_T1 = WORKHOLDER_CX_T1 - WORKHOLDER_PX)
+
+
+VARIABLE_MATH(WORKHOLDER_OY_T1 = WORKHOLDER_CY_T1 - WORKHOLDER_PY)
+
+
+DEFINE_GRID(VariableName=WORKHOLDER_T1, _
+ X=WORKHOLDER_OX_T1, _
+ Y=WORKHOLDER_OY_T1, _
+ Z=WORKHOLDER_CZ_T1, _
+ XSteps=3, _
+ XIncrement=WORKHOLDER_PX, _
+ YSteps=3, _
+ YIncrement=WORKHOLDER_PY)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+DEFINE_VARIABLE(VariableName=WASH_CYCLES, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=SAMPLES_COL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=SAMPLES_COL, _
+ Prompt=ENTER STARTING SAMPLE WELL COLUMN 1=D1  12=D12), _
+ MinValue=1, _
+ MaxValue=12, _
+ ValueIfUserCancels=1)
+
+
+VARIABLE_MATH(SAMPLES_COL = SAMPLES_COL - 1)
+
+
+' WASH THE TIPS
+
+
+FOR(I1 = 0 To 2 Step 1)
+
+
+	IF(WASH_CYCLES > 0)
+
+
+		WASH_TIPS(SyringeMask=0, _
+		 VolumePerStroke_uL=25, _
+		 NumSyringeStrokes=WASH_CYCLES, _
+		 SyringeSpeedPull=13, _
+		 SyringeSpeedPush=15, _
+		 DelayAfter_ms=500, _
+		 Tip1Point=WASH_PT_T1, _
+		 MoveSpeedOut_pct=30)
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=1, _
+		 DelayAfter_ms=100)
+
+
+	ENDIF
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=10, _
+	 Speed_pct=50, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+	ASPIRATE(SyringeMask=0, _
+	 Volume_uL=ASP_UL, _
+	 SyringeSpeed=18, _
+	 ValveToBypass=FALSE, _
+	 DelayAfter_ms=200)
+
+
+	' DISPENSE 1UL BACK IN TO HELP WITH SYRINGE HYSTERISIS.
+
+
+	DISPENSE(SyringeMask=0, _
+	 Volume_uL=1, _
+	 SyringeSpeed=21, _
+	 ValveToBypass=FALSE, _
+	 DelayAfter_ms=200)
+
+
+	' PULL OUT SLOWLY
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=10, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	' MOVE OVER THE WORK HOLDER
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=WORKHOLDER_T1[I1,0], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=4, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	FOR(I2 = 0 To 2 Step 1)
+
+
+		' MOVE RIGHT ONTO TARGE
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=WORKHOLDER_T1[I1,I2], _
+		 Speed_pct=20, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		DISPENSE(SyringeMask=0, _
+		 Volume_uL=DISP_UL, _
+		 SyringeSpeed=21, _
+		 ValveToBypass=FALSE, _
+		 DelayAfter_ms=200)
+
+
+		PAUSE(UserMessage=WAIT, _
+		 PauseTime_ms=300)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=WORKHOLDER_T1[I1,I2], _
+		 ZOffset=3.0, _
+		 Speed_pct=20, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+	MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+NEXT
+
+
+' FINAL WASH
+
+
+IF(WASH_CYCLES > 0)
+
+
+	WASH_TIPS(SyringeMask=0, _
+	 VolumePerStroke_uL=25, _
+	 NumSyringeStrokes=WASH_CYCLES, _
+	 SyringeSpeedPull=13, _
+	 SyringeSpeedPush=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT_T1, _
+	 MoveSpeedOut_pct=30)
+
+
+ENDIF
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=1, _
+ DelayAfter_ms=100)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+

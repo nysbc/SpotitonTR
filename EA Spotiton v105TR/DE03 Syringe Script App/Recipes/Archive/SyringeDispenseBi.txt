@@ -1,0 +1,209 @@
+DEFINE_IMPORT(FileName=C:\PIXY_2.0\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_VARIABLE(VariableName=PAPER_XSPOTS, _
+ VariableType=INT, _
+ VariableValue=10)
+
+
+DEFINE_VARIABLE(VariableName=PAPER_XINC, _
+ VariableType=DOUBLE, _
+ VariableValue=-6.0)
+
+
+DEFINE_VARIABLE(VariableName=ASP_VOL_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=15.0)
+
+
+DEFINE_VARIABLE(VariableName=DISP_VOL_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=1.0)
+
+
+DEFINE_GRID(VariableName=PAPERGRID_T1, _
+ X=67.5, _
+ Y=78, _
+ Z=-18.25, _
+ XSteps=PAPER_XSPOTS, _
+ XIncrement=PAPER_XINC, _
+ YSteps=1, _
+ YIncrement=1.0)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+' OPTIONALLY WASH THE TIPS
+
+
+DEFINE_VARIABLE(VariableName=INIT_WASH_CYCLES, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=INIT_WASH_CYCLES, _
+ Prompt=START WITH WASH  1=YES  0 =NO), _
+ MinValue=0, _
+ MaxValue=1, _
+ ValueIfUserCancels=0)
+
+
+IF(INIT_WASH_CYCLES > 0)
+
+
+	WASH_TIPS(SyringeMask=0, _
+	 VolumePerStroke_uL=50, _
+	 NumSyringeStrokes=INIT_WASH_CYCLES, _
+	 SyringeSpeedPull=13, _
+	 SyringeSpeedPush=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT_T1, _
+	 MoveSpeedOut_pct=30)
+
+
+	SYRINGE_SET_VALVE(SyringeMask=0, _
+	 ValvePosition=1, _
+	 DelayAfter_ms=100)
+
+
+ENDIF
+
+
+DEFINE_VARIABLE(VariableName=SAMPLES_COL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=SAMPLES_COL, _
+ Prompt=ENTER STARTING SAMPLE WELL COLUMN 1=D1  12=D12), _
+ MinValue=1, _
+ MaxValue=12, _
+ ValueIfUserCancels=1)
+
+
+VARIABLE_MATH(SAMPLES_COL = SAMPLES_COL - 1)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=10, _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+ASPIRATE(SyringeMask=0, _
+ Volume_uL=ASP_VOL_UL, _
+ SyringeSpeed=18, _
+ ValveToBypass=FALSE, _
+ DelayAfter_ms=500)
+
+
+' PULL OUT SLOWLY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=10, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+' MOVE OVER THE PAPER
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PAPERGRID_T1[0,0], _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=3, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I2 = 1 To PAPER_XSPOTS Step 1)
+
+
+	VARIABLE_MATH(I1 = I2 - 1)
+
+
+	' MOVE RIGHT ONTO TARGE
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PAPERGRID_T1[I1,0], _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	DISPENSE(SyringeMask=0, _
+	 Volume_uL=DISP_VOL_UL, _
+	 SyringeSpeed=21, _
+	 ValveToBypass=FALSE, _
+	 DelayAfter_ms=200)
+
+
+	PAUSE(UserMessage=WAIT, _
+	 PauseTime_ms=300)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PAPERGRID_T1[I1,0], _
+	 ZOffset=5, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+NEXT
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+' FINAL WASH   ALWAYS
+
+
+WASH_TIPS(SyringeMask=0, _
+ VolumePerStroke_uL=50, _
+ NumSyringeStrokes=1, _
+ SyringeSpeedPull=13, _
+ SyringeSpeedPush=15, _
+ DelayAfter_ms=500, _
+ Tip1Point=WASH_PT_T1, _
+ MoveSpeedOut_pct=30)
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=1, _
+ DelayAfter_ms=100)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+

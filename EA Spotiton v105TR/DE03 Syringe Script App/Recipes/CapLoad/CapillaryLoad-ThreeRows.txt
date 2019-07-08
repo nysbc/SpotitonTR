@@ -1,0 +1,517 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_VARIABLE(VariableName=XSTARTROW, _
+ VariableType=INT, _
+ VariableValue=6)
+
+
+DEFINE_VARIABLE(VariableName=YSTARTCOL, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=XENDROW, _
+ VariableType=INT, _
+ VariableValue=6)
+
+
+DEFINE_VARIABLE(VariableName=YENDCOL, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=10)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R1_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=3.0)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R1_SYR_SPEED, _
+ VariableType=INT, _
+ VariableValue=18)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R1_DELAY_AFTER, _
+ VariableType=INT, _
+ VariableValue=2500)
+
+
+DEFINE_VARIABLE(VariableName=R1_PUSH_B4_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=0.2)
+
+
+DEFINE_VARIABLE(VariableName=R1_PUSH_DELAY, _
+ VariableType=INT, _
+ VariableValue=200)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R2_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=3.0)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R2_SYR_SPEED, _
+ VariableType=INT, _
+ VariableValue=18)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R2_PUSH_B4_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=0.200)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R2_DELAY_AFTER, _
+ VariableType=INT, _
+ VariableValue=2500)
+
+
+DEFINE_VARIABLE(VariableName=R2_PUSH_B4_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=0.2)
+
+
+DEFINE_VARIABLE(VariableName=R2_PUSH_DELAY, _
+ VariableType=INT, _
+ VariableValue=200)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R3_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=5.0)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R3_SYR_SPEED, _
+ VariableType=INT, _
+ VariableValue=18)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R3_PUSH_B4_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=0.200)
+
+
+DEFINE_VARIABLE(VariableName=ASP_R3_DELAY_AFTER, _
+ VariableType=INT, _
+ VariableValue=2500)
+
+
+DEFINE_VARIABLE(VariableName=R3_PUSH_B4_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=0.2)
+
+
+DEFINE_VARIABLE(VariableName=R3_PUSH_DELAY, _
+ VariableType=INT, _
+ VariableValue=200)
+
+
+' ALWAYS DEFINE THIS >= SYRINGE_NOT_TO_EXCEED SO IT FORCES THE
+
+
+' SYRINGE TO RESET BEFORE THE FIRST PICK
+
+
+DEFINE_VARIABLE(VariableName=SYRINGE_POSITION, _
+ VariableType=DOUBLE, _
+ VariableValue=41)
+
+
+DEFINE_VARIABLE(VariableName=SYRINGE_NOT_TO_EXCEED, _
+ VariableType=DOUBLE, _
+ VariableValue=40)
+
+
+DEFINE_GRID(VariableName=MICROPLATE, _
+ X=55.5, _
+ Y=111.7, _
+ Z=-23, _
+ XSteps=16, _
+ XIncrement=-4.5, _
+ YSteps=24, _
+ YIncrement=4.5)
+
+
+DEFINE_VARIABLE(VariableName=XCNT, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=YCNT, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=XTEMP, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=PROMPT_I, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=KEEP_LOOPING, _
+ VariableType=BOOL, _
+ VariableValue=TRUE)
+
+
+WHILE(KEEP_LOOPING = TRUE)
+
+
+	' INPUT THE XSTARTROW
+
+
+	GET_INTEGER_FROM_USER(VariableName=PROMPT_I, _
+	 Prompt=STARTING ROW (1 TO 16) 0 TO CANCEL, _
+	 MinValue=0, _
+	 MaxValue=16, _
+	 ValueIfUserCancels=0)
+
+
+	IF(PROMPT_I = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	VARIABLE_MATH(PROMPT_I = PROMPT_I - 1)
+
+
+	VARIABLE_SET(VariableName=XSTARTROW, _
+	 VariableValue=PROMPT_I)
+
+
+	' INPUT THE XENDROW
+
+
+	GET_INTEGER_FROM_USER(VariableName=PROMPT_I, _
+	 Prompt=ENDING ROW (1 TO 16) 0 TO CANCEL, _
+	 MinValue=1, _
+	 MaxValue=16, _
+	 ValueIfUserCancels=0)
+
+
+	IF(PROMPT_I = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	VARIABLE_MATH(PROMPT_I = PROMPT_I - 1)
+
+
+	VARIABLE_SET(VariableName=XENDROW, _
+	 VariableValue=PROMPT_I)
+
+
+	' INPUT YSTARTCOL
+
+
+	GET_INTEGER_FROM_USER(VariableName=PROMPT_I, _
+	 Prompt=STARTING COL (1 TO 24) 0 TO CANCEL, _
+	 MinValue=0, _
+	 MaxValue=24, _
+	 ValueIfUserCancels=0)
+
+
+	IF(PROMPT_I = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	VARIABLE_MATH(PROMPT_I = PROMPT_I - 1)
+
+
+	VARIABLE_SET(VariableName=YSTARTCOL, _
+	 VariableValue=PROMPT_I)
+
+
+	' INPUT YENDCOL
+
+
+	GET_INTEGER_FROM_USER(VariableName=PROMPT_I, _
+	 Prompt=ENDING COL (1 TO 24) 0 TO CANCEL, _
+	 MinValue=1, _
+	 MaxValue=24, _
+	 ValueIfUserCancels=0)
+
+
+	IF(PROMPT_I = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	VARIABLE_MATH(PROMPT_I = PROMPT_I - 1)
+
+
+	VARIABLE_SET(VariableName=YENDCOL, _
+	 VariableValue=PROMPT_I)
+
+
+	MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+	FOR(XCNT = XSTARTROW To XENDROW Step 2)
+
+
+		FOR(YCNT = YSTARTCOL To YENDCOL Step 1)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XCNT, YCNT], _
+			 ZOffset=10, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			' RESET THE SYRINGE IF REQUIRED
+
+
+			IF(SYRINGE_POSITION >= SYRINGE_NOT_TO_EXCEED)
+
+
+				MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+				 Point=MICROPLATE[XCNT,YCNT], _
+				 Speed_pct=SPEED_FACTOR, _
+				 MoveToSafeHeightFirst=FALSE)
+
+
+				SYRINGE_SET_VALVE(SyringeMask=0, _
+				 ValvePosition=0, _
+				 DelayAfter_ms=50)
+
+
+				SYRINGE_EMPTY(SyringeMask=0, _
+				 SyringeSpeed=14, _
+				 EmptyThroughTip=FALSE, _
+				 DelayAfter_ms=50)
+
+
+				' ASPIRATE A LITTLE IN CASE YOU WANT TO USE PUSH OUT
+
+
+				ASPIRATE(SyringeMask=0, _
+				 Volume_uL=1.0, _
+				 SyringeSpeed=ASP_R1_SYR_SPEED, _
+				 ValveToBypass=FALSE, _
+				 AspFromReservoir=TRUE, _
+				 DelayAfter_ms=ASP_R1_DELAY_AFTER)
+
+
+				VARIABLE_SET(VariableName=SYRINGE_POSITION, _
+				 VariableValue=1.0)
+
+
+				' MOVE BACK UP
+
+
+				IF(R1_PUSH_B4_UL > 0)
+
+
+					MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+					 Point=MICROPLATE[XCNT,YCNT], _
+					 ZOffset=10, _
+					 Speed_pct=SPEED_FACTOR, _
+					 MoveToSafeHeightFirst=FALSE)
+
+
+				ENDIF
+
+
+			ENDIF
+
+
+			IF(R1_PUSH_B4_UL > 0)
+
+
+				DISPENSE(SyringeMask=0, _
+				 Volume_uL=R1_PUSH_B4_UL, _
+				 SyringeSpeed=ASP_R1_SYR_SPEED, _
+				 ValveToBypass=FALSE, _
+				 DelayAfter_ms=R1_PUSH_DELAY)
+
+
+			ENDIF
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XCNT,YCNT], _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+			ASPIRATE(SyringeMask=0, _
+			 Volume_uL=ASP_R1_UL, _
+			 SyringeSpeed=ASP_R1_SYR_SPEED, _
+			 ValveToBypass=FALSE, _
+			 DelayAfter_ms=ASP_R1_DELAY_AFTER)
+
+
+			VARIABLE_MATH(SYRINGE_POSITION = SYRINGE_POSITION + ASP_R1_UL)
+
+
+			' PULL OUT SLOWLY
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XCNT,YCNT], _
+			 ZOffset=10, _
+			 Speed_pct=10, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			' GET R2
+
+
+			VARIABLE_MATH(XTEMP = XCNT + 1)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XTEMP,YCNT], _
+			 ZOffset=10, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			IF(R2_PUSH_B4_UL > 0)
+
+
+				DISPENSE(SyringeMask=0, _
+				 Volume_uL=R2_PUSH_B4_UL, _
+				 SyringeSpeed=ASP_R2_SYR_SPEED, _
+				 ValveToBypass=FALSE, _
+				 DelayAfter_ms=R2_PUSH_DELAY)
+
+
+			ENDIF
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XTEMP,YCNT], _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+			ASPIRATE(SyringeMask=0, _
+			 Volume_uL=ASP_R2_UL, _
+			 SyringeSpeed=ASP_R2_SYR_SPEED, _
+			 ValveToBypass=FALSE, _
+			 DelayAfter_ms=ASP_R2_DELAY_AFTER)
+
+
+			VARIABLE_MATH(SYRINGE_POSITION = SYRINGE_POSITION + ASP_R2_UL)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XTEMP,YCNT], _
+			 ZOffset=10, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			' GET R3
+
+
+			VARIABLE_MATH(XTEMP = XCNT + 2)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XTEMP,YCNT], _
+			 ZOffset=10, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			IF(R3_PUSH_B4_UL > 0)
+
+
+				DISPENSE(SyringeMask=0, _
+				 Volume_uL=R3_PUSH_B4_UL, _
+				 SyringeSpeed=ASP_R3_SYR_SPEED, _
+				 ValveToBypass=FALSE, _
+				 DelayAfter_ms=R3_PUSH_DELAY)
+
+
+			ENDIF
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XTEMP,YCNT], _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+			' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+			ASPIRATE(SyringeMask=0, _
+			 Volume_uL=ASP_R3_UL, _
+			 SyringeSpeed=ASP_R3_SYR_SPEED, _
+			 ValveToBypass=FALSE, _
+			 DelayAfter_ms=ASP_R3_DELAY_AFTER)
+
+
+			VARIABLE_MATH(SYRINGE_POSITION = SYRINGE_POSITION + ASP_R3_UL)
+
+
+			MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+			 Point=MICROPLATE[XTEMP,YCNT], _
+			 ZOffset=10, _
+			 Speed_pct=SPEED_FACTOR, _
+			 MoveToSafeHeightFirst=FALSE)
+
+
+		NEXT
+
+
+	NEXT
+
+
+	' DO ANY STUFF THAT NEEDS TO BE DONE AT THE END
+
+
+	' ONE FINAL THING OF OIL,  ETC...
+
+
+	' OR JUST PUT OIL IN THE LAST REAGENT SPOT
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=SAFE_PT, _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=0, _
+	 Speed_pct=10, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+LOOP
+
+

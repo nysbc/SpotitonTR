@@ -1,0 +1,25 @@
+MOVE_TO_SAFE_HEIGHT(Speed_pct=10.5)
+
+
+DEFINE_GRID(VariableName=MICROTITER, _
+ X=9.8, _
+ Y=172.2, _
+ Z=-10.0, _
+ XSteps=24, _
+ XIncrement=4.5, _
+ YSteps=16, _
+ YIncrement=4.5)
+
+
+ASPIRATE(SyringeMask=1, _
+ Volume_uL=5, _
+ SyringeSpeed=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=MICROTITER[3,0], _
+ XOffset=0.0, _
+ YOffset=0.0, _
+ ZOffset=0.0, _
+ MoveSpeedIn_pct=40, _
+ MoveSpeedOut_pct=40)
+
+

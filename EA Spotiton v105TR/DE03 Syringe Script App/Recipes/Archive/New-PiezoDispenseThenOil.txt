@@ -1,0 +1,414 @@
+DEFINE_IMPORT(FileName=C:\PIXY_2.0\RECIPES\COMMONPOINTS.TXT)
+
+
+' SET SKIP_OIL TO 1 TO SKIP, 0 TO USE OIL
+
+
+DEFINE_VARIABLE(VariableName=SKIP_OIL, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=ASP_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=3.0)
+
+
+DEFINE_VARIABLE(VariableName=ASP_OIL_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=25)
+
+
+DEFINE_VARIABLE(VariableName=DISP_OIL_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=20)
+
+
+DEFINE_VARIABLE(VariableName=PIEZO_AMP, _
+ VariableType=INT, _
+ VariableValue=45)
+
+
+DEFINE_VARIABLE(VariableName=PIEZO_FREQ, _
+ VariableType=INT, _
+ VariableValue=18500)
+
+
+DEFINE_VARIABLE(VariableName=PIEZO_DROPS, _
+ VariableType=INT, _
+ VariableValue=15)
+
+
+DEFINE_VARIABLE(VariableName=PIEZO_DROPS_INS, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+DEFINE_VARIABLE(VariableName=INS_OPTION, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+' CENTER OF WORKHOLDER
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_CX_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=145.0)
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_CY_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=90)
+
+
+' JUST TOUCHING WORKHOLDER SURFACE
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_CZ_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=-13.0)
+
+
+' PITCH BETWEEN SPOTS,  X IS NEGATIVE,  Y IS POSITIVE
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_PX, _
+ VariableType=DOUBLE, _
+ VariableValue=-1.0)
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_PY, _
+ VariableType=DOUBLE, _
+ VariableValue=1.0)
+
+
+' ORIGIN OF WORKHOLDER
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_OX_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_VARIABLE(VariableName=WORKHOLDER_OY_T1, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+VARIABLE_MATH(WORKHOLDER_OX_T1 = WORKHOLDER_CX_T1 - WORKHOLDER_PX)
+
+
+VARIABLE_MATH(WORKHOLDER_OY_T1 = WORKHOLDER_CY_T1 - WORKHOLDER_PY)
+
+
+DEFINE_GRID(VariableName=WORKHOLDER_T1, _
+ X=WORKHOLDER_OX_T1, _
+ Y=WORKHOLDER_OY_T1, _
+ Z=WORKHOLDER_CZ_T1, _
+ XSteps=3, _
+ XIncrement=WORKHOLDER_PX, _
+ YSteps=3, _
+ YIncrement=WORKHOLDER_PY)
+
+
+DEFINE_POINT(VariableName=OIL_T2, _
+ X=63.75, _
+ Y=164, _
+ Z=-43)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+DEFINE_VARIABLE(VariableName=WASH_CYCLES, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=SAMPLES_COL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=SAMPLES_COL, _
+ Prompt=ENTER STARTING SAMPLE WELL COLUMN 1=D1  12=D12), _
+ MinValue=1, _
+ MaxValue=12, _
+ ValueIfUserCancels=1)
+
+
+VARIABLE_MATH(SAMPLES_COL = SAMPLES_COL - 1)
+
+
+' WASH THE TIPS
+
+
+FOR(I1 = 0 To 2 Step 1)
+
+
+	IF(WASH_CYCLES > 0)
+
+
+		FOR(I2 = 0 To 0 Step 1)
+
+			IF(I1>0)
+
+
+			WASH_TIPS(SyringeMask=I2, _
+			 VolumePerStroke_uL=25, _
+			 NumSyringeStrokes=WASH_CYCLES, _
+			 SyringeSpeedPull=13, _
+			 SyringeSpeedPush=15, _
+			 DelayAfter_ms=500, _
+			 Tip1Point=WASH_PT_T1, _
+			 MoveSpeedOut_pct=30)
+
+
+			SYRINGE_SET_VALVE(SyringeMask=I2, _
+			 ValvePosition=1, _
+			 DelayAfter_ms=100)
+
+		      ENDIF
+
+
+		NEXT
+
+
+	ENDIF
+
+
+	' ASPIRATE SOME OIL
+
+
+	IF(SKIP_OIL = 0)
+
+
+		ASPIRATE(SyringeMask=1, _
+		 Volume_uL=ASP_OIL_UL, _
+		 SyringeSpeed=18, _
+		 ValveToBypass=FALSE, _
+		 DelayAfter_ms=500, _
+		 Tip1Point=OIL_T2, _
+		 MoveSpeedIn_pct=20, _
+		 MoveSpeedOut_pct=20)
+
+
+	ENDIF
+
+
+	' NOW ASPIRATE THE SAMPLE
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,0], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=10, _
+	 Speed_pct=50, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,0], _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+	ASPIRATE(SyringeMask=0, _
+	 Volume_uL=ASP_UL, _
+	 SyringeSpeed=18, _
+	 ValveToBypass=TRUE, _
+	 DelayAfter_ms=200)
+
+
+	' PULL OUT SLOWLY
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,0], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=10, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	' INSPECT THE FIRING
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=INS_PT_T1, _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=0, _
+	 Speed_pct=40, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	VARIABLE_MATH(INS_OPTION = 1 + 0)
+
+
+	WHILE(INS_OPTION = 1)
+
+
+		PIEZO_DISPENSE(Tip=1, _
+		 PiezoAmplitude=PIEZO_AMP, _
+		 PiezoFreq=PIEZO_FREQ, _
+		 DropsPerBurst=PIEZO_DROPS_INS, _
+		 NumBursts=1, _
+		 FreqOfBursts=1)
+
+
+		GET_INTEGER_FROM_USER(VariableName=INS_OPTION, _
+		 Prompt=0 TO ABORT  1 TO INSPECT  2 TO PROCEED, _
+		 MinValue=0, _
+		 MaxValue=2, _
+		 ValueIfUserCancels=1)
+
+
+	LOOP
+
+
+	IF(INS_OPTION = 0)
+
+
+		' SET AT OUTPUT, SYRINGE PUMP1
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=1, _
+		 DelayAfter_ms=100)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	' MOVE OVER THE WORKHOLDER
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=WORKHOLDER_T1[I1,0], _
+	 ZOffset=1, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	FOR(I2 = 0 To 2 Step 1)
+
+
+		' MOVE RIGHT ONTO TARGE
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=WORKHOLDER_T1[I1,I2], _
+		 ZOffset=0, _
+		 Speed_pct=20, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		PIEZO_DISPENSE(Tip=1, _
+		 PiezoAmplitude=PIEZO_AMP, _
+		 PiezoFreq=PIEZO_FREQ, _
+		 DropsPerBurst=PIEZO_DROPS, _
+		 NumBursts=1, _
+		 FreqOfBursts=1)
+
+
+		PAUSE(UserMessage=WAIT, _
+		 PauseTime_ms=300)
+
+
+	NEXT
+
+
+	MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+NEXT
+
+
+' NOW PLACE THE OIL DOWN
+
+
+IF(SKIP_OIL = 0)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=WORKHOLDER_T1[0,1], _
+	 XOffset=18, _
+	 ZOffset=.2, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	DISPENSE(SyringeMask=1, _
+	 Volume_uL=DISP_OIL_UL, _
+	 SyringeSpeed=19, _
+	 ValveToBypass=FALSE, _
+	 DelayAfter_ms=200)
+
+
+ENDIF
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+' FINAL WASH
+
+
+IF(WASH_CYCLES > 0)
+
+
+	FOR(I2 = 0 To 0 Step 1)
+
+
+		WASH_TIPS(SyringeMask=I2, _
+		 VolumePerStroke_uL=25, _
+		 NumSyringeStrokes=WASH_CYCLES, _
+		 SyringeSpeedPull=13, _
+		 SyringeSpeedPush=15, _
+		 DelayAfter_ms=500, _
+		 Tip1Point=WASH_PT_T1, _
+		 MoveSpeedOut_pct=30)
+
+
+		SYRINGE_SET_VALVE(SyringeMask=I2, _
+		 ValvePosition=1, _
+		 DelayAfter_ms=100)
+
+
+	NEXT
+
+
+ENDIF
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=1, _
+ DelayAfter_ms=100)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+

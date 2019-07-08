@@ -1,0 +1,106 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+' LETS GO SLOW FOR NOW
+
+
+DEFINE_VARIABLE(VariableName=FULL_SPEED, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=NO_OF_TEST_LOOPS, _
+ VariableType=INT, _
+ VariableValue=5)
+
+
+DEFINE_VARIABLE(VariableName=PLUNGE_POS, _
+ VariableType=DOUBLE, _
+ VariableValue=1)
+
+
+FOR(I1 = 0 To NO_OF_TEST_LOOPS)
+
+
+	PLUNGE_AXIS_MOVE(PositionZ2=0.0, _
+	 ZOffset=0.0, _
+	 Speed_pct=FULL_SPEED)
+
+
+	PLUNGE_AXIS_MOVE(PositionZ2=-10.0, _
+	 ZOffset=0.0, _
+	 Speed_pct=FULL_SPEED)
+
+
+	PLUNGE_AXIS_MOVE(PositionZ2=-40.0, _
+	 ZOffset=0.0, _
+	 Speed_pct=FULL_SPEED)
+
+
+	PLUNGE_AXIS_MOVE(PositionZ2=-50.0, _
+	 ZOffset=0.0, _
+	 Speed_pct=FULL_SPEED)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I2, _
+	 Prompt=0=ABORT  1=DISABLE SERVO AND CONTINUE, _
+	 MinValue=0, _
+	 MaxValue=1, _
+	 ValueIfUserCancels=0)
+
+
+
+	PAUSE(UserMessage=NONE, _
+ 	  PauseTime_ms=1000)
+
+	IF(I2 = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	SERVO_DISABLE(AxisNumber=3)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I2, _
+	 Prompt=0=ABORT  1=ENABLE SERVO AND CONTINUE, _
+	 MinValue=0, _
+	 MaxValue=1, _
+	 ValueIfUserCancels=0)
+
+
+
+	PAUSE(UserMessage=NONE, _
+ 	  PauseTime_ms=1000)
+
+	IF(I2 = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	SERVO_ENABLE(AxisNumber=3)
+
+
+NEXT
+
+
+EXITSEQUENCE
+
+

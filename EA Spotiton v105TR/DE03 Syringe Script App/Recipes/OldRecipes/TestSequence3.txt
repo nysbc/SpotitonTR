@@ -1,0 +1,46 @@
+DEFINE_VARIABLE(VariableName=CONTINUE, _
+ VariableType=BOOL, _
+ VariableValue=TRUE)
+
+
+DEFINE_POINT(VariableName=PT1, _
+ X=10.0, _
+ Y=10.1, _
+ Z=-10.2)
+
+
+DEFINE_POINT(VariableName=PT2, _
+ X=20.0, _
+ Y=20.1, _
+ Z=-11.2)
+
+
+WHILE(CONTINUE = TRUE)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PT1, _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=0, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PT2, _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=0, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	GET_BOOLEAN_FROM_USER(VariableName=CONTINUE, _
+	 Prompt=DO IT AGAIN?, _
+	 ValueIfUserCancels=FALSE)
+
+
+LOOP
+
+

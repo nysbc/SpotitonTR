@@ -1,0 +1,20 @@
+Filename: Experiment1 ,  08/14 16:27:24:160 
+ Note: Condition A, Grid #
+ OTF Enabled
+ OTF Cos
+ OTF Pause (msec) = 1
+ Number Of Drops = 80
+ Key Machine Parameters:
+    PlungeAxisMaxSpeed_Plunge = 1000
+    PlungeAxisAccel_Plunge = 10000
+    OTFStartAbove_mm = 30
+    OTFTargetZOffset_mm = 12
+    OTFAccelPlunge_mm_ss = 24000
+    OTFDecelPlunge_mm_ss = 40000
+    OTFSpeedPlunge_mm_s = 1200
+    OTFTrapDispSpeed_mm_s = 5
+    OTFTrapStartOffset_mm = 1.4
+    OTFTrapDropSpacing_mm = 0.01
+ End of archive
+ 
+ 

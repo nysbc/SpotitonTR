@@ -1,0 +1,59 @@
+MOVE_TO_SAFE_HEIGHT(Speed_pct=50)
+
+
+DEFINE_POINT(VariableName=WASH_PT, _
+ X=100.0, _
+ Y=120.0, _
+ Z=-40.0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_GRID(VariableName=DISPENSEGRID, _
+ X=50, _
+ Y=50, _
+ Z=-15.0, _
+ XSteps=10, _
+ XIncrement=10, _
+ YSteps=10, _
+ YIncrement=10)
+
+
+' MOVE TO ORIGIN OF ARRAY SAFELY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=DISPENSEGRID[0,0], _
+ Speed_pct=100, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+FOR(I1 = 0 To 3 Step 1)
+
+
+	FOR(I2 = 0 To 9 Step 1)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=DISPENSEGRID[I1,I2], _
+		 Speed_pct=100, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+NEXT
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=50)
+
+

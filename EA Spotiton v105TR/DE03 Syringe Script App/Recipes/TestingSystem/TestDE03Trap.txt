@@ -1,0 +1,54 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+' A RECIPE TO CONINTOUSLY LOOP AND FIRE USER SELECTABLE NUMBER OF DROPS WITH A TRAPEZOID WAVE
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=10000)
+
+
+WHILE(I1 > 0)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I1, _
+	 Prompt=INPUT THE SIZE OF THE TRAP BURST, _
+	 MinValue=0, _
+	 MaxValue=10000000, _
+	 ValueIfUserCancels=-1)
+
+
+	IF(I1 > -1)
+
+
+		DE03_STOP_WAVEFORM()
+
+
+		DE03_TRAP_SETUP(Tip=1, _
+		 Leading=3, _
+		 Dwell=15, _
+		 Trailing=10, _
+		 TrapDrops=I1, _
+		 TrapFreq=400, _
+		 TrapAmp=700, _
+		 StrobeDuration=5, _
+		 StrobeDelay=50, _
+		 TriggerSetting=0, _
+		 TriggerDelay=1000000, _
+		 TriggerPeriod=1)
+
+
+		DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+		 Timeout_ms=0)
+
+
+	ENDIF
+
+
+LOOP
+
+
+EXITSEQUENCE
+
+

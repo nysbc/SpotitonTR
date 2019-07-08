@@ -1,0 +1,31 @@
+DEFINE_VARIABLE(VariableName=PRIMECOUNT, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=PRIMECOUNT, _
+ Prompt=HOW MANY TIMES TO PRIME, _
+ MinValue=1, _
+ MaxValue=2, _
+ ValueIfUserCancels=-1)
+
+
+PRIME(SyringeMask=2, _
+ VolumePerStroke_uL=3500, _
+ NumSyringeStrokes=PRIMECOUNT, _
+ SyringeSpeedPull=10, _
+ SyringeSpeedPush=17, _
+ DelayAfter_ms=500, _
+ Tip1Point=SYSTEM_TIPWASH, _
+ MoveSpeedIn_pct=80, _
+ MoveSpeedOut_pct=100)
+
+
+'SET AT OUTPUT
+SYRINGE_SET_VALVE(SyringeMask=2, _
+ ValvePosition=1, _
+ DelayAfter_ms=750)
+
+
+
+

@@ -1,0 +1,27 @@
+Some more testing:
+
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:55:38:234 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 2013
+StartMotion: 2075
+EndMotion: 4602
+EndMotion - StartMotion: 2527
+EndSensor: 5460
+EndSensor - StartMotion: 3385
+-------- Entering SuperPlunge Command ----------
+Start:09/24 17:56:09:374 
+Elapsed Time:0
+   StartSolenoid=-2, StartSensor=3, EndSensor=-4, skipMove=False
+Elapsed Time: 0
+StartSensor: 4618
+StartMotion: 4665
+EndSensor: 6505
+EndSensor - StartMotion: 1840
+EndMotion: 7207
+EndMotion - StartMotion: 2542
+
+Motion seems more consistent and slightly shorter when looking for IO and motion
+(this is very strange)

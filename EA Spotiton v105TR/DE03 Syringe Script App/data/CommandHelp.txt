@@ -1,0 +1,1254 @@
+Comment (NameInCommandFile = ')
+	CommentText
+		Type=System.String
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+WriteToConsole (NameInCommandFile = WRITE_TO_CONSOLE)
+	TextToWrite
+		Type=System.String
+		Required=False
+		Description=Text that will be written to the console window
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Prime (NameInCommandFile = PRIME)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	VolumePerStroke_uL
+		Type=System.Double
+		Required=True
+		Description=
+	NumSyringeStrokes
+		Type=System.Int32
+		Required=True
+		Description=
+	SyringeSpeedPull
+		Type=System.Int32
+		Required=True
+		Description=
+	SyringeSpeedPush
+		Type=System.Int32
+		Required=True
+		Description=
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Tip1Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=False
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedIn_pct
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedOut_pct
+		Type=System.Double
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Aspirate (NameInCommandFile = ASPIRATE)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	Volume_uL
+		Type=System.Double
+		Required=True
+		Description=
+	SyringeSpeed
+		Type=System.Int32
+		Required=True
+		Description=
+	ValveToBypass
+		Type=System.Boolean
+		Required=False
+		Description=
+	AspFromReservoir
+		Type=System.Boolean
+		Required=False
+		Description=
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Tip1Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=False
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedIn_pct
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedOut_pct
+		Type=System.Double
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Dispense (NameInCommandFile = DISPENSE)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	Volume_uL
+		Type=System.Double
+		Required=True
+		Description=
+	SyringeSpeed
+		Type=System.Int32
+		Required=True
+		Description=
+	ValveToBypass
+		Type=System.Boolean
+		Required=False
+		Description=
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Tip1Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=False
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedIn_pct
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedOut_pct
+		Type=System.Double
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Syringe Valve Position (NameInCommandFile = SYRINGE_SET_VALVE)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	ValvePosition
+		Type=System.Int32
+		Required=True
+		Description=0=Input (Reservoir), 1=Output (tip), 2=Bypass
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Syringe Move (NameInCommandFile = SYRINGE_MOVE)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	SyringePosition
+		Type=System.Int32
+		Required=True
+		Description=
+	SyringeSpeed
+		Type=System.Int32
+		Required=True
+		Description=
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Syringe Empty (NameInCommandFile = SYRINGE_EMPTY)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	SyringeSpeed
+		Type=System.Int32
+		Required=True
+		Description=
+	EmptyThroughTip
+		Type=System.Boolean
+		Required=False
+		Description=
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Wash Tips (NameInCommandFile = WASH_TIPS)
+	SyringeMask
+		Type=System.Int32
+		Required=True
+		Description=0=Pump1, 1=Pump2
+	VolumePerStroke_uL
+		Type=System.Double
+		Required=True
+		Description=
+	NumSyringeStrokes
+		Type=System.Int32
+		Required=True
+		Description=
+	SyringeSpeedPull
+		Type=System.Int32
+		Required=True
+		Description=
+	SyringeSpeedPush
+		Type=System.Int32
+		Required=True
+		Description=
+	DelayAfter_ms
+		Type=System.Int32
+		Required=False
+		Description=
+	Tip1Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=False
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedIn_pct
+		Type=System.Double
+		Required=False
+		Description=
+	MoveSpeedOut_pct
+		Type=System.Double
+		Required=False
+		Description=
+	DoAirAspirateAfter
+		Type=System.Boolean
+		Required=False
+		Description=Not Tested - DO NOT USE
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Controller Enable (NameInCommandFile = CONTROLLER_ENABLE)
+	EnableController
+		Type=System.Boolean
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Inspect Tips (NameInCommandFile = INSPECT_TIPS)
+	TipMask
+		Type=System.Int32
+		Required=True
+		Description=INSPECT TIP NOT IMPLEMENTED - DO NOT USE
+	Tip1Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=True
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Piezo Dispense (NameInCommandFile = PIEZO_DISPENSE)
+	Tip
+		Type=System.Int32
+		Required=True
+		Description=1-based tip number
+	PiezoAmplitude
+		Type=System.Int32
+		Required=False
+		Description=0 to 255
+	PiezoFreq
+		Type=System.Int32
+		Required=False
+		Description=0 TO 65335
+	DropsPerBurst
+		Type=System.Int32
+		Required=True
+		Description=
+	NumBursts
+		Type=System.Int32
+		Required=True
+		Description=
+	FreqOfBursts
+		Type=System.Int32
+		Required=True
+		Description=
+	Tip1Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=False
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=Height above Tip1Point when dispensing
+	MoveHeightAboveSurface
+		Type=System.Double
+		Required=False
+		Description=Height above Tip1Point when moving  mm
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Motion Initialize (NameInCommandFile = MOTION_INITIALIZE)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Home Axis (NameInCommandFile = HOME_AXIS)
+	AxisNumber
+		Type=System.Int32
+		Required=True
+		Description=0, 1, or 2
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Servo Disable (NameInCommandFile = SERVO_DISABLE)
+	AxisNumber
+		Type=System.Int32
+		Required=True
+		Description=0, 1, 2 or 3
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Servo Enable (NameInCommandFile = SERVO_ENABLE)
+	AxisNumber
+		Type=System.Int32
+		Required=True
+		Description=0, 1, 2, or 3
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Move Relative (NameInCommandFile = MOVE_RELATIVE)
+	XOffset
+		Type=System.Double
+		Required=True
+		Description=
+	YOffset
+		Type=System.Double
+		Required=True
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=True
+		Description=
+	Speed_pct
+		Type=System.Double
+		Required=False
+		Description=
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Move To Safe Height (NameInCommandFile = MOVE_TO_SAFE_HEIGHT)
+	Speed_pct
+		Type=System.Double
+		Required=False
+		Description=
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Move To Point (NameInCommandFile = MOVE_TO_POINT)
+	Tool
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=True
+		Description=
+	Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=True
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=False
+		Description=
+	Speed_pct
+		Type=System.Double
+		Required=False
+		Description=
+	MoveToSafeHeightFirst
+		Type=System.Boolean
+		Required=True
+		Description=
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Move Above Point (NameInCommandFile = MOVE_ABOVE_POINT)
+	Tool
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=True
+		Description=
+	Point
+		Type=EA.PixyControl.ClassLibrary.MachineCoordinate
+		Required=True
+		Description=
+	XOffset
+		Type=System.Double
+		Required=False
+		Description=
+	YOffset
+		Type=System.Double
+		Required=False
+		Description=
+	Speed_pct
+		Type=System.Double
+		Required=False
+		Description=
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Define Variable (NameInCommandFile = DEFINE_VARIABLE)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	VariableType
+		Type=System.String
+		Required=True
+		Description=
+	VariableValue
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Define Point (NameInCommandFile = DEFINE_POINT)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	X
+		Type=System.Double
+		Required=True
+		Description=
+	Y
+		Type=System.Double
+		Required=True
+		Description=
+	Z
+		Type=System.Double
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Define Grid (NameInCommandFile = DEFINE_GRID)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	X
+		Type=System.Double
+		Required=True
+		Description=
+	Y
+		Type=System.Double
+		Required=True
+		Description=
+	Z
+		Type=System.Double
+		Required=True
+		Description=
+	XSteps
+		Type=System.Int32
+		Required=True
+		Description=
+	XIncrement
+		Type=System.Double
+		Required=True
+		Description=
+	YSteps
+		Type=System.Int32
+		Required=True
+		Description=
+	YIncrement
+		Type=System.Double
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Variable Set (NameInCommandFile = VARIABLE_SET)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	VariableValue
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Variable_Math (NameInCommandFile = VARIABLE_MATH)
+	ResultVariable
+		Type=System.String
+		Required=True
+		Description=
+	LHS
+		Type=System.String
+		Required=True
+		Description=
+	MathOperator
+		Type=System.String
+		Required=True
+		Description=
+	RHS
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Variable Compare (NameInCommandFile = VARIABLE_COMPARE)
+	ResultVariable
+		Type=System.String
+		Required=True
+		Description=
+	LHS
+		Type=System.String
+		Required=True
+		Description=
+	CompareOperator
+		Type=System.String
+		Required=True
+		Description=
+	RHS
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Get Boolean From User (NameInCommandFile = GET_BOOLEAN_FROM_USER)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	Prompt
+		Type=System.String
+		Required=True
+		Description=
+	ValueIfUserCancels
+		Type=System.Boolean
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Get Integer From User (NameInCommandFile = GET_INTEGER_FROM_USER)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	Prompt
+		Type=System.String
+		Required=True
+		Description=
+	MinValue
+		Type=System.Int32
+		Required=False
+		Description=
+	MaxValue
+		Type=System.Int32
+		Required=False
+		Description=
+	ValueIfUserCancels
+		Type=System.Int32
+		Required=False
+		Description=
+	DefaultValue
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Get Double From User (NameInCommandFile = GET_DOUBLE_FROM_USER)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	Prompt
+		Type=System.String
+		Required=True
+		Description=
+	MinValue
+		Type=System.Double
+		Required=False
+		Description=
+	MaxValue
+		Type=System.Double
+		Required=False
+		Description=
+	ValueIfUserCancels
+		Type=System.Double
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Pause (NameInCommandFile = PAUSE)
+	UserMessage
+		Type=System.String
+		Required=True
+		Description=Message to display in dialog box or use 'none' to not pop up dialog box
+	PauseTime_ms
+		Type=System.Int32
+		Required=True
+		Description=Pause time in ms  or Set to 0 to wait for user input
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+TimeStamp (NameInCommandFile = TIMESTAMP)
+	UserMessage
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+For (NameInCommandFile = FOR)
+	VariableName
+		Type=System.String
+		Required=True
+		Description=
+	StartValue
+		Type=System.Int32
+		Required=True
+		Description=
+	EndValue
+		Type=System.Int32
+		Required=True
+		Description=
+	Increment
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Next (NameInCommandFile = NEXT)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+While (NameInCommandFile = WHILE)
+	TestVariableName
+		Type=System.String
+		Required=True
+		Description=
+	ComparisonOperator
+		Type=System.String
+		Required=True
+		Description=
+	TestValue
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Loop (NameInCommandFile = LOOP)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Exit Loop (NameInCommandFile = EXITLOOP)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+If (NameInCommandFile = IF)
+	TestVariableName
+		Type=System.String
+		Required=True
+		Description=
+	ComparisonOperator
+		Type=System.String
+		Required=True
+		Description=
+	TestValue
+		Type=System.String
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Else (NameInCommandFile = ELSE)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+EndIf (NameInCommandFile = ENDIF)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Exit Sequence (NameInCommandFile = EXITSEQUENCE)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Set Max Velocity (NameInCommandFile = SET_MAX_VELOCITY)
+	AxisNumber
+		Type=System.Int32
+		Required=True
+		Description=0, 1, or 2
+	MaxVelocity
+		Type=System.Double
+		Required=True
+		Description=mm Per Sec
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=Use the grid robot, default if not included to false
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Set Accel (NameInCommandFile = SET_ACCEL)
+	AxisNumber
+		Type=System.Int32
+		Required=True
+		Description=0, 1, or 2
+	Accel
+		Type=System.Double
+		Required=True
+		Description=mm  Per Sec Sec
+	Decel
+		Type=System.Double
+		Required=False
+		Description=mm  Per Sec Sec, optional if not included set same as accel
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=Use the grid robot, default if not included to false
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Set Default Motion Parameters (NameInCommandFile = SET_DEFAULT_MOTION_PARAMETERS)
+	AxisNumber
+		Type=System.Int32
+		Required=False
+		Description=0, 1, or 2,   if not included all 3 axis will be set to default values
+	UseGridRobot
+		Type=System.Boolean
+		Required=False
+		Description=Use the grid robot, default if not included is false
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Define Import (NameInCommandFile = DEFINE_IMPORT)
+	FileName
+		Type=System.String
+		Required=True
+		Description=A valid file name may include underscore and space
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+DE03 Cos Setup (NameInCommandFile = DE03_COS_SETUP)
+	Tip
+		Type=System.Int32
+		Required=True
+		Description=1 to 4
+	DesiredFreq
+		Type=System.Int32
+		Required=True
+		Description=10 to 100000
+	InBurstNo
+		Type=System.Int32
+		Required=True
+		Description=1 TO 10,000,000
+	CosAmplitude
+		Type=System.Int32
+		Required=True
+		Description=0 TO 2047
+	StrobeDuration
+		Type=System.Int32
+		Required=True
+		Description=1 TO 10
+	StrobeDelay
+		Type=System.Int32
+		Required=True
+		Description=0 TO 10
+	NumOfBursts
+		Type=System.Int32
+		Required=True
+		Description=1 TO 10,000,000
+	TriggerSetting
+		Type=System.Int32
+		Required=False
+		Description=0 to 2
+	TriggerDelay
+		Type=System.Int32
+		Required=False
+		Description=1 TO 10,000,000
+	TriggerPeriod
+		Type=System.Int32
+		Required=False
+		Description=1 TO 10,000,000
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+DE03 Start Waveform (NameInCommandFile = DE03_START_WAVEFORM)
+	WaitForCompletion
+		Type=System.Boolean
+		Required=True
+		Description=
+	Timeout_ms
+		Type=System.Int32
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+DE03 Stop Waveform (NameInCommandFile = DE03_STOP_WAVEFORM)
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+DE03 Trap Setup (NameInCommandFile = DE03_TRAP_SETUP)
+	Tip
+		Type=System.Int32
+		Required=True
+		Description=1 to 4
+	Leading
+		Type=System.Int32
+		Required=True
+		Description=leading edge usec
+	Dwell
+		Type=System.Int32
+		Required=True
+		Description=dwell usec
+	Trailing
+		Type=System.Int32
+		Required=True
+		Description=trailing edge usec
+	TrapDrops
+		Type=System.Int32
+		Required=True
+		Description=Number of drops
+	TrapFreq
+		Type=System.Int32
+		Required=True
+		Description=Frequency of drops
+	TrapAmp
+		Type=System.Int32
+		Required=True
+		Description=Amplitude 0 TO 4095
+	StrobeDuration
+		Type=System.Int32
+		Required=True
+		Description=1 TO 10 usec
+	StrobeDelay
+		Type=System.Int32
+		Required=True
+		Description=0 TO 300 usec
+	TriggerSetting
+		Type=System.Int32
+		Required=False
+		Description=0 to 2
+	TriggerDelay
+		Type=System.Int32
+		Required=False
+		Description=1 TO 10,000,000
+	TriggerPeriod
+		Type=System.Int32
+		Required=False
+		Description=1 TO 500
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Set IO (NameInCommandFile = IO_SET_OUTPUT)
+	IONumber
+		Type=System.Int32
+		Required=True
+		Description=1 to 24,  Negative turns off
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Wait IO input (NameInCommandFile = IO_WAIT_INPUT)
+	IONumber
+		Type=System.Int32
+		Required=True
+		Description=1 to 24,  Negative means on (active low)
+	TimeOut_ms
+		Type=System.Int32
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Move the plunge axis only (NameInCommandFile = PLUNGE_AXIS_MOVE)
+	PositionZ2
+		Type=System.Double
+		Required=True
+		Description=
+	ZOffset
+		Type=System.Double
+		Required=True
+		Description=
+	Speed_pct
+		Type=System.Double
+		Required=True
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Move the plunge axis synchonized with ethane pnuematic (NameInCommandFile = SUPER_PLUNGE)
+	StartSolenoid
+		Type=System.Int32
+		Required=True
+		Description=Output number that will turn on at start of command, pnuematic ethane output(-999=none)
+	StartSensor
+		Type=System.Int32
+		Required=True
+		Description=Sensor state to look for to trigger servo plunge axis motion (-999=none)
+	EndSensor
+		Type=System.Int32
+		Required=True
+		Description=Sensor state to look for at end of pnuematic ethance axis travel (-999=none)
+	PositionZ2
+		Type=System.Double
+		Required=False
+		Description=Position to move plunge axis
+	Speed_pct
+		Type=System.Double
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Get Integers From File (NameInCommandFile = GET_INTEGERS_FROM_FILE)
+	FilePath
+		Type=System.String
+		Required=True
+		Description=Full Path Name of File
+	Int1
+		Type=System.Int32
+		Required=True
+		Description=
+	Int2
+		Type=System.Int32
+		Required=False
+		Description=
+	Int3
+		Type=System.Int32
+		Required=False
+		Description=
+	Int4
+		Type=System.Int32
+		Required=False
+		Description=
+	Int5
+		Type=System.Int32
+		Required=False
+		Description=
+	Int6
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Put Integers To File (NameInCommandFile = PUT_INTEGERS_TO_FILE)
+	FilePath
+		Type=System.String
+		Required=True
+		Description=Full Path Name of File
+	Int1
+		Type=System.Int32
+		Required=True
+		Description=
+	Int2
+		Type=System.Int32
+		Required=False
+		Description=
+	Int3
+		Type=System.Int32
+		Required=False
+		Description=
+	Int4
+		Type=System.Int32
+		Required=False
+		Description=
+	Int5
+		Type=System.Int32
+		Required=False
+		Description=
+	Int6
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Get Step From File (NameInCommandFile = GET_STEP_FROM_FILE)
+	FilePath
+		Type=System.String
+		Required=True
+		Description=Full Path Name of File
+	StepNo
+		Type=System.String
+		Required=True
+		Description=Step Number You Wish To Retreive from the file
+	Code
+		Type=System.Int32
+		Required=True
+		Description=Will return -1 when step number not found
+	Row
+		Type=System.Int32
+		Required=True
+		Description=Returns 0 Based Row Number,  Row number in file - 1
+	Col
+		Type=System.Int32
+		Required=True
+		Description=Returns 0 Based Col Number,  Col number in file - 1
+	Vol1_ul
+		Type=System.Double
+		Required=True
+		Description=
+	Vol1_syringe_speed
+		Type=System.Int32
+		Required=False
+		Description=
+	Vol1_delay
+		Type=System.Int32
+		Required=False
+		Description=
+	Vol2_ul
+		Type=System.Double
+		Required=False
+		Description=
+	Vol2_syringe_speed
+		Type=System.Int32
+		Required=False
+		Description=
+	Vol2_delay
+		Type=System.Int32
+		Required=False
+		Description=
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Rotate Move (NameInCommandFile = ROTATE_MOVE)
+	PositionCount
+		Type=System.Int32
+		Required=True
+		Description=Move to this position counts, -100,000 is quarter turn clockwise
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+
+Rotate Setup (NameInCommandFile = ROTATE_SETUP)
+	AccelCount
+		Type=System.Int32
+		Required=True
+		Description=Accel count is 10x this, 25,000 is reasonable
+	DecelCount
+		Type=System.Int32
+		Required=True
+		Description=DECEL count is 10x this, 25,000 is reasonable
+	MaxVelCount
+		Type=System.Int32
+		Required=True
+		Description=Max Velocity count is 0.1x this, 1,000,000 is reasonable
+	Enabled
+		Type=System.Boolean
+		Required=False
+		Description=
+

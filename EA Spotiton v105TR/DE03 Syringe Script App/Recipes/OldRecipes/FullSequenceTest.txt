@@ -1,0 +1,346 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_VARIABLE(VariableName=PIEZO_INBURST_INSP, _
+ VariableType=INT, _
+ VariableValue=10000)
+
+
+DEFINE_VARIABLE(VariableName=PIEZO_INBURST_ONGRID, _
+ VariableType=INT, _
+ VariableValue=5)
+
+
+' SET TO 0 TO BYPASS ASPIRATION
+
+DEFINE_VARIABLE(VariableName=ASP_UL, _
+ VariableType=DOUBLE, _
+ VariableValue=5)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+DEFINE_VARIABLE(VariableName=INS_OPTION, _
+ VariableType=INT, _
+ VariableValue=1)
+
+
+' LETS GO SLOW FOR NOW
+
+
+DEFINE_VARIABLE(VariableName=FULL_SPEED, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+' PLUNGE AXIS SAFE,  XYZ SAFE,  CYLINDER NOT ROTATED
+
+
+PLUNGE_AXIS_MOVE(PositionZ2=PLUNGE_AXIS_SAFE_MM, _
+ ZOffset=0.0, _
+ Speed_pct=25)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=25, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+IO_SET_OUTPUT(IONumber=OUT_ROTATE_OFF)
+
+
+IO_SET_OUTPUT(IONumber=OUT_ETHANE_DOWN)
+
+
+' DO WE WISH TO WASH FIRST (PERHAPS ADD THIS)
+
+
+' DO WE WISH TO CLOSE THE SHUTTER
+
+' NOW ASPIRATE THE SAMPLE
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=10, _
+ Speed_pct=FULL_SPEED, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=1 READY TO ASPIRATE   0 TO CANCEL, _
+ MinValue=0, _
+ MaxValue=1, _
+ ValueIfUserCancels=0)
+
+
+IF(I1 = 0)
+
+
+	EXITSEQUENCE
+
+
+ENDIF
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+IF(ASP_UL > 0)
+
+
+	ASPIRATE(SyringeMask=0, _
+	 Volume_uL=ASP_UL, _
+	 SyringeSpeed=18, _
+	 ValveToBypass=TRUE, _
+	 DelayAfter_ms=1000)
+
+
+ENDIF
+
+
+' PULL OUT SLOWLY
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=PICKUP_SAMPLE_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=10, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+' MOVE IN FRONT OF CAMERA AND INSPECT DROPLETS
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=FULL_SPEED, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+IO_SET_OUTPUT(IONumber=OUT_ROTATE_ON)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=INS_T1_PT, _
+ XOffset=0, _
+ YOffset=0, _
+ ZOffset=0, _
+ Speed_pct=FULL_SPEED, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+VARIABLE_SET(VariableName=INS_OPTION, _
+ VariableValue=1)
+
+
+WHILE(INS_OPTION = 1)
+
+
+	DE03_COS_SETUP(Tip=1, _
+	 DesiredFreq=12750, _
+	 InBurstNo=PIEZO_INBURST_INSP, _
+	 CosAmplitude=450, _
+	 StrobeDuration=1, _
+	 StrobeDelay=0, _
+	 NumOfBursts=1, _
+	 TriggerSetting=0, _
+	 TriggerDelay=1000000, _
+	 TriggerPeriod=1)
+
+
+	DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+	 Timeout_ms=0)
+
+
+	GET_INTEGER_FROM_USER(VariableName=INS_OPTION, _
+	 Prompt=0=ABORT  1=FIRE PIEZO  2=PROCEED, _
+	 MinValue=0, _
+	 MaxValue=2, _
+	 ValueIfUserCancels=1)
+
+
+LOOP
+
+
+' CANCEL WAS CHOSEN BY USER
+
+
+IF(INS_OPTION = 0)
+
+
+	' SET AT OUTPUT, SYRINGE PUMP1
+
+
+	SYRINGE_SET_VALVE(SyringeMask=0, _
+	 ValvePosition=1, _
+	 DelayAfter_ms=100)
+
+
+	EXITSEQUENCE
+
+
+ENDIF
+
+
+
+' RAISE THE ETHANE
+
+IO_SET_OUTPUT(IONumber=OUT_ETHANE_UP)
+
+
+
+PAUSE(UserMessage=DELAY AFTER ETHANE STARTS UP, _
+ PauseTime_ms=5000)
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=FIRE_T1_PT, _
+ Speed_pct=50, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+PLUNGE_AXIS_MOVE(PositionZ2=PLUNGE_AXIS_FIRE_AT_GRID_MM, _
+ ZOffset=0.0, _
+ Speed_pct=50)
+
+
+DE03_COS_SETUP(Tip=1, _
+ DesiredFreq=12750, _
+ InBurstNo=PIEZO_INBURST_ONGRID, _
+ CosAmplitude=450, _
+ StrobeDuration=1, _
+ StrobeDelay=0, _
+ NumOfBursts=1, _
+ TriggerSetting=0, _
+ TriggerDelay=1000000, _
+ TriggerPeriod=1)
+
+
+DE03_START_WAVEFORM(WaitForCompletion=FALSE, _
+ Timeout_ms=0)
+
+
+' MOVE BACK A BIT (40MM)
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=FIRE_T1_PT, _
+ XOffset=40, _
+ Speed_pct=FULL_SPEED, _
+ MoveToSafeHeightFirst=FALSE)
+
+
+PAUSE(UserMessage=DELAY BEFORE PLUNGE, _
+ PauseTime_ms=1)
+
+
+IO_SET_OUTPUT(IONumber=OUT_SHUTTER_OPEN)
+
+
+'SHUTTER MUST OPEN (SENS IT BEFORE PLUNGING)
+
+IO_WAIT_INPUT(IONumber=IN_SHUTTER_OPEN_SEN, _
+	 TimeOut_ms=1000)
+
+
+PLUNGE_AXIS_MOVE(PositionZ2=PLUNGE_AXIS_IN_ETHANE_MM, _
+ ZOffset=0.0, _
+ Speed_pct=FULL_SPEED)
+
+
+' FINISH MOVING XYZ
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=FULL_SPEED, _
+ MoveToSafeHeightFirst=TRUE)
+
+
+IO_SET_OUTPUT(IONumber=OUT_ROTATE_OFF)
+
+
+' MAY WISH TO TRY SERVO OFF AND BRAKE ON
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=1=lower ethane Tweezer must be pinned   0=to abort, _
+ MinValue=0, _
+ MaxValue=1, _
+ ValueIfUserCancels=0)
+
+
+IF(I1 = 0)
+
+
+	EXITSEQUENCE
+
+
+ENDIF
+
+
+IO_SET_OUTPUT(IONumber=OUT_BRAKE_OFF)
+
+
+SERVO_DISABLE(AxisNumber=3)
+
+
+IO_SET_OUTPUT(IONumber=OUT_ETHANE_DOWN)
+
+
+'GET_INTEGER_FROM_USER(VariableName=I1, _
+' Prompt=1=SET BRAKE ON After you have pushed axis up   0 to abort, _
+' MinValue=0, _
+' MaxValue=1, _
+' ValueIfUserCancels=0)
+
+
+'IF(I1 = 0)
+
+
+'	EXITSEQUENCE
+
+
+'ENDIF
+
+
+'IO_SET_OUTPUT(IONumber=OUT_BRAKE_ON)
+
+
+GET_INTEGER_FROM_USER(VariableName=I1, _
+ Prompt=1=MOVE PLUNGE AXIS SAFE POS TWEEZER MUST BE DISENGAGED   0 to abort, _
+ MinValue=0, _
+ MaxValue=1, _
+ ValueIfUserCancels=0)
+
+
+SERVO_ENABLE(AxisNumber=3)
+
+
+IO_SET_OUTPUT(IONumber=OUT_BRAKE_OFF)
+
+
+PLUNGE_AXIS_MOVE(PositionZ2=PLUNGE_AXIS_SAFE_MM, _
+ ZOffset=0.0, _
+ Speed_pct=25)
+
+
+IO_SET_OUTPUT(IONumber=OUT_SHUTTER_CLOSE)
+
+
+EXITSEQUENCE
+
+

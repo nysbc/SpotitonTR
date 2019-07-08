@@ -1,0 +1,45 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=TIMEOUT, _
+ VariableType=INT, _
+ VariableValue=10000)
+
+
+WHILE(I1 > -25)
+
+
+	GET_INTEGER_FROM_USER(VariableName=I1, _
+	 Prompt=1 TO 24  NEGATIVE WAITS ON  POSITIVE WAITS OFF, _
+	 MinValue=-24, _
+	 MaxValue=24, _
+	 ValueIfUserCancels=0)
+
+
+	IF(I1 = 0)
+
+
+		EXITLOOP
+
+
+	ENDIF
+
+
+	IO_WAIT_INPUT(IONumber=I1, _
+	 TimeOut_ms=TIMEOUT)
+
+
+LOOP
+
+
+EXITSEQUENCE
+
+
+IO_SET_OUTPUT(IONumber=I1)
+
+

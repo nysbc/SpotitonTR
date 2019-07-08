@@ -1,0 +1,204 @@
+DEFINE_IMPORT(FileName=C:\DE03 SYRINGE SCRIPT APP\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_GRID(VariableName=MOVEGRID, _
+ X=0, _
+ Y=0, _
+ Z=0, _
+ XSteps=10, _
+ XIncrement=25.0, _
+ YSteps=10, _
+ YIncrement=10.0)
+
+
+DEFINE_VARIABLE(VariableName=SPEED_FACTOR, _
+ VariableType=INT, _
+ VariableValue=100)
+
+
+DEFINE_VARIABLE(VariableName=MAX_VELOCITY, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_VARIABLE(VariableName=ACCELERATION, _
+ VariableType=DOUBLE, _
+ VariableValue=0.0)
+
+
+DEFINE_VARIABLE(VariableName=PROMPT_I, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=L_STEP, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=LR_STEP, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=KEEP_LOOPING, _
+ VariableType=BOOL, _
+ VariableValue=TRUE)
+
+
+WHILE(KEEP_LOOPING = TRUE)
+
+
+	GET_INTEGER_FROM_USER(VariableName=PROMPT_I, _
+	 Prompt=READY TO PROCEED WITH MOTION TEST\N 1=CONTINUE  0=ABORT, _
+	 MinValue=0, _
+	 MaxValue=1, _
+	 ValueIfUserCancels=0)
+
+
+	IF(PROMPT_I = 0)
+
+
+		EXITSEQUENCE
+
+
+	ENDIF
+
+
+	' X AXIS MAX VELOCITY AND ACCELERATION
+
+
+	VARIABLE_SET(VariableName=MAX_VELOCITY, _
+	 VariableValue=300)
+
+
+	VARIABLE_SET(VariableName=ACCELERATION, _
+	 VariableValue=3000)
+
+
+	SET_MAX_VELOCITY(AxisNumber=0, _
+	 MaxVelocity=MAX_VELOCITY)
+
+
+	SET_ACCEL(AxisNumber=0, _
+	 Accel=ACCELERATION)
+
+
+	' Y AXIS MAX VELOCITY AND ACCELERATION
+
+
+	VARIABLE_SET(VariableName=MAX_VELOCITY, _
+	 VariableValue=200)
+
+
+	VARIABLE_SET(VariableName=ACCELERATION, _
+	 VariableValue=3000)
+
+
+	SET_MAX_VELOCITY(AxisNumber=1, _
+	 MaxVelocity=MAX_VELOCITY)
+
+
+	SET_ACCEL(AxisNumber=1, _
+	 Accel=ACCELERATION)
+
+
+	' Z AXIS MAX VELOCITY AND ACCELERATION
+
+
+	VARIABLE_SET(VariableName=MAX_VELOCITY, _
+	 VariableValue=40)
+
+
+	VARIABLE_SET(VariableName=ACCELERATION, _
+	 VariableValue=300)
+
+
+	SET_MAX_VELOCITY(AxisNumber=2, _
+	 MaxVelocity=MAX_VELOCITY)
+
+
+	SET_ACCEL(AxisNumber=2, _
+	 Accel=ACCELERATION)
+
+
+	FOR(L_STEP = 2 To 8 Step 2)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[0, 0], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[L_STEP, 0], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+	FOR(L_STEP = 2 To 8 Step 2)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[0, 0], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[0, L_STEP], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+	FOR(L_STEP = 0 To 8 Step 1)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[L_STEP, L_STEP], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[L_STEP, L_STEP], _
+		 ZOffset=0, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[L_STEP, L_STEP], _
+		 ZOffset=-20, _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+	FOR(L_STEP = 1 To 8 Step 1)
+
+
+		VARIABLE_MATH(LR_STEP = 8 - L_STEP)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=MOVEGRID[LR_STEP, LR_STEP], _
+		 Speed_pct=SPEED_FACTOR, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+LOOP
+
+

@@ -1,0 +1,109 @@
+
+DEFINE_POINT(VariableName=SAFE_T1_PT, _
+ X=150.0, _
+ Y=50.0, _
+ Z=-25.0)
+
+
+
+DEFINE_POINT(VariableName=MID_T1_PT, _
+ X=50.0, _
+ Y=50.0, _
+ Z=-35.0)
+
+
+DEFINE_VARIABLE(VariableName=ROTATE_0, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=ROTATE_90, _
+ VariableType=INT, _
+ VariableValue=-100000)
+
+DEFINE_POINT(VariableName=SAFE_PT_GRIDROBOT, _
+ X=0.0, _
+ Y=100.0, _
+ Z=0.0)
+
+
+DEFINE_POINT(VariableName=MID_PT_GRIDROBOT, _
+ X=50.0, _
+ Y=80.0, _
+ Z=-80.0)
+
+
+
+'INS_T1_PT IS IN FRONT OF SIDE CAMERA  
+
+
+DEFINE_POINT(VariableName=INS_T1_PT, _
+X=81.98, _
+Y=148.19, _
+Z=-69.50)
+
+'WASH_T1_PT IS AT TOP OF THE WASH BOWL 
+
+DEFINE_POINT(VariableName=WASH_T1_PT, _
+ X=153.1, _
+ Y=50.2, _
+ Z=-61.0)
+
+'DISPENSING ONTO THE COVER GLASS OR GRID
+
+DEFINE_POINT(VariableName=COVERGLASS_T1_PT, _
+ X=63.6, _
+ Y=65.1, _
+ Z=-46.8)
+
+
+
+'GRID ROBOT HOLDING THE GRID IN FRONT OF THE GRID CAMERA 
+
+DEFINE_POINT(VariableName=CAMERA_PT_GRIDROBOT, _
+ X=52.10, _
+ Y=69.5, _
+ Z=-31.8)
+
+
+
+'ARRAYS OF POINTS,  WELL A1 TAUGHT AT TOP SURFACE OF WELL 
+
+DEFINE_GRID(VariableName=TUBES_T1_PT_ARRAY, _
+ X=48.5, _
+ Y=51.3, _
+ Z=-51.5, _
+ XSteps=4, _
+ XIncrement=4.5, _
+ YSteps=4, _
+ YIncrement=-4.5)
+
+DEFINE_GRID(VariableName=DAB_T1_PT_ARRAY, _
+ X=89.7, _
+ Y=52.31, _
+ Z=-54.5, _
+ XSteps=8, _
+ XIncrement=2, _
+ YSteps=8, _
+ YIncrement=-1)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

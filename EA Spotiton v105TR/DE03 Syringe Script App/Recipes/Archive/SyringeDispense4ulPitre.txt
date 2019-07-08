@@ -1,0 +1,198 @@
+DEFINE_IMPORT(FileName=C:\PIXY_2.0\RECIPES\COMMONPOINTS.TXT)
+
+
+DEFINE_GRID(VariableName=PITREGRID_T1, _
+ X=67.5, _
+ Y=78, _
+ Z=-18.25, _
+ XSteps=3, _
+ XIncrement=-6.35, _
+ YSteps=3, _
+ YIncrement=6.35)
+
+
+MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+DEFINE_VARIABLE(VariableName=WASH_CYCLES, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I1, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=I2, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+DEFINE_VARIABLE(VariableName=SAMPLES_COL, _
+ VariableType=INT, _
+ VariableValue=0)
+
+
+GET_INTEGER_FROM_USER(VariableName=SAMPLES_COL, _
+ Prompt=ENTER STARTING SAMPLE WELL COLUMN 1=D1  12=D12), _
+ MinValue=1, _
+ MaxValue=12, _
+ ValueIfUserCancels=1)
+
+
+VARIABLE_MATH(SAMPLES_COL = SAMPLES_COL - 1)
+
+
+' WASH THE TIPS
+
+
+FOR(I1 = 0 To 2 Step 1)
+
+
+	IF(WASH_CYCLES > 0)
+
+
+		WASH_TIPS(SyringeMask=0, _
+		 VolumePerStroke_uL=50, _
+		 NumSyringeStrokes=WASH_CYCLES, _
+		 SyringeSpeedPull=13, _
+		 SyringeSpeedPush=15, _
+		 DelayAfter_ms=500, _
+		 Tip1Point=WASH_PT_T1, _
+		 MoveSpeedOut_pct=30)
+
+
+		SYRINGE_SET_VALVE(SyringeMask=0, _
+		 ValvePosition=1, _
+		 DelayAfter_ms=100)
+
+
+	ENDIF
+
+
+	'ONLY ASPIRATE THE FIRST SAMPLE
+
+	IF(I1 = 0)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=10, _
+	 Speed_pct=50, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+
+	' ASPIRATE (FROM OUTPUT IS DEFAULT)
+
+
+	ASPIRATE(SyringeMask=0, _
+	 Volume_uL=40, _
+	 SyringeSpeed=18, _
+	 ValveToBypass=FALSE, _
+	 DelayAfter_ms=500)
+
+
+	' PULL OUT SLOWLY
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PICKUP_SAMPLE_T1[SAMPLES_COL,I1], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=10, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=FALSE)
+
+	ENDIF
+
+
+	' MOVE OVER THE PITRE DISH
+
+
+	MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+	 Point=PITREGRID_T1[I1,0], _
+	 XOffset=0, _
+	 YOffset=0, _
+	 ZOffset=3, _
+	 Speed_pct=20, _
+	 MoveToSafeHeightFirst=TRUE)
+
+
+	FOR(I2 = 0 To 2 Step 1)
+
+
+		' MOVE RIGHT ONTO TARGE
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=PITREGRID_T1[I1,I2], _
+		 Speed_pct=20, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+		DISPENSE(SyringeMask=0, _
+		 Volume_uL=4, _
+		 SyringeSpeed=21, _
+		 ValveToBypass=FALSE, _
+		 DelayAfter_ms=200)
+
+
+		PAUSE(UserMessage=WAIT, _
+		 PauseTime_ms=300)
+
+
+		MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+		 Point=PITREGRID_T1[I1,I2], _
+		 ZOffset=5, _
+		 Speed_pct=20, _
+		 MoveToSafeHeightFirst=FALSE)
+
+
+	NEXT
+
+
+	MOVE_TO_SAFE_HEIGHT(Speed_pct=30)
+
+
+NEXT
+
+
+' FINAL WASH
+
+
+'IF(WASH_CYCLES > 0)
+
+
+	WASH_TIPS(SyringeMask=0, _
+	 VolumePerStroke_uL=50, _
+	 NumSyringeStrokes=WASH_CYCLES, _
+	 SyringeSpeedPull=13, _
+	 SyringeSpeedPush=15, _
+	 DelayAfter_ms=500, _
+	 Tip1Point=WASH_PT_T1, _
+	 MoveSpeedOut_pct=30)
+
+
+'ENDIF
+
+
+SYRINGE_SET_VALVE(SyringeMask=0, _
+ ValvePosition=1, _
+ DelayAfter_ms=100)
+
+
+MOVE_TO_POINT(Tool=SYSTEM_TIP1, _
+ Point=SAFE_PT, _
+ Speed_pct=20, _
+ MoveToSafeHeightFirst=TRUE)
+
+
